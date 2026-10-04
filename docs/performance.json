@@ -1,0 +1,181 @@
+{
+  "checkedAt": "2026-10-03",
+  "environment": {
+    "device": "MacBook Pro, Apple M1 Pro, 16 GB RAM",
+    "os": "macOS 15.7.4",
+    "browser": "Codex In-app Browser (Chromium), exact version unavailable from supported browser interface",
+    "network": "127.0.0.1 loopback; warm assets; no CPU/network throttling",
+    "devicePixelRatio": 1,
+    "physicalMobileTest": false
+  },
+  "method": "Single local lab navigations. Hidden DOM PerformanceObserver reports LCP, total layout-shift without recent input, and maximum observed event duration. This is not a Lighthouse score, field p75 or certified INP/CLS implementation.",
+  "targets": {
+    "lcpMs": 2500,
+    "interactionMs": 200,
+    "cls": 0.1,
+    "firstSceneAssetBytes": 3000000
+  },
+  "home390": {
+    "lcpMs": 68,
+    "cls": 0,
+    "largestObservedEventMs": 0,
+    "overflow": false
+  },
+  "home1440": {
+    "lcpMs": 96,
+    "cls": 0,
+    "largestObservedEventMs": 0,
+    "overflow": false
+  },
+  "studio390": {
+    "height": 844,
+    "metrics": {
+      "cls": "0.0015",
+      "interactionMs": "40.0",
+      "lcpMs": "208.0",
+      "shiftTrace": "[{\"at\":178.20000004768372,\"value\":0.0014549543099511093,\"sources\":[{\"tag\":\"SPAN\",\"id\":\"\",\"class\":\"\",\"previous\":{\"x\":134.0859375,\"y\":461.546875,\"width\":106.8203125,\"height\":26,\"top\":461.546875,\"right\":240.90625,\"bottom\":487.546875,\"left\":134.0859375},\"current\":{\"x\":54.1484375,\"y\":461.546875,\"width\":98.4765625,\"height\":26,\"top\":461.546875,\"right\":152.625,\"bottom\":487.546875,\"left\":54.1484375}}]}]"
+    },
+    "overflow": false,
+    "scene": {
+      "loadMs": "380.5",
+      "movementCap": "30",
+      "pixelRatio": "1",
+      "readyAt": "692.9",
+      "renderMode": "on-change"
+    },
+    "scrollY": 302.5,
+    "width": 390
+  },
+  "studio1440": {
+    "height": 900,
+    "metrics": {
+      "cls": "0.0196",
+      "interactionMs": "56.0",
+      "lcpMs": "108.0",
+      "shiftTrace": "[{\"at\":75.40000009536743,\"value\":0.01964734900909682,\"sources\":[{\"tag\":\"DIV\",\"id\":\"\",\"class\":\"studio-swatches\",\"previous\":{\"x\":1078.15625,\"y\":443.6640625,\"width\":263,\"height\":397,\"top\":443.6640625,\"right\":1341.15625,\"bottom\":840.6640625,\"left\":1078.15625},\"current\":{\"x\":1078.15625,\"y\":531.859375,\"width\":263,\"height\":368.140625,\"top\":531.859375,\"right\":1341.15625,\"bottom\":900,\"left\":1078.15625}},{\"tag\":\"DIV\",\"id\":\"\",\"class\":\"search\",\"previous\":{\"x\":1078.15625,\"y\":337.6640625,\"width\":263,\"height\":38,\"top\":337.6640625,\"right\":1341.15625,\"bottom\":375.6640625,\"left\":1078.15625},\"current\":{\"x\":1078.15625,\"y\":425.859375,\"width\":263,\"height\":38,\"top\":425.859375,\"right\":1341.15625,\"bottom\":463.859375,\"left\":1078.15625}},{\"tag\":\"DIV\",\"id\":\"\",\"class\":\"group/tabs flex gap-2 data-[orientation=horizontal]:flex-col\",\"previous\":{\"x\":1078.15625,\"y\":393.6640625,\"width\":263,\"height\":32,\"top\":393.6640625,\"right\":1341.15625,\"bottom\":425.6640625,\"left\":1078.15625},\"current\":{\"x\":1078.15625,\"y\":481.859375,\"width\":263,\"height\":32,\"top\":481.859375,\"right\":1341.15625,\"bottom\":513.859375,\"left\":1078.15625}},{\"tag\":\"DIV\",\"id\":\"\",\"class\":\"active-material\",\"previous\":{\"x\":1075.15625,\"y\":858.6640625,\"width\":269,\"height\":41.3359375,\"top\":858.6640625,\"right\":1344.15625,\"bottom\":900,\"left\":1075.15625},\"current\":{\"x\":0,\"y\":0,\"width\":0,\"height\":0,\"top\":0,\"right\":0,\"bottom\":0,\"left\":0}},{\"tag\":\"SPAN\",\"id\":\"\",\"class\":\"\",\"previous\":{\"x\":491.8046875,\"y\":363.6640625,\"width\":131.390625,\"height\":29.1953125,\"top\":363.6640625,\"right\":623.1953125,\"bottom\":392.859375,\"left\":491.8046875},\"current\":{\"x\":253.6484375,\"y\":363.6640625,\"width\":121.3828125,\"height\":29.1953125,\"top\":363.6640625,\"right\":375.03125,\"bottom\":392.859375,\"left\":253.6484375}}]}]"
+    },
+    "overflow": false,
+    "scene": {
+      "loadMs": "380.6",
+      "movementCap": "on-change",
+      "pixelRatio": "1",
+      "readyAt": "600.5",
+      "renderMode": "on-change"
+    },
+    "width": 1440
+  },
+  "bundles": {
+    "initialScripts": [
+      {
+        "path": "/_next/static/chunks/4bd1b696-de76000e5c1a87bd.js",
+        "rawBytes": 201053,
+        "gzipBytes": 63200
+      },
+      {
+        "path": "/_next/static/chunks/794-9b812cbf467340b0.js",
+        "rawBytes": 240660,
+        "gzipBytes": 65370
+      },
+      {
+        "path": "/_next/static/chunks/main-app-925a62c14ff48c87.js",
+        "rawBytes": 513,
+        "gzipBytes": 224
+      },
+      {
+        "path": "/_next/static/chunks/365-2349cb68ab998b10.js",
+        "rawBytes": 211192,
+        "gzipBytes": 61653
+      },
+      {
+        "path": "/_next/static/chunks/137-16b925f8f70e6078.js",
+        "rawBytes": 100000,
+        "gzipBytes": 30420
+      },
+      {
+        "path": "/_next/static/chunks/app/%5Blocale%5D/%5B%5B...slug%5D%5D/page-60bc17f281518afa.js",
+        "rawBytes": 128,
+        "gzipBytes": 123
+      },
+      {
+        "path": "/_next/static/chunks/polyfills-42372ed130431b0a.js",
+        "rawBytes": 112594,
+        "gzipBytes": 39373
+      },
+      {
+        "path": "/_next/static/chunks/webpack-d821a8a3ebd703bb.js",
+        "rawBytes": 3319,
+        "gzipBytes": 1724
+      }
+    ],
+    "threeIntentChunks": [
+      {
+        "path": ".next/static/chunks/212.ffd053143e92dbd7.js",
+        "rawBytes": 27035,
+        "gzipBytes": 7388
+      },
+      {
+        "path": ".next/static/chunks/b536a0f1.81e9d357d4d8a7d5.js",
+        "rawBytes": 356587,
+        "gzipBytes": 84215
+      },
+      {
+        "path": ".next/static/chunks/bd904a5c.f09c3fd1bd776886.js",
+        "rawBytes": 203052,
+        "gzipBytes": 53363
+      }
+    ],
+    "initialRawBytes": 869459,
+    "initialGzipBytes": 262087,
+    "studioRawBytes": 586674,
+    "studioGzipBytes": 144966,
+    "SSRcontrolsPresent": true,
+    "SSRnoCanvas": true,
+    "buildId": "5i2BHeGPPARfbO61PxQJ9"
+  },
+  "additionalStudioCssImages": [
+    {
+      "path": "/_next/static/css/137e935a3021dc8d.css",
+      "rawBytes": 162855,
+      "gzipBytes": 27097
+    },
+    {
+      "path": "/media/logo.png",
+      "rawBytes": 6975,
+      "gzipBytes": 6728
+    },
+    {
+      "path": "/media/swatches/1121-frosted.jpg",
+      "rawBytes": 11997,
+      "gzipBytes": 2943
+    },
+    {
+      "path": "/media/swatches/255-frosted.jpg",
+      "rawBytes": 12043,
+      "gzipBytes": 2954
+    },
+    {
+      "path": "/media/swatches/373-frosted.jpg",
+      "rawBytes": 12007,
+      "gzipBytes": 2955
+    },
+    {
+      "path": "/media/swatches/373-gloss.jpg",
+      "rawBytes": 14429,
+      "gzipBytes": 6906
+    },
+    {
+      "path": "/media/swatches/425-frosted.jpg",
+      "rawBytes": 12000,
+      "gzipBytes": 2948
+    },
+    {
+      "path": "/media/swatches/425-gloss.jpg",
+      "rawBytes": 13692,
+      "gzipBytes": 6273
+    }
+  ],
+  "htmlRawBytes": 44791,
+  "measuredRawStudioTotal": 1746922,
+  "movement": "Demand rendering, no idle loop. Mobile movement scheduler 33ms (~30 FPS maximum by design), mobile DPR <=1.5. Actual frame-rate profiling on target mobile hardware pending.",
+  "regressionFixed": "Studio SSR disabled originally caused footer displacement/CLS0.6816. Controls and 2D now SSR; Three stays dynamically imported on intent. Restored state label movement remains small."
+}

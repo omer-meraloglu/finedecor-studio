@@ -1,0 +1,161 @@
+{
+  "checkedAt": "2026-10-03",
+  "timezone": "Europe/Istanbul",
+  "authorization": "User supplied finedecor.de and finedecor.com.tr as company context and authorized assets for this local demo. Wider publication and third-party rights need owner confirmation.",
+  "publicationStatus": "local-demo-only-pending-owner-confirmation",
+  "assets": [
+    {
+      "id": "source-kitchen",
+      "sourcePage": "https://www.finedecor.de/en/",
+      "url": "https://www.finedecor.de/wp-content/uploads/2024/08/Finedecor_Kueche.jpg",
+      "observedAt": "rendered-homepage-background-and-direct-image",
+      "dimensions": [
+        800,
+        551
+      ],
+      "description": "Dark kitchen cabinetry and island photographed near a window.",
+      "credit": "Fine Decor source application imagery",
+      "variantAssignment": null,
+      "clientIdentity": null,
+      "calibrationStatus": "not-supplied",
+      "localPath": "/media/kitchen.jpg",
+      "bytes": 73721,
+      "sha256": "916bfded73ea7b7178758bf6d686d02572443be495f00e78db9337bcfec82ddc"
+    },
+    {
+      "id": "source-film-photography",
+      "sourcePage": "https://www.finedecor.de/en/our-products/",
+      "url": "https://www.finedecor.de/wp-content/uploads/2024/08/Finedecor_Folien-1.jpg",
+      "observedAt": "rendered-product-page-image",
+      "credit": "Fine Decor source material photography",
+      "variantAssignment": null,
+      "calibrationStatus": "not-supplied",
+      "localPath": "/media/film.jpg",
+      "bytes": 91548,
+      "sha256": "fd3678191d8607549447d188bae37fb448237547d37d2fb24405e53d8f540cdb"
+    },
+    {
+      "id": "source-door-detail",
+      "sourcePage": "https://www.finedecor.de/en/our-products/",
+      "url": "https://www.finedecor.de/wp-content/uploads/2020/04/fine-decor-lacklaminat.jpg",
+      "observedAt": "rendered-product-page-and-direct-image",
+      "dimensions": [
+        526,
+        438
+      ],
+      "description": "Glossy white furniture door detail; geometry does not establish process suitability.",
+      "credit": "Fine Decor source surface imagery",
+      "variantAssignment": null,
+      "calibrationStatus": "not-supplied",
+      "localPath": "/media/lacquer.jpg",
+      "bytes": 27787,
+      "sha256": "16ae3c2c85d02ae03ba8fc7e42453fbb377068f4c0ec842f26de1d2073aaff9a"
+    },
+    {
+      "id": "source-company-facade",
+      "sourcePage": "https://www.finedecor.de/en/",
+      "url": "https://www.finedecor.de/wp-content/uploads/2020/11/fd_slider1.jpg",
+      "observedAt": "rendered-homepage-and-direct-image",
+      "dimensions": [
+        1920,
+        800
+      ],
+      "description": "Building facade bearing Fine Decor identity; do not infer current exact site from image.",
+      "credit": "Fine Decor source company photography",
+      "localPath": "/media/interior.jpg",
+      "bytes": 687700,
+      "sha256": "cb84410c566994ef5be9ee9232bd563ffd9361c6df8f24aa6fe39bfa3df6d7ce"
+    },
+    {
+      "id": "fine-decor-logo",
+      "sourcePage": "https://www.finedecor.de/en/",
+      "url": "https://www.finedecor.de/wp-content/uploads/2020/09/FineDecor_Logo_m.png",
+      "observedAt": "rendered-footer-logo",
+      "description": "Existing Fine Decor logo; retain original proportions/identity. Local demo authorized by user; owner rights verification pending.",
+      "localPath": "/media/logo.png",
+      "bytes": 6975,
+      "sha256": "155d0ff7ed5d9015e068dc0ad0986d0a4e4d593c5b56e4baae46a4aba1080551"
+    },
+    {
+      "id": "source-swatches",
+      "sourcePage": "https://www.finedecor.de/en/our-products/",
+      "urlBase": "https://www.finedecor.de/wp-content/uploads/2020/11/",
+      "observedAt": "rendered-frosted-gloss-gallery",
+      "dimensions": [
+        200,
+        200
+      ],
+      "items": [
+        {
+          "decorCode": "373",
+          "sourceName": "OliveGreen",
+          "finish": "Frosted",
+          "filename": "41_373-OliveGreen.jpg",
+          "localPath": "/media/swatches/373-frosted.jpg",
+          "bytes": 12007,
+          "sha256": "ef8544e7f71bade1d915cdae55e16562283ccf9618031dabb8e4042d19735495"
+        },
+        {
+          "decorCode": "373",
+          "sourceName": "OliveGreen",
+          "finish": "Gloss",
+          "filename": "27_373-OliveGreen-copy.jpg",
+          "localPath": "/media/swatches/373-gloss.jpg",
+          "bytes": 14429,
+          "sha256": "ef98935d07be5d395ef943d3ab5d5f404c2d6cac991d675ad7d033f8653b6c5e"
+        },
+        {
+          "decorCode": "425",
+          "sourceName": "SlateGrey",
+          "finish": "Frosted",
+          "filename": "36_425-SlateGrey.jpg",
+          "localPath": "/media/swatches/425-frosted.jpg",
+          "bytes": 12000,
+          "sha256": "ef5d3df015ed02bc090457ef9dc70d5ddf6372adf173f193cc80dfbf115854ee"
+        },
+        {
+          "decorCode": "425",
+          "sourceName": "SlateGrey",
+          "finish": "Gloss",
+          "filename": "23_425-SlateGrey-copy.jpg",
+          "localPath": "/media/swatches/425-gloss.jpg",
+          "bytes": 13692,
+          "sha256": "cc0c1b281fc6719f8c8281245953d4243830531045726e49831ebdec67246b93"
+        },
+        {
+          "decorCode": "255",
+          "sourceName": "Kaschmir",
+          "finish": "Frosted",
+          "filename": "13_255-Kaschmir.jpg",
+          "localPath": "/media/swatches/255-frosted.jpg",
+          "bytes": 12043,
+          "sha256": "3f3f14cb61081b24ed0fe5fb4226d9a7a6b76ffba5eb194bbca19d15d84e4d6f"
+        },
+        {
+          "decorCode": "1121",
+          "sourceName": "Sand",
+          "finish": "Frosted",
+          "filename": "15_1121-Sand.jpg",
+          "localPath": "/media/swatches/1121-frosted.jpg",
+          "bytes": 11997,
+          "sha256": "036b465b5b496297a62bb144a98bd5a24d3b4d2499668e0c57607afb68f377a2"
+        }
+      ],
+      "physicalScale": null,
+      "colourSpace": "not-supplied-by-source",
+      "uvOrientation": "not-supplied",
+      "normalMap": null,
+      "roughnessMap": null,
+      "clearcoatMap": null,
+      "calibrationStatus": "not-supplied",
+      "previewLimit": "A source swatch is not evidence of physically exact appearance. Verify with a physical sample."
+    }
+  ],
+  "localCodeAssets": [
+    {
+      "path": "public/favicon.svg",
+      "provenance": "Local generic navigation/favicon SVG; not a replacement corporate logo. Original Fine Decor logo is retained in the site header/footer.",
+      "publicationStatus": "owner review with site identity"
+    }
+  ]
+}

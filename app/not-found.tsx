@@ -1,0 +1,1 @@
+export default function NotFound(){return <main className="page-wrap empty"><span className="eyebrow">404 / FINE DECOR</span><h1>This page is unavailable.</h1><p>The page or variant may be missing. Your device shortlist is preserved.</p><a className="btn" href="/en/collections">Explore collections ↗</a></main>}

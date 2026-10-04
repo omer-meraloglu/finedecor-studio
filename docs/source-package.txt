@@ -1,0 +1,6 @@
+Archive: Fine-Decor-Material-Studio-source.zip
+Updated: 2026-10-04
+Files: 174
+Bytes: 2513382
+SHA-256: 3ad01f3dc8c642cfc3f7418993700bfa104ee1c2465fb34d9557f45bfa1459ea
+Excluded: dependencies, build outputs, private SQLite data, role tokens, local environment files, task internals and this checksum sidecar.

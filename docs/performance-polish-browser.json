@@ -1,0 +1,89 @@
+{
+  "checkedAt": "2026-10-04",
+  "environment": {
+    "device": "MacBook Pro, Apple M1 Pro, 16 GB RAM",
+    "os": "macOS 15.7.4 (host recorded 3 October)",
+    "browser": "Codex in-app Chromium; version unavailable from supported interface",
+    "network": "Warm loopback; no CPU/network throttling",
+    "dpr": 1,
+    "physicalMobile": false
+  },
+  "method": "Single local lab page observations. DOM PerformanceObserver metrics are indicative, not field p75, certified INP or Lighthouse.",
+  "home1440": {
+    "metrics": {
+      "cls": "0.0000",
+      "interactionMs": "0.0",
+      "lcpMs": "96.0"
+    },
+    "reveals": 11,
+    "scrollWidth": 1425,
+    "width": 1425
+  },
+  "home390": {
+    "metrics": {
+      "cls": "0.0000",
+      "interactionMs": "0.0",
+      "lcpMs": "68.0"
+    },
+    "scrollWidth": 375,
+    "width": 375
+  },
+  "studio390": {
+    "metrics": {
+      "cls": "0.0000",
+      "interactionMs": "32.0",
+      "lcpMs": "72.0"
+    },
+    "scene": {
+      "accentVariant": "",
+      "cameraMotion": "idle",
+      "cameraPosition": "3.50000,2.60000,4.80000",
+      "cameraTarget": "0.00000,1.05000,0.00000",
+      "compareVariant": "",
+      "comparison": "false",
+      "frontVariant": "demo-373-frosted",
+      "geometryRevision": "1",
+      "light": "neutral",
+      "loadMs": "379.2",
+      "motion": "eased",
+      "movementCap": "30",
+      "pixelRatio": "1",
+      "readyAt": "657.9",
+      "renderCount": "2",
+      "renderMode": "on-change",
+      "rendererInstance": "1",
+      "scene": "panel"
+    },
+    "scrollWidth": 375,
+    "width": 375
+  },
+  "studio1440": {
+    "metrics": {
+      "cls": "0.0000",
+      "interactionMs": "40.0",
+      "lcpMs": "80.0"
+    },
+    "scene": {
+      "accentVariant": "",
+      "cameraMotion": "idle",
+      "cameraPosition": "3.50000,2.60000,4.80000",
+      "cameraTarget": "0.00000,1.05000,0.00000",
+      "compareVariant": "",
+      "comparison": "false",
+      "frontVariant": "demo-373-frosted",
+      "geometryRevision": "1",
+      "light": "neutral",
+      "loadMs": "390.0",
+      "motion": "eased",
+      "movementCap": "on-change",
+      "pixelRatio": "1",
+      "readyAt": "656.7",
+      "renderCount": "3",
+      "renderMode": "on-change",
+      "rendererInstance": "1",
+      "scene": "panel"
+    },
+    "scrollWidth": 1425,
+    "width": 1425
+  }
+}

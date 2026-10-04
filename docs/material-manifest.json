@@ -1,0 +1,99 @@
+{
+  "checkedAt": "2026-10-03",
+  "approvalStatus": "illustrative-local-demo",
+  "units": "metres",
+  "colourHandling": {
+    "baseColour": "manually selected illustrative sRGB hex, converted by Three ColorManagement to linear working space",
+    "sourceSwatches": "2D sRGB browser display only; embedded source profile/calibration not established",
+    "output": "sRGB",
+    "toneMapping": "ACESFilmicToneMapping",
+    "exposure": 0.95
+  },
+  "textureAssets": {
+    "baseColourUrl": null,
+    "normalUrl": null,
+    "roughnessUrl": null,
+    "clearcoatUrl": null,
+    "physicalScaleMetres": null,
+    "uvOrientation": null,
+    "calibration": "not supplied; no measured maps generated"
+  },
+  "finishes": [
+    {
+      "id": "illustrative-frosted",
+      "roughness": 0.72,
+      "clearcoat": 0.08,
+      "clearcoatRoughness": 0.18,
+      "metalness": 0
+    },
+    {
+      "id": "illustrative-gloss",
+      "roughness": 0.16,
+      "clearcoat": 0.75,
+      "clearcoatRoughness": 0.18,
+      "metalness": 0
+    }
+  ],
+  "parameterProvenance": "Engineering illustration only, not derived from industrial gloss figures or calibrated measurements.",
+  "lighting": {
+    "neutral": {
+      "environmentIntensity": 0.65,
+      "hemisphere": 0.7,
+      "directional": 1.55,
+      "fill": 0.3,
+      "directionalColour": "#fffefa",
+      "directionalPosition": [3, 5, 4],
+      "environmentRotationYRadians": 0
+    },
+    "daylight": {
+      "environmentIntensity": 0.65,
+      "hemisphere": 0.7,
+      "directional": 2,
+      "fill": 0.3,
+      "directionalColour": "#fffefa",
+      "directionalPosition": [-3, 5, 4],
+      "environmentRotationYRadians": -0.65
+    },
+    "warm": {
+      "environmentIntensity": 0.65,
+      "hemisphere": 0.7,
+      "directional": 1.55,
+      "fill": 0.3,
+      "directionalColour": "#ffdbb2",
+      "fillColour": "#fff0dd",
+      "directionalPosition": [3, 5, 4],
+      "environmentRotationYRadians": 0.25
+    }
+  },
+  "environment": "Three RoomEnvironment with two shared procedural softbox reflection cards; not photographed on-site or measured for these materials",
+  "environmentSettings": {
+    "pmremSigmaRadians": 0.035,
+    "calibrationStatus": "illustrative; generated without measured source lighting",
+    "reflectionCards": [
+      {"worldPositionMetres": [-3, -1.2, 5], "widthMetres": 1.2, "heightMetres": 3.1, "emissiveColour": "#ffffff", "emissiveIntensity": 7},
+      {"worldPositionMetres": [1.35, 0.1, 5], "widthMetres": 0.55, "heightMetres": 2.7, "emissiveColour": "#ffffff", "emissiveIntensity": 4.5}
+    ],
+    "reflectionCardScope": "Identical for all variants and comparison copies; face environment capture origin. Cards are included only in procedural lighting, never as scene furniture, material maps or measured finish data. RoomEnvironment.dispose releases their geometry and materials after PMREM generation."
+  },
+  "shadows": {
+    "type": "PCFShadowMap",
+    "mapSize": [1024, 1024],
+    "normalBiasMetres": 0.008,
+    "bias": -0.00015,
+    "intensity": 0.72,
+    "updatePolicy": "fixed shadow maps cached; refresh on geometry or lighting changes, never on camera orbit"
+  },
+  "geometry": "Generic furniture substrate constructed in metres: flat furniture-front panel with visible edge and stand, kitchen vignette with door/drawer gaps and fixed hardware, furniture unit with fixed legs and backdrop. Surface film is applied only to front/accent slots. Sink, handles, bodies, walls, floors and hardware are fixed illustration geometry. Demo dimensions, thickness and edges establish no industrial processing capability or product specification.",
+  "comparison": "Same stored camera coordinates, responsive lens, viewport aspect, geometry, tone mapping, exposure, environment and lights for both halves. Explicit accent assignment stays fixed; otherwise each copy uses its own front variant for the accent. Default vertical field of view is 35 degrees; narrow viewports use fov = 2atan(tan(35deg/2) * max(1, 1.05/aspect)). Responsive framing changes the lens equally for both copies, never their saved positions.",
+  "performance": "No external scene/model/texture downloads and no generated material maps. Renderer/environment persist across selections; substrate rebuilds only on scene changes. Both copies share geometry buffers. Demand rendering stops at rest and pauses for hidden documents or offscreen canvas. Camera commands use a transient 280ms ease; reduced-motion commands are instant. Mobile classification follows viewport <=768px or coarse pointer and is refreshed on resize/preference changes. DPR <=1.5 on mobile and <=2 on desktop; movement rendering ceiling <=30 FPS on mobile. Resources and observers are disposed on teardown. Context-loss cleanup checks current context and extension support; missing material assets or render failures lead to the 2D fallback.",
+  "limitations": "Illustrative preview \u2014 verify with a physical sample. Exact matching requires approved measurement workflow.",
+  "implementationReviewedAt": "2026-10-04",
+  "documentationReviewedAt": "2026-10-04",
+  "implementationSources": [
+    "https://threejs.org/docs/pages/WebGLRenderer.html",
+    "https://threejs.org/docs/pages/OrbitControls.html",
+    "https://threejs.org/docs/pages/MeshPhysicalMaterial.html",
+    "https://threejs.org/docs/pages/LightShadow.html",
+    "https://threejs.org/docs/pages/PMREMGenerator.html"
+  ]
+}

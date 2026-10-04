@@ -1,0 +1,124 @@
+{
+  "checkedAt": "2026-10-04",
+  "buildId": "bP_otdlx9a6xsGDTOzNHs",
+  "method": "Raw local production files plus estimated gzip; includes conditional polyfill as a conservative upper bound. No external geometry or texture assets. HTTP overhead is excluded.",
+  "initialScripts": [
+    {
+      "path": "/_next/static/chunks/4bd1b696-de76000e5c1a87bd.js",
+      "rawBytes": 201053,
+      "gzipBytes": 63298
+    },
+    {
+      "path": "/_next/static/chunks/794-9b812cbf467340b0.js",
+      "rawBytes": 240660,
+      "gzipBytes": 65576
+    },
+    {
+      "path": "/_next/static/chunks/main-app-925a62c14ff48c87.js",
+      "rawBytes": 513,
+      "gzipBytes": 222
+    },
+    {
+      "path": "/_next/static/chunks/app/layout-5bf545b797029824.js",
+      "rawBytes": 6925,
+      "gzipBytes": 3018
+    },
+    {
+      "path": "/_next/static/chunks/278-954079ac1a0080c3.js",
+      "rawBytes": 221066,
+      "gzipBytes": 65496
+    },
+    {
+      "path": "/_next/static/chunks/137-985cccc4f0b90fd6.js",
+      "rawBytes": 116649,
+      "gzipBytes": 35414
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blocale%5D/%5B%5B...slug%5D%5D/page-353e031b11160f29.js",
+      "rawBytes": 132,
+      "gzipBytes": 128
+    },
+    {
+      "path": "/_next/static/chunks/polyfills-42372ed130431b0a.js",
+      "rawBytes": 112594,
+      "gzipBytes": 39627
+    },
+    {
+      "path": "/_next/static/chunks/webpack-6d369be7921f8b44.js",
+      "rawBytes": 3352,
+      "gzipBytes": 1760
+    }
+  ],
+  "threeIntentChunks": [
+    {
+      "path": ".next/static/chunks/967.9263af3e8efeb28f.js",
+      "rawBytes": 8781,
+      "gzipBytes": 3632
+    },
+    {
+      "path": ".next/static/chunks/b536a0f1.81e9d357d4d8a7d5.js",
+      "rawBytes": 356587,
+      "gzipBytes": 84820
+    },
+    {
+      "path": ".next/static/chunks/bd904a5c.f09c3fd1bd776886.js",
+      "rawBytes": 203052,
+      "gzipBytes": 54083
+    }
+  ],
+  "additionalStudioCssImages": [
+    {
+      "path": "/_next/static/css/f1ed548d858e997a.css",
+      "rawBytes": 173391,
+      "gzipBytes": 29412
+    },
+    {
+      "path": "/_next/static/css/b670d22aa73e1dfc.css",
+      "rawBytes": 5777,
+      "gzipBytes": 1674
+    },
+    {
+      "path": "/media/logo.png",
+      "rawBytes": 6975,
+      "gzipBytes": 6743
+    },
+    {
+      "path": "/media/swatches/373-frosted.jpg",
+      "rawBytes": 12007,
+      "gzipBytes": 2967
+    },
+    {
+      "path": "/media/swatches/255-frosted.jpg",
+      "rawBytes": 12043,
+      "gzipBytes": 2963
+    },
+    {
+      "path": "/media/swatches/1121-frosted.jpg",
+      "rawBytes": 11997,
+      "gzipBytes": 2959
+    },
+    {
+      "path": "/media/swatches/425-frosted.jpg",
+      "rawBytes": 12000,
+      "gzipBytes": 2957
+    },
+    {
+      "path": "/media/swatches/373-gloss.jpg",
+      "rawBytes": 14429,
+      "gzipBytes": 6971
+    },
+    {
+      "path": "/media/swatches/425-gloss.jpg",
+      "rawBytes": 13692,
+      "gzipBytes": 6331
+    }
+  ],
+  "initialRawBytes": 902944,
+  "initialGzipBytes": 274539,
+  "studioRawBytes": 568420,
+  "studioGzipBytes": 142535,
+  "htmlRawBytes": 46601,
+  "measuredRawStudioTotal": 1780276,
+  "SSRcontrolsPresent": true,
+  "SSRnoCanvas": true
+}

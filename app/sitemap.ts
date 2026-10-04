@@ -1,0 +1,1 @@
+export default function sitemap(){return ['en','de'].flatMap(locale=>['','collections','applications','knowledge','company','contact'].map(path=>({url:`http://127.0.0.1:4173/${locale}/${path}`,alternates:{languages:{en:`http://127.0.0.1:4173/en/${path}`,de:`http://127.0.0.1:4173/de/${path}`}}}))) }

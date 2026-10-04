@@ -1,0 +1,164 @@
+{
+  "checkedAt": "2026-10-04",
+  "buildId": "6Net-NGGzUWs6BLy0e_ZM",
+  "environment": {
+    "device": "MacBook Pro, Apple M1 Pro, 16 GB RAM",
+    "os": "macOS 15.7.4 (host recorded 3 October)",
+    "browser": "Codex in-app Chromium; version unavailable from supported interface",
+    "network": "Warm loopback; no CPU/network throttling",
+    "studioPixelRatio": 1,
+    "physicalMobile": false
+  },
+  "method": "Single local DOM PerformanceObserver observations. Lifetime layout-shift sum and maximum event duration; not field p75/session-window CLS, certified INP or Lighthouse. Saved comparison restored before loading Three.js.",
+  "studio390": {
+    "initial": {
+      "canvasCount": 0,
+      "metrics": {
+        "cls": "0.0316",
+        "interactionMs": "0.0",
+        "lcpMs": "168.0",
+        "shiftTrace": "[{\"at\":136.40000009536743,\"value\":0.03159547355461468,\"sources\":[{\"tag\":\"FIGURE\",\"id\":\"\",\"class\":\"\",\"previous\":{\"x\":16,\"y\":497.13067626953125,\"width\":343,\"height\":225,\"top\":497.13067626953125,\"right\":359,\"bottom\":722.1306762695312,\"left\":16},\"current\":{\"x\":16,\"y\":490.13067626953125,\"width\":203.5,\"height\":225,\"top\":490.13067626953125,\"right\":219.5,\"bottom\":715.1306762695312,\"left\":16}},{\"tag\":\"BUTTON\",\"id\":\"\",\"class\":\"\",\"previous\":{\"x\":101.09375,\"y\":445.75244140625,\"width\":172.8125,\"height\":75.3984375,\"top\":445.75244140625,\"right\":273.90625,\"bottom\":521.15087890625,\"left\":101.09375},\"current\":{\"x\":16,\"y\":445.75244140625,\"width\":150.359375,\"height\":75.3984375,\"top\":445.75244140625,\"right\":166.359375,\"bottom\":521.15087890625,\"left\":16}},{\"tag\":\"svg\",\"id\":\"\",\"class\":{},\"previous\":{\"x\":53.203125,\"y\":329.25244140625,\"width\":16,\"height\":16,\"top\":329.25244140625,\"right\":69.203125,\"bottom\":345.25244140625,\"left\":53.203125},\"current\":{\"x\":48.3046875,\"y\":329.25244140625,\"width\":16,\"height\":16,\"top\":329.25244140625,\"right\":64.3046875,\"bottom\":345.25244140625,\"left\":48.3046875}}]}]"
+      },
+      "width": 375,
+      "scrollWidth": 375
+    },
+    "midpageReload": {
+      "metrics": {
+        "cls": "0.0020",
+        "interactionMs": "0.0",
+        "lcpMs": "100.0",
+        "shiftTrace": "[{\"at\":76.90000009536743,\"value\":0.0019615842204966007,\"sources\":[{\"previous\":{\"x\":40,\"y\":181.9832763671875,\"width\":295,\"height\":13.5,\"top\":181.9832763671875,\"right\":335,\"bottom\":195.4832763671875,\"left\":40},\"current\":{\"x\":40,\"y\":181.9832763671875,\"width\":104.328125,\"height\":13.5,\"top\":181.9832763671875,\"right\":144.328125,\"bottom\":195.4832763671875,\"left\":40}},{\"tag\":\"DD\",\"id\":\"\",\"class\":\"\",\"previous\":{\"x\":120.8125,\"y\":749.1082763671875,\"width\":86.828125,\"height\":17.59375,\"top\":749.1082763671875,\"right\":207.640625,\"bottom\":766.7020263671875,\"left\":120.8125},\"current\":{\"x\":128.765625,\"y\":749.1082763671875,\"width\":78.875,\"height\":17.59375,\"top\":749.1082763671875,\"right\":207.640625,\"bottom\":766.7020263671875,\"left\":128.765625}}]}]"
+      },
+      "comparisonRestored": true
+    },
+    "loaded": {
+      "metrics": {
+        "cls": "0.0316",
+        "interactionMs": "32.0",
+        "lcpMs": "168.0",
+        "shiftTrace": "[{\"at\":136.40000009536743,\"value\":0.03159547355461468,\"sources\":[{\"tag\":\"FIGURE\",\"id\":\"\",\"class\":\"\",\"previous\":{\"x\":16,\"y\":497.13067626953125,\"width\":343,\"height\":225,\"top\":497.13067626953125,\"right\":359,\"bottom\":722.1306762695312,\"left\":16},\"current\":{\"x\":16,\"y\":490.13067626953125,\"width\":203.5,\"height\":225,\"top\":490.13067626953125,\"right\":219.5,\"bottom\":715.1306762695312,\"left\":16}},{\"tag\":\"BUTTON\",\"id\":\"\",\"class\":\"\",\"previous\":{\"x\":101.09375,\"y\":445.75244140625,\"width\":172.8125,\"height\":75.3984375,\"top\":445.75244140625,\"right\":273.90625,\"bottom\":521.15087890625,\"left\":101.09375},\"current\":{\"x\":16,\"y\":445.75244140625,\"width\":150.359375,\"height\":75.3984375,\"top\":445.75244140625,\"right\":166.359375,\"bottom\":521.15087890625,\"left\":16}},{\"tag\":\"svg\",\"id\":\"\",\"class\":{},\"previous\":{\"x\":53.203125,\"y\":329.25244140625,\"width\":16,\"height\":16,\"top\":329.25244140625,\"right\":69.203125,\"bottom\":345.25244140625,\"left\":53.203125},\"current\":{\"x\":48.3046875,\"y\":329.25244140625,\"width\":16,\"height\":16,\"top\":329.25244140625,\"right\":64.3046875,\"bottom\":345.25244140625,\"left\":48.3046875}}]}]"
+      },
+      "scene": {
+        "accentVariant": "demo-1121-frosted",
+        "cameraMotion": "idle",
+        "cameraPosition": "3.90000,2.60000,5.30000",
+        "cameraTarget": "0.45000,1.15000,0.00000",
+        "compareVariant": "demo-255-frosted",
+        "comparison": "true",
+        "drawCalls": "96",
+        "environment": "procedural RoomEnvironment and softbox cards, uncalibrated",
+        "exposure": ".95",
+        "fov": "66.25",
+        "frontVariant": "demo-425-gloss",
+        "geometryCount": "28",
+        "geometryRevision": "1",
+        "light": "neutral",
+        "loadMs": "403.5",
+        "motion": "eased",
+        "movementCap": "30",
+        "pixelRatio": "1",
+        "readyAt": "8028.0",
+        "renderCount": "2",
+        "renderMode": "on-change",
+        "rendererInstance": "1",
+        "scene": "kitchen",
+        "triangles": "1872",
+        "units": "metres, illustrative geometry",
+        "visible": "true"
+      }
+    }
+  },
+  "studio1440": {
+    "initial": {
+      "canvasCount": 0,
+      "metrics": {
+        "cls": "0.0529",
+        "interactionMs": "0.0",
+        "lcpMs": "100.0",
+        "shiftTrace": "[{\"at\":74.40000009536743,\"value\":0.05285142475462535,\"sources\":[{\"tag\":\"FIGURE\",\"id\":\"\",\"class\":\"\",\"previous\":{\"x\":336.5,\"y\":429.6317138671875,\"width\":431,\"height\":321,\"top\":429.6317138671875,\"right\":767.5,\"bottom\":750.6317138671875,\"left\":336.5},\"current\":{\"x\":142.5,\"y\":429.6317138671875,\"width\":431,\"height\":321,\"top\":429.6317138671875,\"right\":573.5,\"bottom\":750.6317138671875,\"left\":142.5}},{\"tag\":\"BUTTON\",\"id\":\"\",\"class\":\"\",\"previous\":{\"x\":448.8125,\"y\":364.4844970703125,\"width\":206.375,\"height\":92.1953125,\"top\":364.4844970703125,\"right\":655.1875,\"bottom\":456.6798095703125,\"left\":448.8125},\"current\":{\"x\":60.84375,\"y\":364.4844970703125,\"width\":189.03125,\"height\":92.1953125,\"top\":364.4844970703125,\"right\":249.875,\"bottom\":456.6798095703125,\"left\":60.84375}},{\"tag\":\"DIV\",\"id\":\"\",\"class\":\"studio-top-actions\",\"previous\":{\"x\":1046.0546875,\"y\":219.4844970703125,\"width\":319.1015625,\"height\":52,\"top\":219.4844970703125,\"right\":1365.15625,\"bottom\":271.4844970703125,\"left\":1046.0546875},\"current\":{\"x\":1037.4765625,\"y\":221.4844970703125,\"width\":327.6796875,\"height\":46,\"top\":221.4844970703125,\"right\":1365.15625,\"bottom\":267.4844970703125,\"left\":1037.4765625}},{\"tag\":\"BUTTON\",\"id\":\"\",\"class\":\"inline-flex shrink-0 items-center justify-center gap-2 rounded-md text-sm font-medium whitespace-nowrap transition-all outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-9 px-4 py-2 has-[>svg]:px-3\",\"previous\":{\"x\":1046.0546875,\"y\":219.4844970703125,\"width\":149.65625,\"height\":52,\"top\":219.4844970703125,\"right\":1195.7109375,\"bottom\":271.4844970703125,\"left\":1046.0546875},\"current\":{\"x\":1034.4765625,\"y\":219.4844970703125,\"width\":161.234375,\"height\":52,\"top\":219.4844970703125,\"right\":1195.7109375,\"bottom\":271.4844970703125,\"left\":1034.4765625}},{\"previous\":{\"x\":1073.15625,\"y\":401.6563720703125,\"width\":262,\"height\":12.5,\"top\":401.6563720703125,\"right\":1335.15625,\"bottom\":414.1563720703125,\"left\":1073.15625},\"current\":{\"x\":1073.15625,\"y\":401.6563720703125,\"width\":93.328125,\"height\":12.5,\"top\":401.6563720703125,\"right\":1166.484375,\"bottom\":414.1563720703125,\"left\":1073.15625}}]}]"
+      },
+      "scrollWidth": 1425,
+      "width": 1425
+    },
+    "loaded": {
+      "metrics": {
+        "cls": "0.0529",
+        "interactionMs": "32.0",
+        "lcpMs": "100.0",
+        "shiftTrace": "[{\"at\":74.40000009536743,\"value\":0.05285142475462535,\"sources\":[{\"tag\":\"FIGURE\",\"id\":\"\",\"class\":\"\",\"previous\":{\"x\":336.5,\"y\":429.6317138671875,\"width\":431,\"height\":321,\"top\":429.6317138671875,\"right\":767.5,\"bottom\":750.6317138671875,\"left\":336.5},\"current\":{\"x\":142.5,\"y\":429.6317138671875,\"width\":431,\"height\":321,\"top\":429.6317138671875,\"right\":573.5,\"bottom\":750.6317138671875,\"left\":142.5}},{\"tag\":\"BUTTON\",\"id\":\"\",\"class\":\"\",\"previous\":{\"x\":448.8125,\"y\":364.4844970703125,\"width\":206.375,\"height\":92.1953125,\"top\":364.4844970703125,\"right\":655.1875,\"bottom\":456.6798095703125,\"left\":448.8125},\"current\":{\"x\":60.84375,\"y\":364.4844970703125,\"width\":189.03125,\"height\":92.1953125,\"top\":364.4844970703125,\"right\":249.875,\"bottom\":456.6798095703125,\"left\":60.84375}},{\"tag\":\"DIV\",\"id\":\"\",\"class\":\"studio-top-actions\",\"previous\":{\"x\":1046.0546875,\"y\":219.4844970703125,\"width\":319.1015625,\"height\":52,\"top\":219.4844970703125,\"right\":1365.15625,\"bottom\":271.4844970703125,\"left\":1046.0546875},\"current\":{\"x\":1037.4765625,\"y\":221.4844970703125,\"width\":327.6796875,\"height\":46,\"top\":221.4844970703125,\"right\":1365.15625,\"bottom\":267.4844970703125,\"left\":1037.4765625}},{\"tag\":\"BUTTON\",\"id\":\"\",\"class\":\"inline-flex shrink-0 items-center justify-center gap-2 rounded-md text-sm font-medium whitespace-nowrap transition-all outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50 h-9 px-4 py-2 has-[>svg]:px-3\",\"previous\":{\"x\":1046.0546875,\"y\":219.4844970703125,\"width\":149.65625,\"height\":52,\"top\":219.4844970703125,\"right\":1195.7109375,\"bottom\":271.4844970703125,\"left\":1046.0546875},\"current\":{\"x\":1034.4765625,\"y\":219.4844970703125,\"width\":161.234375,\"height\":52,\"top\":219.4844970703125,\"right\":1195.7109375,\"bottom\":271.4844970703125,\"left\":1034.4765625}},{\"previous\":{\"x\":1073.15625,\"y\":401.6563720703125,\"width\":262,\"height\":12.5,\"top\":401.6563720703125,\"right\":1335.15625,\"bottom\":414.1563720703125,\"left\":1073.15625},\"current\":{\"x\":1073.15625,\"y\":401.6563720703125,\"width\":93.328125,\"height\":12.5,\"top\":401.6563720703125,\"right\":1166.484375,\"bottom\":414.1563720703125,\"left\":1073.15625}}]}]"
+      },
+      "scene": {
+        "accentVariant": "demo-1121-frosted",
+        "cameraMotion": "idle",
+        "cameraPosition": "3.90000,2.60000,5.30000",
+        "cameraTarget": "0.45000,1.15000,0.00000",
+        "compareVariant": "demo-255-frosted",
+        "comparison": "true",
+        "drawCalls": "96",
+        "environment": "procedural RoomEnvironment and softbox cards, uncalibrated",
+        "exposure": ".95",
+        "fov": "35.00",
+        "frontVariant": "demo-425-gloss",
+        "geometryCount": "28",
+        "geometryRevision": "1",
+        "light": "neutral",
+        "loadMs": "423.1",
+        "motion": "eased",
+        "movementCap": "on-change",
+        "pixelRatio": "1",
+        "readyAt": "703.0",
+        "renderCount": "3",
+        "renderMode": "on-change",
+        "rendererInstance": "1",
+        "scene": "kitchen",
+        "triangles": "1872",
+        "units": "metres, illustrative geometry",
+        "visible": "true"
+      },
+      "scrollWidth": 1425,
+      "width": 1425
+    }
+  },
+  "panelRestore": {
+    "accent": "",
+    "front": "demo-1121-frosted",
+    "instance": "1",
+    "scene": "panel"
+  },
+  "checks": {
+    "tests": 17,
+    "build": true,
+    "readOnlyHttpSmoke": true,
+    "realContextLoss": {
+      "server": "isolated development on 4174, stopped",
+      "variantId": "demo-425-gloss",
+      "canvasCountAfter": 0,
+      "sourceReferencePreserved": true,
+      "retryAvailable": true,
+      "consoleWarningsErrors": 0
+    },
+    "sharing": "explicit local link opened, then revoked; recovery state verified",
+    "export": "captured PNG; exact selected IDs, roles, project ID and date; no discarded IDs",
+    "locales": "EN/DE document language, main focus, project and preview intent preserved",
+    "enquiryHandoff": "current study IDs merged into existing deliberate shortlist; 5 selected IDs shown without mismatched project attachment",
+    "productPageIntent": "Inspect in 3D directly loaded shared renderer with demo-425-gloss; no second loading action",
+    "idleRendering": {
+      "before": "3",
+      "after": "3",
+      "unchanged": true
+    },
+    "finalConsoleWarningsErrors": 0
+  },
+  "regressionResolved": {
+    "previousBuildId": "YOSUwvvlqoUpSMcnZWzdB",
+    "midpageMobileCls": 0.2939,
+    "cause": "Restored A/B and accent cards increased stacked assignment height by 155 px above the viewport.",
+    "repair": "Compact single-row mobile assignments, stable comparison-note height and reserved project action height.",
+    "finalMidpageMobileCls": 0.002
+  },
+  "limitations": [
+    "Physical-phone/adverse-network measurements pending",
+    "OS reduced-motion preference not changed; implementation code-reviewed",
+    "Broad assistive-technology and regional review pending"
+  ]
+}

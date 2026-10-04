@@ -1,0 +1,16 @@
+source_path,local_equivalent,locale,status
+/en/,/en,en,reviewed semantic map
+/en/our-products/,/en/collections,en,range subset and IDs require approval
+/unsere-produkte/,/de/collections,de,range subset and IDs require approval
+/en/about-fine-decor/,/en/company,en,location contradiction flagged
+/ueber-fine-decor/,/de/company,de,location descriptions require review
+/en/contact/,/en/contact,en,regional rules pending
+/kontakt/,/de/contact,de,regional rules pending
+/en/pr-events/,/en/knowledge,en,archived sources retained
+/pr-events/,/de/knowledge,de,archived sources retained
+/karriere/,/de/company,de,vacancies not verified; external careers link
+/en/legal-information/,/en/legal,en,owner review required
+/impressum/,/de/legal,de,owner review required
+/en/privacy-policy/,/en/legal,en,owner review required
+/datenschutzerklaerung/,/de/legal,de,owner review required
+.com.tr/*,unpublished TR,,separate regional consolidation decision
