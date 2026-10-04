@@ -1,5 +1,7 @@
 # Applications, homepage and studio refinement — 4 October 2026
 
+**Historical report:** the six-3D/80-2D state below is superseded by [all-reference 3D and contact refinement](library-contact-refinement.md).
+
 This local update gives the application pages distinct visual context, expands the homepage's source photography and makes the Material Studio easier to enter and inspect. The catalog now contains 86 source-reference demo variants; six have illustrative 3D assets and the remaining 80 use their source swatches in 2D. Photography and reference furniture do not assign a Fine Decor decor, establish application suitability or provide a calibrated material render.
 
 ## Application photography

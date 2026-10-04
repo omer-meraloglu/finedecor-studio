@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {variants,decors,materials,getVariant,getDecor,filterCatalog} from '../lib/catalog';
-import {productionSourceEntries,productionVariants} from '../lib/production-catalog';
+import {productionSourceEntries,productionVariants,productionMaterials} from '../lib/production-catalog';
 import {projectSchema} from '../lib/validation';
 import {defaultProject} from '../lib/catalog';
 
@@ -36,16 +36,58 @@ test('Every imported pair has one catalog variant and its verified company swatc
   assert.deepEqual(manifest.unresolvedAssets,[]);
 });
 
-test('Expanded catalog preserves six saved-study materials while new references stay 2D-only demos',()=>{
+test('Every source variant has a valid illustrative 3D material while six saved-study appearances stay unchanged',()=>{
   const expected=[['demo-373-frosted','#747b54'],['demo-255-frosted','#b3a998'],['demo-1121-frosted','#d4cab3'],['demo-425-frosted','#5b625b'],['demo-373-gloss','#737956'],['demo-425-gloss','#4f5550']];
   assert.deepEqual(variants.slice(0,6).map(variant=>[variant.id,variant.hex]),expected);
   assert.equal(productionVariants.length,80);
-  for(const variant of productionVariants){assert.equal(variant.materialId,null);assert.equal(variant.demo,true);assert.equal(variant.approval,'draft');assert.equal(variant.familyId,null);assert.equal(variant.sku,null);assert.equal(variant.dimensions,null);assert.deepEqual(variant.documentIds,[]);assert.deepEqual(variant.compatibleApplications,[])}
-  assert.equal(materials.reduce((count,material)=>count+material.variantIds.length,0),6);
+  assert.equal(productionMaterials.length,80);
+  assert.equal(materials.length,82);
+  assert.equal(new Set(materials.map(material=>material.id)).size,82);
+  for(const variant of productionVariants){assert.equal(variant.materialId,`illustrative-source-${variant.id.slice('demo-'.length)}`);assert.equal(variant.demo,true);assert.equal(variant.approval,'draft');assert.equal(variant.familyId,null);assert.equal(variant.sku,null);assert.equal(variant.dimensions,null);assert.deepEqual(variant.documentIds,[]);assert.deepEqual(variant.compatibleApplications,[])}
+  assert.equal(materials.reduce((count,material)=>count+material.variantIds.length,0),86);
   assert.ok(materials.every(material=>material.variantIds.every(id=>getVariant(id)?.materialId===material.id)));
+  for(const variant of variants){
+    const matching=materials.filter(material=>material.id===variant.materialId&&material.variantIds.includes(variant.id));
+    assert.equal(matching.length,1,variant.id);
+    const material=matching[0];
+    const existingFinish=materials.find(asset=>asset.id===`illustrative-${variant.finishId}`)!;
+    assert.deepEqual(material.visualParameters,existingFinish.visualParameters);
+    assert.equal(material.calibrationStatus,'illustrative');
+    assert.equal(material.scaleMetres,null);
+    assert.equal(material.uvOrientation,null);
+    assert.equal(material.colourSpace,'sRGB');
+    for(const map of ['baseColourUrl','normalUrl','roughnessUrl','clearcoatUrl'] as const)assert.equal(material[map],null);
+    assert.match(variant.hex,/^#[0-9a-f]{6}$/i);
+  }
+  assert.deepEqual(materials[0].variantIds,['demo-373-frosted','demo-255-frosted','demo-1121-frosted','demo-425-frosted']);
+  assert.deepEqual(materials[1].variantIds,['demo-373-gloss','demo-425-gloss']);
+  assert.equal(materials[0].id,'illustrative-frosted');
+  assert.equal(materials[1].id,'illustrative-gloss');
   assert.ok(projectSchema.safeParse(defaultProject).success);
-  const source2D='demo-8366-gloss';
-  assert.ok(projectSchema.safeParse({...defaultProject,variantIds:[source2D],assignments:{fronts:source2D}}).success);
+  const yellow='demo-8366-gloss';
+  assert.ok(projectSchema.safeParse({...defaultProject,variantIds:[yellow],assignments:{fronts:yellow}}).success);
+});
+
+test('Added 3D colours match documented source averages and expose their illustrative provenance',()=>{
+  const ledger=JSON.parse(readFileSync(new URL('../docs/production-catalog-import.json',import.meta.url),'utf8'));
+  const materialManifest=JSON.parse(readFileSync(new URL('../docs/material-manifest.json',import.meta.url),'utf8'));
+  assert.equal(materialManifest.catalogScope.illustrative3DReferences,86);
+  assert.equal(materialManifest.catalogScope.additional2DOnlyReferences,0);
+  for(const variant of productionVariants){
+    const source=productionSourceEntries.find(entry=>entry.id===variant.id)!;
+    const documented=ledger.entries.find((entry:{id:string})=>entry.id===variant.id);
+    const material=materials.find(asset=>asset.id===variant.materialId)!;
+    assert.equal(variant.hex,documented.indicativeDisplayHex);
+    assert.equal(variant.hex,source.displayHex);
+    assert.ok(material.provenance.includes(source.sourceImageUrl));
+    assert.ok(material.provenance.includes('arithmetic mean'));
+    assert.ok(material.provenance.includes('not industrial gloss conversions or measured material data'));
+    const recorded=materialManifest.sourceDerivedMaterialAssets.find((asset:{variantId:string})=>asset.variantId===variant.id);
+    assert.equal(recorded.materialId,variant.materialId);
+    assert.equal(recorded.illustrativeColourHex,variant.hex);
+    assert.equal(recorded.sourceImageUrl,source.sourceImageUrl);
+    assert.deepEqual(recorded.visualParameters,material.visualParameters);
+  }
 });
 
 test('Hyphenated codes and source name conflicts do not synthesize finish relationships',()=>{

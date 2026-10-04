@@ -2,7 +2,7 @@
 
 All images are local browser captures; interiors are source imagery and 3D is expressly illustrative.
 
-**Latest captures:** see the source enrichment section below and [latest QA](../applications-home-studio-refinement.md). Earlier sections are historical.
+**Latest captures:** see the Surface Library and contact section below and [latest QA](../library-contact-refinement.md). Earlier sections are historical.
 
 ## Original build
 
@@ -59,3 +59,20 @@ The context-loss capture uses the isolated development diagnostic; other new vie
 | Source production band | [Homepage](refinement-home-production-1440.jpg) | Source images and movement before latest palette/content import |
 
 Viewport-based JPEG captures reserve a scrollbar and may be scaled: 390×844 produces 375×812; 768×1024 produces 753×1004; 1440×900 produces 1425×891. Native fullscreen follows the actual browser/window size and is labelled separately. Company/stock photography is source or inspiration imagery with no exact variant assignment; every 3D view is illustrative. None of these images prove industrial processing suitability, colour accuracy or physical-device performance.
+
+
+## Surface Library, all-reference 3D and contact refinement — 4 October
+
+| View | Evidence | Scope |
+|---|---|---|
+| Bounded library, 1440×900 | [Desktop](library-scroll-1440.jpg) | Kitchen with Contact in primary navigation |
+| Independently scrolling library, 390×844 | [Mobile](library-scroll-390.jpg) | Keyboard PageDown moves library, page stays fixed |
+| Newly enabled Red/932 Gloss | [3D preview](all-surfaces-red-3d-1440.jpg) | Search result and exact variant ID |
+| Red/IndigoBlue comparison | [Expanded workspace](all-surfaces-comparison-fullscreen.jpg) | Browser-window expansion observed; one shared renderer |
+| Red PDP preview on intent | [Product preview](all-surfaces-product-3d.jpg) | Shared material/renderer implementation |
+| Hosted selected references, 1440×900 | [Contact layout](request-layout-1440.jpg) | Red/932 preserved; no contact-entry form |
+| Hosted empty selection, 1440×900 | [Empty state](request-empty-1440.jpg) | Collection and Studio entry points |
+| Hosted request, 390×844 | [Mobile](request-layout-390.jpg) | Padded single-column panels |
+| Hosted request DE, 768×1024 | [German tablet](request-layout-de-768.jpg) | Localized spacing, no horizontal overflow |
+
+Request captures are full-page; Studio captures show the active viewport. Viewport overrides and capture scaling follow the browser details recorded above. The only test selections are source-reference demo IDs; no actual contact enquiry is sent. All 86 3D views remain indicative uniform colour/finish previews with uncalibrated parameters, not physical material matches. See [current QA and limitations](../library-contact-refinement.md).

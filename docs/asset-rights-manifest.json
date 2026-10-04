@@ -392,6 +392,8 @@
     "preserved": 6,
     "totalBytes": 1120642,
     "ledger": "production-catalog-import.json",
-    "role": "indicative source colour swatches; no calibrated texture maps"
+    "role": "Indicative source colour swatches; documented source RGB averages drive 80 additional illustrative 3D colour/finish previews. No calibrated texture maps.",
+    "illustrative3DVariants": 86,
+    "materialManifest": "material-manifest.json"
   }
 }

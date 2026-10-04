@@ -40,3 +40,8 @@ The repository requires Node `24.x`. Vercel is detected through its trusted `VER
 Rollback: select the previous Vercel deployment or revert this commit on `main` under a new explicit instruction. Never force-push or erase stored local review data. Existing demo IDs remain compatible.
 
 Platform references: [Node versions](https://vercel.com/docs/functions/runtimes/node-js/node-js-versions), [file handling in Vercel Functions](https://vercel.com/kb/guide/how-can-i-use-files-in-serverless-functions).
+
+
+## Authorized follow-up review update — 4 October 2026
+
+The user separately authorized commit and push for the Surface Library/all-reference 3D/contact update. This permission applies to this update only. Run the 31 tests and final optimized build, inspect the responsive library/request screenshots, and verify the Git-connected Vercel review deployment after push. Existing hosted persistence guards, noindex, demo exclusions and privacy controls remain in force. Previous known-good source for rollback is `9ed12345be94f9f04d484d6fec28af315e056f5d`; rollback still requires a new explicit instruction and must not erase local database contents.

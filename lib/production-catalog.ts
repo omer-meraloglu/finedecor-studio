@@ -1,4 +1,4 @@
-import type {Decor, ProductVariant} from './model';
+import type {Decor, ProductVariant, MaterialAsset} from './model';
 
 // Checked against both rendered production finish tabs on 4 October 2026.
 // These public-source references remain demos pending owner product approval.
@@ -1137,11 +1137,24 @@ export const productionDecors: Decor[] = Array.from(new Map(productionSourceEntr
   colourFamily: entry.colourFamily, source: PRODUCTION_CATALOG_SOURCE,
 }])).values());
 
-// Added source swatches have no approved material maps or 3D preview asset.
-// Their display hex is an indicative thumbnail average, never a measured colour.
+// Added colours use source-swatch averages and generic finish response in 3D.
+// No calibrated colour, measured maps, texture scale or product suitability is asserted.
 export const productionVariants: ProductVariant[] = productionSourceEntries.filter(entry => !entry.legacyPreserved).map(entry => ({
   id: entry.id, decorId: entry.decorId, finishId: entry.finish,
   familyId: null, sku: null, approval: 'draft', demo: true,
   compatibleApplications: [], dimensions: null, documentIds: [],
-  materialId: null, swatch: entry.swatch, hex: entry.displayHex,
+  materialId: `illustrative-source-${entry.id.slice('demo-'.length)}`, swatch: entry.swatch, hex: entry.displayHex,
+}));
+
+// Uniform display colour is kept on ProductVariant.hex. A source thumbnail is
+// deliberately not applied as a texture: its gloss highlights are already baked
+// into the image and its physical scale, lighting and calibration are unknown.
+export const productionMaterials: MaterialAsset[] = productionSourceEntries.filter(entry => !entry.legacyPreserved).map(entry => ({
+  id: `illustrative-source-${entry.id.slice('demo-'.length)}`,
+  variantIds: [entry.id],
+  baseColourUrl: null, normalUrl: null, roughnessUrl: null, clearcoatUrl: null,
+  provenance: `Illustrative colour derived from the arithmetic mean of the source JPEG display RGB channels, rounded to an 8-bit sRGB hex and stored on ProductVariant.hex. Source: ${entry.sourceImageUrl}. Source finish relationship: ${entry.sourceLabel} / ${entry.finish}. Generic finish parameters are engineering illustrations, not industrial gloss conversions or measured material data. Source profile, calibration, texture scale and UV orientation are unknown. Verify with a physical sample.`,
+  scaleMetres: null, colourSpace: 'sRGB', uvOrientation: null,
+  calibrationStatus: 'illustrative',
+  visualParameters: {roughness: entry.finish === 'gloss' ? .16 : .72, clearcoat: entry.finish === 'gloss' ? .75 : .08, metalness: 0},
 }));

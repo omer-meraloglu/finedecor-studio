@@ -36,7 +36,7 @@ export default function Site({locale,path}:{locale:'en'|'de';path:string[]}){
     const focusFrame=requestAnimationFrame(()=>{if(document.activeElement===menuButton.current)header.current?.querySelector<HTMLAnchorElement>('nav a')?.focus({preventScroll:true})});
     const escape=(event:KeyboardEvent)=>{if(event.key==='Escape'){setMenu(false);menuButton.current?.focus()}};
     const outside=(event:Event)=>{if(!header.current?.contains(event.target as Node))setMenu(false)};
-    const media=window.matchMedia('(min-width:1001px)');
+    const media=window.matchMedia('(min-width:1201px)');
     const resize=()=>{if(media.matches)setMenu(false)};
     document.addEventListener('keydown',escape);document.addEventListener('pointerdown',outside);document.addEventListener('focusin',outside);media.addEventListener('change',resize);
     return ()=>{cancelAnimationFrame(focusFrame);document.removeEventListener('keydown',escape);document.removeEventListener('pointerdown',outside);document.removeEventListener('focusin',outside);media.removeEventListener('change',resize)};
@@ -49,7 +49,7 @@ export default function Site({locale,path}:{locale:'en'|'de';path:string[]}){
   },[]);
   const props={locale,path};
   const content=page==='collections'?<Catalog {...props}/>:page==='products'?<Product {...props}/>:page==='applications'?<ApplicationsPage {...props}/>:page==='studio'?<StudioPage {...props}/>:page==='shortlist'?<Shortlist {...props}/>:page==='request'?<RequestForm {...props}/>:page==='knowledge'?<Knowledge {...props}/>:page==='company'?<Company {...props}/>:page==='contact'?<Contact {...props}/>:page==='legal'?<Legal {...props}/>:page==='accessibility'?<Legal {...props} accessibility/>:page==='admin'?(serverPersistence?<Admin locale={locale}/>:<div className="page-wrap"><h1>{de?'Redaktion in der lokalen Vorschau':'Content review in the local preview'}</h1><p>{de?'Die gehostete Vorschau enthält keinen schreibbaren Redaktionsspeicher.':'This hosted review has no writable content store.'}</p></div>):page==='shared'?<Studio locale={locale} shareToken={path[1]}/>:page===''?<Home locale={locale}/>:<Missing {...props}/>;
-  const navigation=[['collections',de?'Kollektionen':'Collections'],['applications',de?'Anwendungen':'Applications'],['studio','Material Studio'],['knowledge',de?'Wissen':'Knowledge'],['company',de?'Unternehmen':'Company']];
+  const navigation=[['collections',de?'Kollektionen':'Collections'],['applications',de?'Anwendungen':'Applications'],['studio','Material Studio'],['knowledge',de?'Wissen':'Knowledge'],['company',de?'Unternehmen':'Company'],['contact',de?'Kontakt':'Contact']];
   return <>
     <a className="skip" href="#main">{de?'Zum Inhalt':'Skip to content'}</a>
     <div className="notice">{serverPersistence?(de?'Lokale Vorschau · Materialien und Anfragen zur Prüfung':'Local preview · materials and enquiries for review'):(de?'Gehostete Vorschau · Quellenmaterialien · private Geräteentwürfe':'Hosted review · source materials · private device drafts')}</div>
@@ -57,7 +57,7 @@ export default function Site({locale,path}:{locale:'en'|'de';path:string[]}){
       <Link href={link('')} className="brand" aria-label={de?'Fine Decor Startseite':'Fine Decor home'}><img src="/media/logo.png" alt="Fine Decor" width="171" height="66"/></Link>
       <nav id="primary-navigation" aria-label={de?'Hauptnavigation':'Main navigation'} className={menu?'open':''}>
         {navigation.map(([p,n])=><Link key={p} href={link(p)} prefetch aria-current={page===p?'page':undefined} onNavigate={()=>setMenu(false)}>{n}<PendingHint/></Link>)}
-        <div className="mobile-nav-extra"><Link href={link('shortlist')} onNavigate={()=>setMenu(false)}><Bookmark size={17}/>{de?'Merkliste':'Shortlist'}<span>{shortlist.length}</span></Link><Link href={link('contact')} onNavigate={()=>setMenu(false)}>{de?'Kontakt aufnehmen':'Talk to our team'}<ArrowUpRight size={17}/></Link></div>
+        <div className="mobile-nav-extra"><Link href={link('shortlist')} onNavigate={()=>setMenu(false)}><Bookmark size={17}/>{de?'Merkliste':'Shortlist'}<span>{shortlist.length}</span></Link></div>
       </nav>
       <div className="header-actions">
         <Link href={`/${de?'en':'de'}/${path.join('/')}`} className="locale" hrefLang={de?'en':'de'} aria-label={de?'Switch to English':'Auf Deutsch wechseln'}>{de?'EN':'DE'}</Link>

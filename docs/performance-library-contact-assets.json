@@ -1,0 +1,529 @@
+{
+  "checkedAt": "2026-10-04",
+  "buildId": "j4MtuVKmQ69oQuDpnXYnq",
+  "method": "Raw local production files plus estimated gzip; includes conditional polyfill as a conservative upper bound. No external geometry or texture assets. HTTP overhead is excluded.",
+  "initialScripts": [
+    {
+      "path": "/_next/static/chunks/4bd1b696-de76000e5c1a87bd.js",
+      "rawBytes": 201053,
+      "gzipBytes": 63298
+    },
+    {
+      "path": "/_next/static/chunks/794-9b812cbf467340b0.js",
+      "rawBytes": 240660,
+      "gzipBytes": 65576
+    },
+    {
+      "path": "/_next/static/chunks/main-app-925a62c14ff48c87.js",
+      "rawBytes": 513,
+      "gzipBytes": 222
+    },
+    {
+      "path": "/_next/static/chunks/74-373b2c1f6ecff9eb.js",
+      "rawBytes": 37574,
+      "gzipBytes": 8216
+    },
+    {
+      "path": "/_next/static/chunks/app/layout-dd4507f94c2af7f5.js",
+      "rawBytes": 514,
+      "gzipBytes": 290
+    },
+    {
+      "path": "/_next/static/chunks/312-06f0215a4c7fc3c0.js",
+      "rawBytes": 226136,
+      "gzipBytes": 67162
+    },
+    {
+      "path": "/_next/static/chunks/137-a7c9a58721c42564.js",
+      "rawBytes": 171802,
+      "gzipBytes": 50248
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blocale%5D/%5B%5B...slug%5D%5D/page-02ae7061ca3f37b9.js",
+      "rawBytes": 135,
+      "gzipBytes": 131
+    },
+    {
+      "path": "/_next/static/chunks/polyfills-42372ed130431b0a.js",
+      "rawBytes": 112594,
+      "gzipBytes": 39627
+    },
+    {
+      "path": "/_next/static/chunks/webpack-9f3345e6ca563b5c.js",
+      "rawBytes": 3352,
+      "gzipBytes": 1758
+    }
+  ],
+  "threeIntentChunks": [
+    {
+      "path": ".next/static/chunks/967.8040005dc39696a4.js",
+      "rawBytes": 13107,
+      "gzipBytes": 5288
+    },
+    {
+      "path": ".next/static/chunks/b536a0f1.81e9d357d4d8a7d5.js",
+      "rawBytes": 356587,
+      "gzipBytes": 84820
+    },
+    {
+      "path": ".next/static/chunks/bd904a5c.edb4de0fa19a1a5d.js",
+      "rawBytes": 206355,
+      "gzipBytes": 55228
+    }
+  ],
+  "additionalStudioCssImages": [
+    {
+      "path": "/_next/static/css/049c652179f848b3.css",
+      "rawBytes": 179356,
+      "gzipBytes": 29821
+    },
+    {
+      "path": "/_next/static/css/ef87785df67cfb6b.css",
+      "rawBytes": 52169,
+      "gzipBytes": 9807
+    },
+    {
+      "path": "/media/logo.png",
+      "rawBytes": 6975,
+      "gzipBytes": 6743
+    },
+    {
+      "path": "/media/swatches/373-frosted.jpg",
+      "rawBytes": 12007,
+      "gzipBytes": 2967
+    },
+    {
+      "path": "/media/swatches/255-frosted.jpg",
+      "rawBytes": 12043,
+      "gzipBytes": 2963
+    },
+    {
+      "path": "/media/swatches/1121-frosted.jpg",
+      "rawBytes": 11997,
+      "gzipBytes": 2959
+    },
+    {
+      "path": "/media/swatches/425-frosted.jpg",
+      "rawBytes": 12000,
+      "gzipBytes": 2957
+    },
+    {
+      "path": "/media/swatches/373-gloss.jpg",
+      "rawBytes": 14429,
+      "gzipBytes": 6971
+    },
+    {
+      "path": "/media/swatches/425-gloss.jpg",
+      "rawBytes": 13692,
+      "gzipBytes": 6331
+    },
+    {
+      "path": "/media/swatches/101-frosted.jpg",
+      "rawBytes": 11750,
+      "gzipBytes": 2874
+    },
+    {
+      "path": "/media/swatches/245-frosted.jpg",
+      "rawBytes": 11982,
+      "gzipBytes": 2964
+    },
+    {
+      "path": "/media/swatches/546-frosted.jpg",
+      "rawBytes": 11972,
+      "gzipBytes": 2959
+    },
+    {
+      "path": "/media/swatches/540-frosted.jpg",
+      "rawBytes": 11982,
+      "gzipBytes": 2961
+    },
+    {
+      "path": "/media/swatches/191-frosted.jpg",
+      "rawBytes": 11988,
+      "gzipBytes": 2967
+    },
+    {
+      "path": "/media/swatches/548-1-frosted.jpg",
+      "rawBytes": 12011,
+      "gzipBytes": 2974
+    },
+    {
+      "path": "/media/swatches/243-frosted.jpg",
+      "rawBytes": 11997,
+      "gzipBytes": 2959
+    },
+    {
+      "path": "/media/swatches/1120-frosted.jpg",
+      "rawBytes": 11999,
+      "gzipBytes": 2962
+    },
+    {
+      "path": "/media/swatches/244-frosted.jpg",
+      "rawBytes": 12023,
+      "gzipBytes": 2963
+    },
+    {
+      "path": "/media/swatches/8362-frosted.jpg",
+      "rawBytes": 12025,
+      "gzipBytes": 2964
+    },
+    {
+      "path": "/media/swatches/254-frosted.jpg",
+      "rawBytes": 11999,
+      "gzipBytes": 2957
+    },
+    {
+      "path": "/media/swatches/301-frosted.jpg",
+      "rawBytes": 12017,
+      "gzipBytes": 2961
+    },
+    {
+      "path": "/media/swatches/8370-frosted.jpg",
+      "rawBytes": 12009,
+      "gzipBytes": 2972
+    },
+    {
+      "path": "/media/swatches/1130-frosted.jpg",
+      "rawBytes": 12003,
+      "gzipBytes": 2967
+    },
+    {
+      "path": "/media/swatches/1124-frosted.jpg",
+      "rawBytes": 12009,
+      "gzipBytes": 2966
+    },
+    {
+      "path": "/media/swatches/449-frosted.jpg",
+      "rawBytes": 12005,
+      "gzipBytes": 2966
+    },
+    {
+      "path": "/media/swatches/246-frosted.jpg",
+      "rawBytes": 12043,
+      "gzipBytes": 2965
+    },
+    {
+      "path": "/media/swatches/1126-frosted.jpg",
+      "rawBytes": 12013,
+      "gzipBytes": 2979
+    },
+    {
+      "path": "/media/swatches/247-frosted.jpg",
+      "rawBytes": 11982,
+      "gzipBytes": 2964
+    },
+    {
+      "path": "/media/swatches/477-frosted.jpg",
+      "rawBytes": 11972,
+      "gzipBytes": 2958
+    },
+    {
+      "path": "/media/swatches/392-frosted.jpg",
+      "rawBytes": 12009,
+      "gzipBytes": 2971
+    },
+    {
+      "path": "/media/swatches/577-frosted.jpg",
+      "rawBytes": 11982,
+      "gzipBytes": 2968
+    },
+    {
+      "path": "/media/swatches/962-frosted.jpg",
+      "rawBytes": 11978,
+      "gzipBytes": 2961
+    },
+    {
+      "path": "/media/swatches/570-frosted.jpg",
+      "rawBytes": 12007,
+      "gzipBytes": 2965
+    },
+    {
+      "path": "/media/swatches/423-frosted.jpg",
+      "rawBytes": 11978,
+      "gzipBytes": 2966
+    },
+    {
+      "path": "/media/swatches/421-frosted.jpg",
+      "rawBytes": 11986,
+      "gzipBytes": 2970
+    },
+    {
+      "path": "/media/swatches/314-frosted.jpg",
+      "rawBytes": 12025,
+      "gzipBytes": 2963
+    },
+    {
+      "path": "/media/swatches/412-frosted.jpg",
+      "rawBytes": 11962,
+      "gzipBytes": 2964
+    },
+    {
+      "path": "/media/swatches/1127-frosted.jpg",
+      "rawBytes": 11937,
+      "gzipBytes": 2964
+    },
+    {
+      "path": "/media/swatches/4270-frosted.jpg",
+      "rawBytes": 11962,
+      "gzipBytes": 2967
+    },
+    {
+      "path": "/media/swatches/105-frosted.jpg",
+      "rawBytes": 12002,
+      "gzipBytes": 2964
+    },
+    {
+      "path": "/media/swatches/422-frosted.jpg",
+      "rawBytes": 12006,
+      "gzipBytes": 2964
+    },
+    {
+      "path": "/media/swatches/1128-frosted.jpg",
+      "rawBytes": 11974,
+      "gzipBytes": 2957
+    },
+    {
+      "path": "/media/swatches/5000-frosted.jpg",
+      "rawBytes": 11974,
+      "gzipBytes": 2951
+    },
+    {
+      "path": "/media/swatches/567-frosted.jpg",
+      "rawBytes": 11997,
+      "gzipBytes": 2950
+    },
+    {
+      "path": "/media/swatches/505-2-frosted.jpg",
+      "rawBytes": 12011,
+      "gzipBytes": 2968
+    },
+    {
+      "path": "/media/swatches/388-frosted.jpg",
+      "rawBytes": 11984,
+      "gzipBytes": 2968
+    },
+    {
+      "path": "/media/swatches/101-gloss.jpg",
+      "rawBytes": 11179,
+      "gzipBytes": 4078
+    },
+    {
+      "path": "/media/swatches/540-gloss.jpg",
+      "rawBytes": 11232,
+      "gzipBytes": 4120
+    },
+    {
+      "path": "/media/swatches/545-gloss.jpg",
+      "rawBytes": 11201,
+      "gzipBytes": 4086
+    },
+    {
+      "path": "/media/swatches/191-gloss.jpg",
+      "rawBytes": 11434,
+      "gzipBytes": 4318
+    },
+    {
+      "path": "/media/swatches/8361-gloss.jpg",
+      "rawBytes": 11793,
+      "gzipBytes": 4630
+    },
+    {
+      "path": "/media/swatches/544-gloss.jpg",
+      "rawBytes": 11065,
+      "gzipBytes": 3953
+    },
+    {
+      "path": "/media/swatches/547-gloss.jpg",
+      "rawBytes": 11310,
+      "gzipBytes": 4263
+    },
+    {
+      "path": "/media/swatches/556-gloss.jpg",
+      "rawBytes": 11239,
+      "gzipBytes": 4193
+    },
+    {
+      "path": "/media/swatches/594-gloss.jpg",
+      "rawBytes": 11462,
+      "gzipBytes": 4383
+    },
+    {
+      "path": "/media/swatches/238-gloss.jpg",
+      "rawBytes": 11443,
+      "gzipBytes": 4377
+    },
+    {
+      "path": "/media/swatches/745-gloss.jpg",
+      "rawBytes": 11534,
+      "gzipBytes": 4422
+    },
+    {
+      "path": "/media/swatches/8362-gloss.jpg",
+      "rawBytes": 11858,
+      "gzipBytes": 4747
+    },
+    {
+      "path": "/media/swatches/216-gloss.jpg",
+      "rawBytes": 12018,
+      "gzipBytes": 4821
+    },
+    {
+      "path": "/media/swatches/239-gloss.jpg",
+      "rawBytes": 11882,
+      "gzipBytes": 4761
+    },
+    {
+      "path": "/media/swatches/570-gloss.jpg",
+      "rawBytes": 12107,
+      "gzipBytes": 4928
+    },
+    {
+      "path": "/media/swatches/8368-gloss.jpg",
+      "rawBytes": 12548,
+      "gzipBytes": 5324
+    },
+    {
+      "path": "/media/swatches/962-gloss.jpg",
+      "rawBytes": 12128,
+      "gzipBytes": 5033
+    },
+    {
+      "path": "/media/swatches/211-gloss.jpg",
+      "rawBytes": 12562,
+      "gzipBytes": 5348
+    },
+    {
+      "path": "/media/swatches/236-gloss.jpg",
+      "rawBytes": 12791,
+      "gzipBytes": 5502
+    },
+    {
+      "path": "/media/swatches/412-gloss.jpg",
+      "rawBytes": 12901,
+      "gzipBytes": 5632
+    },
+    {
+      "path": "/media/swatches/8363-gloss.jpg",
+      "rawBytes": 13428,
+      "gzipBytes": 6079
+    },
+    {
+      "path": "/media/swatches/420-gloss.jpg",
+      "rawBytes": 13616,
+      "gzipBytes": 6317
+    },
+    {
+      "path": "/media/swatches/3355-gloss.jpg",
+      "rawBytes": 13894,
+      "gzipBytes": 6403
+    },
+    {
+      "path": "/media/swatches/567-gloss.jpg",
+      "rawBytes": 14242,
+      "gzipBytes": 6790
+    },
+    {
+      "path": "/media/swatches/8366-gloss.jpg",
+      "rawBytes": 13335,
+      "gzipBytes": 5908
+    },
+    {
+      "path": "/media/swatches/515-gloss.jpg",
+      "rawBytes": 14745,
+      "gzipBytes": 7243
+    },
+    {
+      "path": "/media/swatches/414-gloss.jpg",
+      "rawBytes": 15476,
+      "gzipBytes": 7764
+    },
+    {
+      "path": "/media/swatches/932-gloss.jpg",
+      "rawBytes": 15189,
+      "gzipBytes": 7575
+    },
+    {
+      "path": "/media/swatches/571-gloss.jpg",
+      "rawBytes": 14699,
+      "gzipBytes": 7155
+    },
+    {
+      "path": "/media/swatches/8364-gloss.jpg",
+      "rawBytes": 13890,
+      "gzipBytes": 6414
+    },
+    {
+      "path": "/media/swatches/580-gloss.jpg",
+      "rawBytes": 12613,
+      "gzipBytes": 5370
+    },
+    {
+      "path": "/media/swatches/1104-gloss.jpg",
+      "rawBytes": 13077,
+      "gzipBytes": 5812
+    },
+    {
+      "path": "/media/swatches/1115-gloss.jpg",
+      "rawBytes": 12460,
+      "gzipBytes": 5261
+    },
+    {
+      "path": "/media/swatches/6091-gloss.jpg",
+      "rawBytes": 13083,
+      "gzipBytes": 5859
+    },
+    {
+      "path": "/media/swatches/8367-gloss.jpg",
+      "rawBytes": 13505,
+      "gzipBytes": 6173
+    },
+    {
+      "path": "/media/swatches/1106-gloss.jpg",
+      "rawBytes": 13298,
+      "gzipBytes": 5899
+    },
+    {
+      "path": "/media/swatches/413-gloss.jpg",
+      "rawBytes": 13236,
+      "gzipBytes": 5858
+    },
+    {
+      "path": "/media/swatches/242-gloss.jpg",
+      "rawBytes": 13529,
+      "gzipBytes": 6137
+    },
+    {
+      "path": "/media/swatches/477-gloss.jpg",
+      "rawBytes": 13827,
+      "gzipBytes": 6463
+    },
+    {
+      "path": "/media/swatches/1108-gloss.jpg",
+      "rawBytes": 14252,
+      "gzipBytes": 6873
+    },
+    {
+      "path": "/media/swatches/7451-gloss.jpg",
+      "rawBytes": 15093,
+      "gzipBytes": 6877
+    },
+    {
+      "path": "/media/swatches/4981-gloss.jpg",
+      "rawBytes": 34565,
+      "gzipBytes": 23492
+    },
+    {
+      "path": "/media/swatches/5660-gloss.jpg",
+      "rawBytes": 40180,
+      "gzipBytes": 27179
+    }
+  ],
+  "initialRawBytes": 994333,
+  "initialGzipBytes": 296528,
+  "studioRawBytes": 576049,
+  "studioGzipBytes": 145336,
+  "htmlRawBytes": 82674,
+  "measuredRawStudioTotal": 3012198,
+  "SSRcontrolsPresent": true,
+  "SSRnoCanvas": true
+}

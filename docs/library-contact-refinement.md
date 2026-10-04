@@ -1,0 +1,35 @@
+# Surface Library, all-reference 3D and contact refinement — 4 October 2026
+
+This update contains the Surface Library inside its own scrolling area, enables illustrative 3D previews for every one of the 86 source-listed references, improves the hosted enquiry page and adds Contact/Kontakt to the primary navigation. The user explicitly authorized a commit and push for this update only.
+
+## Library and navigation
+
+The swatch grid has a bounded viewport, visible scroll hint and scrollbar, a labelled keyboard-focusable region and a visible focus ring. Search and finish changes reset the library scroll position; material selection preserves it. The count, search, finish controls and active-surface information remain outside the scrollable grid. Mobile, tablet and expanded workspace layouts have separate height rules. Selecting a material still uses the validated project assignments and preserves the shortlist.
+
+Manual desktop and mobile keyboard checks confirmed that Home/PageDown scroll the library without moving the page once the region has focus. On 390×844, PageDown changed the library position from 0 to 282 px while page position remained 1208.5 px; its measured inner height was 328 px and content 3167 px. On 1440×900, the library was 304 px high with 5593 px of content, and the entire Studio page was 2314 px high. The previous unbounded page was observed at 7572 px at a different viewport, 1280×720; these are observations, not an equal-width percentage comparison. Search `932` reset the region to its start and returned the actual single Red/Gloss reference. The last AnthrazitgrauPearl/5660 Gloss reference remained reachable and rendered in 3D.
+
+Contact is a shared primary route in both desktop and mobile navigation, with the locale-equivalent Kontakt label and correct URL. The compact navigation breakpoint matches its JavaScript behavior at 1200 px. Keyboard activation of Contact from the mobile menu reached `/en/contact` and closed the menu.
+
+## Every reference in 3D
+
+All 86 validated variants now have matching illustrative material memberships. The six original IDs, colours, source swatches and two generic material assets are unchanged. Each of the 80 additional references has a stable per-variant material record using its already-documented representative source JPEG display-RGB average and the existing generic Frosted/Gloss response. The catalog API exposes these records. Studio, comparison and product-page previews use the same renderer and material lookup.
+
+This is a uniform colour-and-finish preview. Source swatch images remain separate 2D references: baked highlights and unknown scale make them unsuitable as calibrated texture maps. No normal, roughness, clearcoat or base-colour map is invented. Physical scale and UV orientation remain unknown; metallic and pearl labels do not create an invented metallic effect. Parameters are illustrative engineering choices rather than conversions from industrial gloss values. [Material provenance](material-manifest.json) and the [source import ledger](production-catalog-import.json) record the exact scope and limitations. Every variant remains a draft demo with unknown SKU, family, dimensions, documents and application suitability, excluded from fulfilment and public product SEO.
+
+Browser checks rendered Red/932 Gloss, IndigoBlue/505-2 Frosted and AnthrazitgrauPearl/5660 Gloss. Red versus IndigoBlue comparison kept one renderer and the same scene/camera/exposure/light. The expanded workspace preserved both IDs and contained its scrolling library; this run observed browser-window expansion and does not add a native-fullscreen compatibility claim. Product-page Inspect in 3D loaded Red/932 using the same implementation only after intent. No 3D canvas exists in the initial server-rendered Studio HTML.
+
+## Hosted enquiry layout
+
+The screenshot's hosted `/request` branch now has a properly padded direct-contact panel, a project-brief panel and a separately spaced material-reference section. Selected cards show decor code, finish and exact variant ID. Empty selection provides collection and Studio entry points instead of an empty heading. Email/phone links remain direct contact actions; no message was sent during verification.
+
+EN desktop and mobile and DE tablet layouts were inspected at 1440×900, 390×844 and 768×1024 without horizontal page overflow. The desktop contact panel had 48 px padding and a 64 px gap before the reference section. A selected Red/932 ID survived the hosted handoff. Removing that synthetic selection through the isolated QA shortlist showed the new empty state. Both hosted states contained zero contact-entry forms. Hosted server storage, sharing, enquiries and admin writes remain guarded until durable services are configured; full local SQLite workflows are preserved.
+
+## Verification and evidence
+
+All **31 automated tests**, TypeScript/optimized production build, read-only HTTP smoke and whitespace checks pass. Integrity checks cover every material membership, preservation of the original six appearances, provenance/manifest consistency, unsupported combinations and the existing project/enquiry/role/privacy flows. Test databases and contact data are synthetic; no real lead, email or dispatch is created.
+
+See the [new screenshot section](screenshots/README.md), [asset measurements](performance-library-contact-assets.json) and [browser observations](performance-library-contact-browser.json). The 3D intent chunks total **576,049 raw bytes / 145,336 estimated gzip bytes**, without external models/textures. Initial scripts conservatively include the legacy polyfill. Counting every listed swatch image, even lazy images outside the library viewport, gives approximately **3.01 MB raw** for the full Studio plus HTML/CSS/scripts/3D. This is slightly above a decimal 3 MB whole-page tally, while the initial scene assets alone remain below the provisional 3 MB scene budget. File compression estimates are not captured network transfer measurements.
+
+The Red PDP lab observer reported LCP 128 ms, maximum observed event duration 64 ms, lifetime layout-shift sum 0.0000 and renderer load 388.6 ms. These are warm-loopback samples on Apple M1 Pro / 16 GB, macOS 15.7.4, Codex in-app Chromium, DPR 1. Viewport emulation is not a physical phone. Metrics do not establish field INP, session-window CLS or p75 Core Web Vitals. Actual agreed phones/networks, cold-network traces, full screen-reader/zoom audits and a platform failure matrix remain release checks. This update preserves reduced-motion, capability fallback and resource disposal; those broader matrices were not re-certified.
+
+Source publication rights, product/technical approval, calibrated material capture, regional/legal review and durable hosted integrations remain production dependencies. The review stays `noindex`; TR, AI, AR and optional tracking remain unpublished or disabled. Setup remains in the [root README](../README.md), with the [deployment/rollback checklist](deployment-checklist.md).

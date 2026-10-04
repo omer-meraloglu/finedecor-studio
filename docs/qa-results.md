@@ -1,6 +1,6 @@
 # QA and performance
 
-**Latest evidence:** [applications, homepage, source enrichment and Studio refinement](applications-home-studio-refinement.md), [browser observations](performance-refinement-browser.json), [asset measurements](performance-refinement-assets.json) and [screenshots](screenshots/README.md). All 30 tests, final production build and read-only HTTP smoke pass. Earlier sections below are historical.
+**Latest evidence:** [Surface Library, all-reference 3D and contact refinement](library-contact-refinement.md); [browser observations](performance-library-contact-browser.json), [asset measurements](performance-library-contact-assets.json); previous [source enrichment and Studio refinement](applications-home-studio-refinement.md) and [screenshots](screenshots/README.md). All 31 tests, final production build and read-only HTTP smoke pass. Earlier sections below are historical.
 
 ## Original build — 3 October 2026
 
@@ -67,6 +67,6 @@ See [motion-polish.md](motion-polish.md) for the current interaction checks, upd
 The latest studio implementation, 17 passing checks, browser behavior, responsive screenshots, asset budget and provisional performance/accessibility evidence are recorded in [studio-upgrade.md](studio-upgrade.md). Earlier measurements remain historical.
 
 
-## Latest source enrichment and four-scene Studio
+## Earlier source enrichment and four-scene Studio
 
 The 86 observed source combinations remain draft demos: six illustrative 3D materials and 80 source-only 2D references. Regression checks now also cover Table save/share/revoke, full-study capacity without state loss, explicit enquiry ID priority over a full shortlist, exact catalog import and hosted catalog reads with server persistence blocked. Local flows are functional; the Vercel review uses device drafts and direct contact until durable storage/integrations exist. See the latest linked report for responsive/fullscreen evidence, asset budgets and physical-device/assistive-technology limits.

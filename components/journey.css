@@ -83,3 +83,107 @@
   .saved-reference code { font-size: 12px; }
 }
 @media (prefers-reduced-motion: reduce) { .journey-spinner { animation: none; } }
+
+/* The hosted enquiry path has a real contact handoff, with room for the brief and references. */
+.hosted-request { max-width: 1520px; margin-inline: auto; padding-block: clamp(40px,5vw,72px) clamp(60px,7vw,100px); }
+.hosted-request .page-head { margin-bottom: 44px; }
+.hosted-request .page-head p { max-width: 720px; }
+.hosted-contact-layout { display: grid; grid-template-columns: minmax(0,1.12fr) minmax(0,1fr); gap: 28px; align-items: stretch; }
+.hosted-contact-panel,.hosted-brief-panel { min-width: 0; padding: clamp(28px,3.4vw,48px); border: 1px solid var(--line); border-radius: 3px; }
+.hosted-contact-panel { background: var(--secondary); }
+.hosted-contact-panel h2 { margin: 20px 0 23px; font-size: clamp(32px,3vw,43px); max-width: 510px; }
+.hosted-contact-lead { max-width: 540px; font-size: 15px; line-height: 1.9; }
+.hosted-contact-methods { display: flex; flex-direction: column; gap: 14px; margin: 32px 0 23px; }
+.hosted-contact-method { display: flex; align-items: center; gap: 18px; padding: 19px 21px; min-height: 90px; background: #fff; border: 1px solid var(--line); border-radius: 2px; transition: border-color .2s ease,transform .2s ease; }
+.hosted-contact-method:hover { border-color: var(--olive); transform: translateY(-2px); }
+.hosted-contact-icon { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; width: 44px; height: 44px; border-radius: 50%; background: var(--accent); color: var(--olive); }
+.hosted-contact-method>span:nth-child(2) { min-width: 0; flex: 1; }
+.hosted-contact-method small { display: block; color: var(--muted); font-size: 10px; font-weight: 600; letter-spacing: .1em; line-height: 1.5; }
+.hosted-contact-method strong { display: block; font-size: clamp(18px,1.7vw,23px); line-height: 1.4; font-weight: 400; letter-spacing: -.025em; color: var(--olive); overflow-wrap: anywhere; margin-top: 5px; }
+.hosted-contact-method>svg { flex-shrink: 0; color: var(--olive); }
+.hosted-contact-panel>.text-link { font-size: 13px; }
+.hosted-brief-panel { background: #fff; }
+.hosted-brief-panel h2 { margin: 20px 0 27px; max-width: 380px; font-size: clamp(29px,2.6vw,36px); }
+.hosted-brief-list { padding: 0; margin: 0; list-style: none; }
+.hosted-brief-list li { display: flex; gap: 17px; padding: 19px 0; border-top: 1px solid var(--line); }
+.hosted-brief-list li>span { flex-shrink: 0; color: var(--olive); font-size: 12px; line-height: 1.5; padding-top: 3px; }
+.hosted-brief-list h3 { font-size: 18px; letter-spacing: -.025em; line-height: 1.35; }
+.hosted-brief-list p { margin-top: 8px; font-size: 13px; line-height: 1.8; }
+.hosted-storage-note { display: flex; align-items: flex-start; gap: 12px; padding-top: 20px; margin-top: 4px; border-top: 1px solid var(--line); }
+.hosted-storage-note>svg { flex-shrink: 0; color: var(--olive); margin-top: 3px; }
+.hosted-storage-note p { font-size: 12px; line-height: 1.8; }
+.hosted-reference-section { margin-top: 64px; border-top: 1px solid var(--line); padding-top: 40px; }
+.hosted-reference-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 26px; margin-bottom: 30px; }
+.hosted-reference-heading h2 { font-size: clamp(29px,2.7vw,38px); margin: 15px 0 15px; }
+.hosted-reference-heading p { font-size: 14px; line-height: 1.8; max-width: 680px; }
+.hosted-reference-count { flex-shrink: 0; padding: 8px 14px; border: 1px solid var(--line); background: var(--accent); border-radius: 2px; font-size: 12px; color: var(--olive); margin-top: 7px; }
+.hosted-reference-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; }
+.hosted-reference-card { min-width: 0; display: flex; align-items: center; gap: 17px; border: 1px solid var(--line); padding: 21px; border-radius: 2px; background: #fff; }
+.hosted-reference-image { width: 88px; flex-shrink: 0; }
+.hosted-reference-image img { width: 88px; height: 88px; }
+.hosted-reference-card>div { min-width: 0; flex: 1; }
+.hosted-reference-card h3 { font-size: 20px; line-height: 1.3; letter-spacing: -.035em; overflow-wrap: anywhere; }
+.hosted-reference-card h3 a { display: flex; gap: 8px; justify-content: space-between; align-items: flex-start; }
+.hosted-reference-card h3 a:hover { color: var(--olive); }
+.hosted-reference-card h3 svg { flex-shrink: 0; margin-top: 5px; color: var(--olive); }
+.hosted-reference-card p { font-size: 12px; margin-top: 7px; }
+.hosted-reference-card code { display: block; font-size: 10px; line-height: 1.6; font-family: inherit; color: var(--muted); overflow-wrap: anywhere; margin-top: 7px; }
+.hosted-reference-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 24px; margin-top: 26px; }
+.hosted-reference-empty { display: flex; align-items: flex-start; gap: 28px; border: 1px dashed var(--line); background: var(--accent); padding: clamp(28px,3.6vw,48px); border-radius: 3px; }
+.hosted-empty-icon { display: flex; align-items: center; justify-content: center; width: 58px; height: 58px; flex-shrink: 0; background: var(--paper); border: 1px solid var(--line); border-radius: 50%; color: var(--olive); }
+.hosted-reference-empty h3 { font-size: clamp(25px,2.2vw,31px); line-height: 1.2; margin-bottom: 14px; }
+.hosted-reference-empty p { max-width: 710px; font-size: 14px; line-height: 1.85; }
+.hosted-reference-limit { margin-top: 30px; padding-top: 5px; max-width: 900px; }
+.hosted-reference-limit .demo-note { margin-bottom: 11px; }
+.hosted-reference-limit>p:last-child { font-size: 12px; line-height: 1.8; }
+@media (max-width: 1100px) {
+  .hosted-contact-layout { gap: 22px; }
+  .hosted-contact-method { padding-inline: 16px; gap: 13px; }
+  .hosted-contact-icon { width: 36px; height: 36px; }
+  .hosted-reference-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media (max-width: 850px) {
+  .hosted-contact-layout { grid-template-columns: minmax(0,1fr); gap: 24px; }
+  .hosted-contact-panel,.hosted-brief-panel { padding: 34px; }
+  .hosted-contact-panel h2 { max-width: none; }
+  .hosted-contact-method strong { font-size: 22px; }
+  .hosted-contact-methods { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); }
+  .hosted-contact-method { padding: 18px 15px; }
+  .hosted-contact-method>svg { display: none; }
+  .hosted-brief-panel h2 { max-width: none; }
+  .hosted-reference-section { margin-top: 48px; padding-top: 32px; }
+  .hosted-reference-card { padding: 17px; gap: 14px; }
+  .hosted-reference-image,.hosted-reference-image img { width: 70px; }
+  .hosted-reference-image img { height: 70px; }
+}
+@media (max-width: 600px) {
+  .hosted-request { padding-top: 34px; padding-bottom: 58px; }
+  .hosted-request .page-head { margin-bottom: 30px; }
+  .hosted-request .page-head h1 { font-size: 39px; line-height: 1.1; }
+  .hosted-contact-panel,.hosted-brief-panel { padding: 26px 23px; }
+  .hosted-contact-panel h2 { font-size: 32px; margin-block: 17px 19px; }
+  .hosted-contact-lead { font-size: 14px; }
+  .hosted-contact-methods { display: flex; gap: 12px; margin-block: 26px 20px; }
+  .hosted-contact-method { padding: 18px 15px; min-height: 84px; gap: 14px; }
+  .hosted-contact-method strong { font-size: 20px; }
+  .hosted-contact-method small { font-size: 9px; }
+  .hosted-contact-icon { width: 37px; height: 37px; }
+  .hosted-contact-panel>.text-link { font-size: 12px; gap: 13px; line-height: 1.7; }
+  .hosted-brief-panel h2 { font-size: 29px; margin-block: 17px 23px; }
+  .hosted-brief-list li { padding-block: 18px; gap: 14px; }
+  .hosted-brief-list h3 { font-size: 17px; }
+  .hosted-reference-section { margin-top: 40px; padding-top: 28px; }
+  .hosted-reference-heading { flex-direction: column; align-items: flex-start; gap: 16px; margin-bottom: 24px; }
+  .hosted-reference-heading h2 { font-size: 30px; margin-block: 13px; }
+  .hosted-reference-count { margin: 0; }
+  .hosted-reference-grid { grid-template-columns: minmax(0,1fr); gap: 13px; }
+  .hosted-reference-card { padding: 18px; gap: 17px; }
+  .hosted-reference-image,.hosted-reference-image img { width: 76px; }
+  .hosted-reference-image img { height: 76px; }
+  .hosted-reference-empty { flex-direction: column; gap: 21px; padding: 27px 23px; }
+  .hosted-empty-icon { width: 48px; height: 48px; }
+  .hosted-reference-empty h3 { font-size: 27px; }
+  .hosted-reference-actions { align-items: flex-start; gap: 16px; }
+  .hosted-reference-empty .hosted-reference-actions { flex-direction: column; }
+  .hosted-reference-limit { margin-top: 24px; }
+}

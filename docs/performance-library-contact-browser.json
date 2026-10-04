@@ -1,0 +1,77 @@
+{
+  "checkedAt": "2026-10-04",
+  "hardware": {
+    "machine": "MacBook Pro",
+    "chip": "Apple M1 Pro",
+    "memoryGB": 16,
+    "os": "macOS 15.7.4"
+  },
+  "browser": "Codex in-app Chromium",
+  "network": "warm loopback localhost, no throttling",
+  "dpr": 1,
+  "viewportChecks": [
+    {
+      "width": 1440,
+      "height": 900,
+      "horizontalOverflow": false,
+      "studioPageHeightPx": 2314,
+      "libraryViewportInnerHeightPx": 304,
+      "libraryContentHeightPx": 5593
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "horizontalOverflow": false,
+      "libraryViewportInnerHeightPx": 328,
+      "libraryContentHeightPx": 3167,
+      "pageYBeforeAndAfterPageDown": 1208.5,
+      "libraryScrollTopBefore": 0,
+      "libraryScrollTopAfter": 282
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "route": "/de/request",
+      "horizontalOverflow": false,
+      "hostedContactEntryForms": 0
+    }
+  ],
+  "rendererChecks": [
+    {
+      "frontVariant": "demo-932-gloss",
+      "compareVariant": "demo-505-2-frosted",
+      "scene": "kitchen",
+      "canvasCount": 1,
+      "exposure": 0.95,
+      "loadMs": 180.5,
+      "geometryCount": 28,
+      "triangles": 1872,
+      "renderMode": "on-change",
+      "mobileMovementCap": 30
+    },
+    {
+      "variant": "demo-5660-gloss",
+      "result": "3D rendered, no material-unavailable fallback"
+    },
+    {
+      "route": "/en/products/demo-932-gloss",
+      "intent": "Inspect in 3D",
+      "canvasCount": 1,
+      "rendererLoadMs": 388.6,
+      "observedLcpMs": 128,
+      "maximumObservedEventDurationMs": 64,
+      "lifetimeLayoutShiftSum": 0
+    }
+  ],
+  "hostedRequest": {
+    "selectedVariant": "demo-932-gloss",
+    "exactIdPreserved": true,
+    "contactEntryForms": 0,
+    "emptyStateVerified": true,
+    "desktopContactPaddingPx": 48,
+    "referenceSectionMarginTopPx": 64,
+    "mobileKeyboardContactLink": "/en/contact"
+  },
+  "limits": "Responsive emulation, warm single lab samples, not physical-mobile or field Core Web Vitals; no full assistive-technology audit. Expanded workspace tested; this run did not assert native fullscreen support. All materials are illustrative and uncalibrated.",
+  "buildId": "j4MtuVKmQ69oQuDpnXYnq"
+}
