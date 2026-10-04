@@ -1,8 +1,8 @@
 {
-  "checkedAt": "2026-10-03",
+  "checkedAt": "2026-10-04",
   "timezone": "Europe/Istanbul",
-  "authorization": "User supplied finedecor.de and finedecor.com.tr as company context and authorized assets for this local demo. Wider publication and third-party rights need owner confirmation.",
-  "publicationStatus": "local-demo-only-pending-owner-confirmation",
+  "authorization": "The user authorized reuse of Fine Decor .de content and assets in this site and its one-time GitHub/Vercel review update on 4 October 2026. Stock application photos use verified free Unsplash/Burst licenses and remain inspiration. A company-domain release, approved product/PIM data and regional legal review remain separate dependencies.",
+  "publicationStatus": "user-authorized-local-and-hosted-review; company release pending owner confirmation",
   "assets": [
     {
       "id": "source-kitchen",
@@ -32,7 +32,12 @@
       "calibrationStatus": "not-supplied",
       "localPath": "/media/film.jpg",
       "bytes": 91548,
-      "sha256": "fd3678191d8607549447d188bae37fb448237547d37d2fb24405e53d8f540cdb"
+      "sha256": "fd3678191d8607549447d188bae37fb448237547d37d2fb24405e53d8f540cdb",
+      "usage": [
+        "home-material-studio-teaser",
+        "material-reference"
+      ],
+      "description": "Layered neutral, white and dark material panels; source styling does not identify any current published variant."
     },
     {
       "id": "source-door-detail",
@@ -149,6 +154,226 @@
       "clearcoatMap": null,
       "calibrationStatus": "not-supplied",
       "previewLimit": "A source swatch is not evidence of physically exact appearance. Verify with a physical sample."
+    },
+    {
+      "id": "inspiration-application-living",
+      "sourcePage": "https://unsplash.com/photos/minimalist-living-room-with-wooden-sideboard-aX1TTOuq83M",
+      "url": "https://images.unsplash.com/photo-1585128792020-803d29415281?auto=format&fit=max&fm=jpg&q=82&w=1400",
+      "observedAt": "2026-10-04 source photo and license pages, downloaded JPEG visually inspected",
+      "description": "Wooden sideboard and grey sofa in a sunlit living room.",
+      "credit": "Julia / Beazy",
+      "license": "Unsplash License",
+      "licenseUrl": "https://unsplash.com/license",
+      "dimensions": [
+        1400,
+        2100
+      ],
+      "usage": [
+        "application-index",
+        "application-detail-en",
+        "application-detail-de"
+      ],
+      "role": "Licensed inspiration photography; not a Fine Decor client project or product render.",
+      "variantAssignment": null,
+      "clientIdentity": null,
+      "calibrationStatus": "not-applicable-context-photo",
+      "localPath": "/media/applications/living.jpg",
+      "bytes": 280032,
+      "sha256": "027cbcc6681c6660dc12d468e0d6671518837f2eb028291b3584d4e9da7957ad",
+      "transformation": "Publisher CDN resized to 1400 px width; responsive focal crop in CSS. No product material modification."
+    },
+    {
+      "id": "inspiration-application-bathroom",
+      "sourcePage": "https://unsplash.com/photos/modern-white-bathroom-vanity-with-striped-drawers-baaFjrEgVWs",
+      "url": "https://images.unsplash.com/photo-1756906838742-4be32553d467?auto=format&fit=max&fm=jpg&q=82&w=1400",
+      "observedAt": "2026-10-04 source photo and license pages, downloaded JPEG visually inspected",
+      "description": "White vanity with grooved drawers, basin and brass handles.",
+      "credit": "Caroline Badran",
+      "license": "Unsplash License",
+      "licenseUrl": "https://unsplash.com/license",
+      "dimensions": [
+        1400,
+        2100
+      ],
+      "usage": [
+        "application-index",
+        "application-detail-en",
+        "application-detail-de"
+      ],
+      "role": "Licensed inspiration photography; not a Fine Decor client project or product render.",
+      "variantAssignment": null,
+      "clientIdentity": null,
+      "calibrationStatus": "not-applicable-context-photo",
+      "localPath": "/media/applications/bathroom.jpg",
+      "bytes": 191229,
+      "sha256": "b6c62986f4f611c0e4cc23501c2b5e4e66c93f2eb162004d32175acc6dac6dc7",
+      "transformation": "Publisher CDN resized to 1400 px width; responsive focal crop in CSS. No product material modification."
+    },
+    {
+      "id": "inspiration-application-shopfitting",
+      "sourcePage": "https://www.shopify.com/stock-photos/photos/minimal-clothing-store-interior",
+      "url": "https://burst.shopifycdn.com/photos/minimal-clothing-store-interior.jpg?exif=0&format=pjpg&iptc=0&width=1400",
+      "observedAt": "2026-10-04 source photo and license pages, downloaded JPEG visually inspected",
+      "description": "Minimal clothing shop with display rails and warm daylight.",
+      "credit": "Thom Bradley",
+      "license": "Burst Some Rights Reserved",
+      "licenseUrl": "https://www.shopify.com/stock-photos/licenses/shopify-some-rights-reserved",
+      "dimensions": [
+        1400,
+        2100
+      ],
+      "usage": [
+        "application-index",
+        "application-detail-en",
+        "application-detail-de"
+      ],
+      "role": "Licensed inspiration photography; not a Fine Decor client project or product render.",
+      "variantAssignment": null,
+      "clientIdentity": null,
+      "calibrationStatus": "not-applicable-context-photo",
+      "localPath": "/media/applications/shopfitting.jpg",
+      "bytes": 241787,
+      "sha256": "4c534b6effaa35dcb1a336cf9d6073a89c30cc304ffa89b3463de4a8696ce986",
+      "transformation": "Publisher CDN resized to 1400 px width; responsive focal crop in CSS. No product material modification."
+    },
+    {
+      "id": "inspiration-application-doors",
+      "sourcePage": "https://unsplash.com/photos/modern-interior-features-a-wooden-door-and-white-drawers-ROUipzKdSVk",
+      "url": "https://images.unsplash.com/photo-1753117034349-5181adbc3506?auto=format&fit=max&fm=jpg&q=82&w=1400",
+      "observedAt": "2026-10-04 source photo and license pages, downloaded JPEG visually inspected",
+      "description": "Wood interior door with recessed handle beside fitted white furniture.",
+      "credit": "Caroline Badran",
+      "license": "Unsplash License",
+      "licenseUrl": "https://unsplash.com/license",
+      "dimensions": [
+        1400,
+        2015
+      ],
+      "usage": [
+        "application-index",
+        "application-detail-en",
+        "application-detail-de"
+      ],
+      "role": "Licensed inspiration photography; not a Fine Decor client project or product render.",
+      "variantAssignment": null,
+      "clientIdentity": null,
+      "calibrationStatus": "not-applicable-context-photo",
+      "localPath": "/media/applications/doors.jpg",
+      "bytes": 257680,
+      "sha256": "36fa491d2ff457593fd44cc1d817ee3877061de64e39a45c0b54fae2652757cb",
+      "transformation": "Publisher CDN resized to 1400 px width; responsive focal crop in CSS. No product material modification."
+    },
+    {
+      "id": "inspiration-application-caravans",
+      "sourcePage": "https://unsplash.com/photos/interior-of-a-camper-van-with-sunlight-streaming-in-_Hlxyzb_GCs",
+      "url": "https://images.unsplash.com/photo-1773123441753-e87f821ec76d?auto=format&fit=max&fm=jpg&q=82&w=1400",
+      "observedAt": "2026-10-04 source photo and license pages, downloaded JPEG visually inspected",
+      "description": "Compact caravan interior with wooden cupboards and a sunlit kitchenette.",
+      "credit": "Alexander Lunyov",
+      "license": "Unsplash License",
+      "licenseUrl": "https://unsplash.com/license",
+      "dimensions": [
+        1400,
+        933
+      ],
+      "usage": [
+        "application-index",
+        "application-detail-en",
+        "application-detail-de"
+      ],
+      "role": "Licensed inspiration photography; not a Fine Decor client project or product render.",
+      "variantAssignment": null,
+      "clientIdentity": null,
+      "calibrationStatus": "not-applicable-context-photo",
+      "localPath": "/media/applications/caravans.jpg",
+      "bytes": 242507,
+      "sha256": "e48fbc1d38e1b7495c01284594ab907e8f97b372aa3303f1bd3850d85045c7c0",
+      "transformation": "Publisher CDN resized to 1400 px width; responsive focal crop in CSS. No product material modification."
+    },
+    {
+      "id": "source-production-rolls",
+      "sourcePage": "https://www.finedecor.de/en/",
+      "url": "https://www.finedecor.de/wp-content/uploads/2024/08/Finedecor_Folien.jpg",
+      "observedAt": "2026-10-04 Fine Decor public media record/direct photo visually inspected",
+      "description": "Roll of film on production machinery; source photograph, no exact current product/variant assigned.",
+      "credit": "Fine Decor source photography",
+      "dimensions": [
+        800,
+        551
+      ],
+      "usage": [
+        "home-hero-gallery",
+        "home-production-band"
+      ],
+      "variantAssignment": null,
+      "clientIdentity": null,
+      "calibrationStatus": "not-applicable-context-photo",
+      "localPath": "/media/production-rolls.jpg",
+      "bytes": 68972,
+      "sha256": "eae9dc98cbd576352c3f2fcd733b29e3a7c3500b12b8f9a7612fc3464ac4dee7",
+      "publicationStatus": "user-authorized-local-demo-pending-owner-publication-review"
+    },
+    {
+      "id": "source-production-workshop",
+      "sourcePage": "https://www.finedecor.de/ueber-fine-decor/",
+      "url": "https://www.finedecor.de/wp-content/uploads/2024/03/finedecor-produktion.jpg",
+      "observedAt": "2026-10-04 Fine Decor public media record/direct photo visually inspected",
+      "description": "Two people beside production equipment; identities and current roles are not asserted.",
+      "credit": "Fine Decor source photography",
+      "dimensions": [
+        850,
+        567
+      ],
+      "usage": [
+        "home-production-band"
+      ],
+      "variantAssignment": null,
+      "clientIdentity": null,
+      "calibrationStatus": "not-applicable-context-photo",
+      "localPath": "/media/production.jpg",
+      "bytes": 58486,
+      "sha256": "af4eb76ef455d6c74f72665eed3f07525242f77e2f3d55f348b68b50b7474f8a",
+      "publicationStatus": "user-authorized-local-demo-pending-owner-publication-review"
+    },
+    {
+      "id": "source-production-hall",
+      "sourcePage": "https://www.finedecor.de/en/about-fine-decor/",
+      "url": "https://www.finedecor.de/wp-content/uploads/elementor/thumbs/fineline-produktion-oelde-2-qd4cpwi2x6utydqs5t802ownfhtqs07e0v2yhiu6d4.jpg",
+      "localPath": "/media/source-production-hall.jpg",
+      "description": "Aerial exterior of an industrial building from the FineLine company gallery. No capacity, staffing or current operating responsibility inferred.",
+      "credit": "Fine Decor / FineLine source company gallery",
+      "dimensions": [
+        600,
+        300
+      ],
+      "bytes": 50795,
+      "sha256": "02391496eccab5f2be4fdb0e76442b66b67ce5ba235f00f500d326b1a6484d15",
+      "variantAssignment": null,
+      "calibrationStatus": "not-applicable-context-photo",
+      "publicationStatus": "user-authorized-local-copy-pending-owner-release",
+      "usage": [
+        "CompanySourceStory"
+      ]
+    },
+    {
+      "id": "source-production-exterior",
+      "sourcePage": "https://www.finedecor.de/en/about-fine-decor/",
+      "url": "https://www.finedecor.de/wp-content/uploads/elementor/thumbs/fineline-produktion-oelde-1-qd4cpwi2x6utydqs5t802ownfhtqs07e0v2yhiu6d4.jpg",
+      "localPath": "/media/source-production-exterior.jpg",
+      "description": "Building facade with FineLine signage from the Fine Decor company gallery. No present legal entity/address/responsibility assertion.",
+      "credit": "Fine Decor / FineLine source company gallery",
+      "dimensions": [
+        600,
+        300
+      ],
+      "bytes": 33488,
+      "sha256": "a093f8c2b10bd9a9985ba6af261600ea0bcff9d07d85aef6943e033e3463a50d",
+      "variantAssignment": null,
+      "calibrationStatus": "not-applicable-context-photo",
+      "publicationStatus": "user-authorized-local-copy-pending-owner-release",
+      "usage": [
+        "CompanySourceStory"
+      ]
     }
   ],
   "localCodeAssets": [
@@ -157,5 +382,16 @@
       "provenance": "Local generic navigation/favicon SVG; not a replacement corporate logo. Original Fine Decor logo is retained in the site header/footer.",
       "publicationStatus": "owner review with site identity"
     }
-  ]
+  ],
+  "catalogImportLedger": "production-catalog-import.json",
+  "contentSourceLedger": "production-content-sources.json",
+  "brandAudit": "production-brand-audit.md",
+  "catalogSourceAssets": {
+    "count": 86,
+    "added": 80,
+    "preserved": 6,
+    "totalBytes": 1120642,
+    "ledger": "production-catalog-import.json",
+    "role": "indicative source colour swatches; no calibrated texture maps"
+  }
 }

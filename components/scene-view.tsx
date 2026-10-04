@@ -148,8 +148,8 @@ export default function SceneView({requestedAt,project,onCamera,onCapture,onFail
         const id=copy===1&&next.compareId?next.compareId:next.assignments.fronts;
         const scene=new THREE.Scene();scene.background=new THREE.Color('#eeeee7');scene.environment=environment.texture;scene.environmentIntensity=.65;
         const hemi=new THREE.HemisphereLight('#fffdf8','#b6b8a9',.7);scene.add(hemi);
-        const light=new THREE.DirectionalLight('#fffefa',1.55);light.position.set(3,5,4);light.target.position.set(next.scene==='kitchen'?.45:0,1,0);scene.add(light.target);light.castShadow=true;
-        const span=next.scene==='panel'?2.1:3.5;
+        const light=new THREE.DirectionalLight('#fffefa',1.55);light.position.set(3,5,4);light.target.position.set(next.scene==='kitchen'?.45:0,next.scene==='table'?.55:1,0);scene.add(light.target);light.castShadow=true;
+        const span=next.scene==='panel'?2.1:next.scene==='table'?2.5:3.5;
         light.shadow.mapSize.set(1024,1024);light.shadow.camera.left=-span;light.shadow.camera.right=span;light.shadow.camera.top=span;light.shadow.camera.bottom=-span;
         light.shadow.camera.near=.1;light.shadow.camera.far=15;light.shadow.normalBias=.008;light.shadow.bias=-.00015;light.shadow.intensity=.72;
         // Models and lights are fixed between changes; orbiting never redraws
@@ -207,10 +207,12 @@ export default function SceneView({requestedAt,project,onCamera,onCapture,onFail
         }
         if(next.scene==='unit'){
           backdrop(scene,wall,dark);
-          box(scene,2.48,.85,.53,0,.855,0,dark);
-          box(scene,2.48,.84,.505,0,.855,-.014,body);
+          // One visible carcass avoids coplanar sides from nested full boxes.
+          // The narrower front plate supplies dark reveals without sharing the
+          // carcass side/back planes or extending through its rear face.
+          box(scene,2.48,.85,.53,0,.855,0,body);
+          box(scene,2.452,.826,.004,0,.855,.265,dark);
           box(scene,2.52,.045,.565,0,1.3025,0,wood);
-          box(scene,2.47,.009,.525,0,1.2755,0,dark);
           for(let i=0;i<3;i++){
             const x=(i-1)*.815;
             box(scene,.798,.818,.016,x,.855,.277,i===2?accent:film);
@@ -221,6 +223,21 @@ export default function SceneView({requestedAt,project,onCamera,onCapture,onFail
             cylinder(scene,.024,.018,x,.009,z,dark);
           }
           box(scene,2.09,.024,.03,0,.39,-.18,dark);
+        }
+        if(next.scene==='table'){
+          backdrop(scene,wall,dark);
+          // The tabletop is another generic visualization substrate. Only its
+          // thin horizontal film face receives the fronts material assignment;
+          // edge, apron, legs, walls and floor remain fixed reference geometry.
+          box(scene,1.9,.035,.95,0,.7605,0,wood);
+          const tabletop=box(scene,1.894,.002,.944,0,.779,0,film);
+          tabletop.userData.materialSlot='fronts';
+          for(const z of [-.35,.35])box(scene,1.61,.065,.035,0,.7105,z,dark);
+          for(const x of [-.79,.79])box(scene,.035,.065,.665,x,.7105,0,dark);
+          for(const x of [-.79,.79])for(const z of [-.35,.35]){
+            cylinder(scene,.025,.743,x,.3715,z,dark);
+            cylinder(scene,.03,.012,x,.006,z,dark);
+          }
         }
         scenes.push({scene,front:film,accent,keyLight:light,fillLight:fill,light:null});
       }

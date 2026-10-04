@@ -1,3 +1,5 @@
+> Latest source recheck: 4 October 2026. The current visible EN/DE finish galleries contain 86 pairs (41 Frosted/Matt, 45 Gloss/Hochglanz). Exact entries/assets, same-code name conflicts and excluded hidden Glaslaminat data are recorded in [production-catalog-import.json](production-catalog-import.json). New company/product copy and source photographs are recorded in [production-content-sources.json](production-content-sources.json); observed colours in [production-brand-audit.md](production-brand-audit.md). All references remain demos pending PIM/technical approval. Earlier notes below describe the original six-reference seed and remain historical evidence.
+
 # Fine Decor source audit
 
 Checked 3 October 2026 (Europe/Istanbul). Live in-app browser rendering was inspected for the English home/products/contact pages, German careers page and English event archive. Web fetches also inspected the German products/company, English company, Turkish company and Schattdecor announcement. Public marketing content establishes provenance, not technical approval. Final authority remains owner-approved PIM and current applicable technical reports.

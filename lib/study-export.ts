@@ -37,7 +37,7 @@ export function buildStudyExport({project, projectId, locale, previewDataUrl, en
   const exportDate = Number.isNaN(date.getTime()) ? new Date() : date;
   const isoDate = exportDate.toISOString().slice(0, 10);
   const displayDate = new Intl.DateTimeFormat(safeLocale, {dateStyle: 'long', timeZone: 'UTC'}).format(exportDate);
-  const sceneNames = {panel: text('Front panel', 'Frontplatte'), kitchen: text('Kitchen vignette', 'Küchenvignette'), unit: text('Furniture unit', 'Möbeleinheit')};
+  const sceneNames = {panel: text('Front panel', 'Frontplatte'), kitchen: text('Kitchen vignette', 'Küchenvignette'), unit: text('Furniture unit', 'Möbeleinheit'), table: text('Table', 'Tisch')};
   const lightNames = {neutral: text('Neutral studio', 'Neutrales Studio'), daylight: text('Illustrative daylight', 'Illustratives Tageslicht'), warm: text('Illustrative warm light', 'Illustratives warmes Licht')};
   const cameraNames = {perspective: text('Perspective', 'Perspektive'), front: text('Front', 'Front'), detail: text('Detail', 'Detail')};
   const matchingPreset = (['perspective', 'front', 'detail'] as const).find(preset => {
@@ -49,9 +49,9 @@ export function buildStudyExport({project, projectId, locale, previewDataUrl, en
   const pendingFamily = text('Pending owner approval', 'Eigentümerfreigabe ausstehend');
   const unavailable = text('Material unavailable', 'Material nicht verfügbar');
   const roles: {label: string; id: string}[] = [
-    {label: text('A · Main fronts', 'A · Hauptfronten'), id: project.assignments.fronts},
+    {label: project.scene === 'table' ? text('A · Tabletop', 'A · Tischplatte') : text('A · Main fronts', 'A · Hauptfronten'), id: project.assignments.fronts},
     ...(project.assignments.accent ? [{label: text('Accent front · fixed in A and B', 'Akzentfront · in A und B identisch'), id: project.assignments.accent}] : []),
-    ...(project.compareId ? [{label: text('B · Comparison fronts', 'B · Vergleichsfronten'), id: project.compareId}] : []),
+    ...(project.compareId ? [{label: project.scene === 'table' ? text('B · Comparison tabletop', 'B · Vergleichstischplatte') : text('B · Comparison fronts', 'B · Vergleichsfronten'), id: project.compareId}] : []),
   ];
   const variantLabel = (id: string) => {
     const variant = getVariant(id);

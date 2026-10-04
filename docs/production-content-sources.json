@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-10-04",
+  "timezone": "Europe/Istanbul",
+  "verification": "Live rendered English home, product and company pages inspected in a hidden in-app browser tab; English and German source pages also retrieved via web tool. Product extraction includes hidden legacy glass-laminate content, which was excluded from the rendered range used here.",
+  "authorization": "The user explicitly authorized copying Fine Decor .de company content and assets into this local site. Text is concise sourced paraphrase. Wider company publication and technical product approvals remain owner dependencies.",
+  "content": [
+    {"component":"Home", "topic":"Industrial offer and history", "treatment":"PET decorative films for the furniture industry; founding in 2004 remains a company date, not a dated product specification.", "sources":["https://www.finedecor.de/en/", "https://www.finedecor.de/en/about-fine-decor/"]},
+    {"component":"Home / FamilyOverview", "topic":"Sensory and customer-informed design", "treatment":"Sight, touch and customer ideas inform colours/decors. No claimed measured tactile behavior or customer result.", "sources":["https://www.finedecor.de/en/our-products/", "https://www.finedecor.de/unsere-produkte/"]},
+    {"component":"FamilyOverview", "topic":"Fineflex and lacquered laminate", "treatment":"Two source-named public families with restrained design descriptions. No draft variant is assigned to a family by these cards. Fineflex uses general material-reference photography, not verified family-specific or variant-specific imagery. Technical-enquiry links open the existing technical request flow.", "sources":["https://www.finedecor.de/en/our-products/", "https://www.finedecor.de/unsere-produkte/"]},
+    {"component":"CustomConsultation", "topic":"Individual requirements", "treatment":"Discuss colour setting, special widths and application questions. Colour reference examples RAL/NCS/Pantone come from the public products page. No availability, exact colour match, processing suitability, price or delivery promise.", "sources":["https://www.finedecor.de/en/our-products/", "https://www.finedecor.de/unsere-produkte/"]},
+    {"component":"CompanySourceStory", "topic":"Company/design collaboration", "treatment":"German and international kitchen/furniture industrial context, senses/nature/customer-informed design, PET development from 2005, a 2019 production-site milestone for sister company FineLine Innovation. No export count, market leadership or current ownership/production-routing inference.", "sources":["https://www.finedecor.de/en/", "https://www.finedecor.de/en/about-fine-decor/", "https://www.finedecor.de/ueber-fine-decor/", "https://www.finedecor.de/en/our-products/"]}
+  ],
+  "excludedClaims": [
+    "Recycled percentages, recyclability or environmental benefit",
+    "Current Golden M/REACH certification, pollutant/health statements or test ratings",
+    "Durability, scratch/chemical/light resistance or calibrated gloss values",
+    "Current stock, lead times, price, free DIN-A4 sample/dispatch terms",
+    "Market leadership, customer/export counts and quantified business results",
+    "Hidden/cached Glaslaminat specification tables and legacy PVC/processing categories as current range"
+  ],
+  "contradictions": [
+    {"id":"PC-01", "topic":"Locations", "observation":"Current company location blocks say Oelde head office/production and Bielefeld warehouse; older English prose still describes Bielefeld headquarters.", "resolution":"No new operating-site or sales-responsibility assertion is made. Root ledger/owner review remains authoritative."},
+    {"id":"PC-02", "topic":"Range", "observation":"Web extraction still exposes legacy Glaslaminat claims/tables that are not present in the inspected rendered range.", "resolution":"Family overview uses only rendered Fineflex/lacquered-laminate headings, without copying hidden technical content."},
+    {"id":"PC-03", "topic":"PET history", "observation":"Home presents the company offer as operating since 2004; company history dates PET development to 2005.", "resolution":"Founding remains 2004; the company story separately states PET development from 2005."}
+  ],
+  "assets": [
+    {"id":"source-production-hall", "sourcePage":"https://www.finedecor.de/en/about-fine-decor/", "url":"https://www.finedecor.de/wp-content/uploads/elementor/thumbs/fineline-produktion-oelde-2-qd4cpwi2x6utydqs5t802ownfhtqs07e0v2yhiu6d4.jpg", "localPath":"/media/source-production-hall.jpg", "description":"Aerial exterior of an industrial building from the FineLine company gallery. No capacity, staffing or current operating responsibility inferred.", "credit":"Fine Decor / FineLine source company gallery", "dimensions":[600,300], "bytes":50795, "sha256":"02391496eccab5f2be4fdb0e76442b66b67ce5ba235f00f500d326b1a6484d15", "variantAssignment":null, "calibrationStatus":"not-applicable-context-photo", "publicationStatus":"user-authorized-local-copy-pending-owner-release", "usage":["CompanySourceStory"]},
+    {"id":"source-production-exterior", "sourcePage":"https://www.finedecor.de/en/about-fine-decor/", "url":"https://www.finedecor.de/wp-content/uploads/elementor/thumbs/fineline-produktion-oelde-1-qd4cpwi2x6utydqs5t802ownfhtqs07e0v2yhiu6d4.jpg", "localPath":"/media/source-production-exterior.jpg", "description":"Building facade with FineLine signage from the Fine Decor company gallery. No present legal entity/address/responsibility assertion.", "credit":"Fine Decor / FineLine source company gallery", "dimensions":[600,300], "bytes":33488, "sha256":"a093f8c2b10bd9a9985ba6af261600ea0bcff9d07d85aef6943e033e3463a50d", "variantAssignment":null, "calibrationStatus":"not-applicable-context-photo", "publicationStatus":"user-authorized-local-copy-pending-owner-release", "usage":["CompanySourceStory"]}
+  ],
+  "existingAssetReuse": [
+    {"localPath":"/media/film.jpg", "url":"https://www.finedecor.de/wp-content/uploads/2024/08/Finedecor_Folien-1.jpg", "usage":"Fineflex editorial card, general material reference only; no family/variant assignment evidence"},
+    {"localPath":"/media/lacquer.jpg", "url":"https://www.finedecor.de/wp-content/uploads/2020/04/fine-decor-lacklaminat.jpg", "usage":"Lacquered laminate card, source surface detail; no variant or process suitability inferred"}
+  ]
+}

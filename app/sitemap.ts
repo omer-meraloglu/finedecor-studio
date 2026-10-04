@@ -1,1 +1,2 @@
-export default function sitemap(){return ['en','de'].flatMap(locale=>['','collections','applications','knowledge','company','contact'].map(path=>({url:`http://127.0.0.1:4173/${locale}/${path}`,alternates:{languages:{en:`http://127.0.0.1:4173/en/${path}`,de:`http://127.0.0.1:4173/de/${path}`}}}))) }
+import {publicOrigin} from '@/lib/runtime';
+export default function sitemap(){const origin=publicOrigin();return ['en','de'].flatMap(locale=>['','collections','applications','knowledge','company','contact'].map(path=>({url:`${origin}/${locale}/${path}`,alternates:{languages:{en:`${origin}/en/${path}`,de:`${origin}/de/${path}`}}}))) }

@@ -1,0 +1,315 @@
+{
+  "checkedAt": "2026-10-04",
+  "sourceHierarchy": "Rendered .de homepage asset references and public Elementor CSS; original company logo. Public visual observations are not an owner-approved corporate identity manual.",
+  "homepage": "https://www.finedecor.de/en/",
+  "observedColours": [
+    {
+      "id": "brand-olive",
+      "hex": "#A5A51E",
+      "scope": "Company logo and branded Elementor accent",
+      "evidence": [
+        "elementor-post-11: --e-global-color-accent and --e-global-color-36597e0",
+        "elementor-post-1778: contact-band background and content divider",
+        "elementor-post-1830 and elementor-post-2414: branded CTA background",
+        "original-company-logo: dominant opaque pixel colour"
+      ]
+    },
+    {
+      "id": "secondary-olive",
+      "hex": "#9F9E00",
+      "scope": "Elementor kit buttons and input borders; inline heading override",
+      "evidence": [
+        "elementor-post-11: kit button background and field border",
+        "homepage inline: .elementor-kit-11 h3"
+      ]
+    },
+    {
+      "id": "source-primary-text",
+      "hex": "#333333",
+      "scope": "Elementor global primary colour",
+      "evidence": [
+        "elementor-post-11: --e-global-color-primary and --e-global-color-0a669f4"
+      ]
+    },
+    {
+      "id": "source-body-text",
+      "hex": "#7D7D7D",
+      "scope": "Elementor kit body text",
+      "evidence": [
+        "elementor-post-11: kit color"
+      ]
+    },
+    {
+      "id": "source-secondary-text",
+      "hex": "#A1A9AF",
+      "scope": "Elementor global text token",
+      "evidence": [
+        "elementor-post-11: --e-global-color-text"
+      ]
+    },
+    {
+      "id": "source-background",
+      "hex": "#FFFFFF",
+      "scope": "Elementor kit background and site white",
+      "evidence": [
+        "elementor-post-11: background-color; homepage theme background override"
+      ]
+    }
+  ],
+  "sourceAssets": [
+    {
+      "id": "elementor-post-11",
+      "url": "https://www.finedecor.de/wp-content/uploads/elementor/css/post-11.css",
+      "homepageDeclaredVersion": "1791086356",
+      "bytes": 5130,
+      "sha256": "9cf726b3cfa00e41e78dbca21bb4243bc152fbdcd04388745f2079a542d2ade0"
+    },
+    {
+      "id": "elementor-post-1778",
+      "url": "https://www.finedecor.de/wp-content/uploads/elementor/css/post-1778.css",
+      "homepageDeclaredVersion": "1791092430",
+      "bytes": 31531,
+      "sha256": "da113d81a645f6bb16d264e9f448774947fe1c8a75e117f7ff90482cc76dd2a7"
+    },
+    {
+      "id": "elementor-post-1830",
+      "url": "https://www.finedecor.de/wp-content/uploads/elementor/css/post-1830.css",
+      "homepageDeclaredVersion": "1791086357",
+      "bytes": 9015,
+      "sha256": "f2d22dd05f2082b9dcb9914b60fbe5dc9dbdb94dede492691686dbf697c11954"
+    },
+    {
+      "id": "elementor-post-775",
+      "url": "https://www.finedecor.de/wp-content/uploads/elementor/css/post-775.css",
+      "homepageDeclaredVersion": "1791086357",
+      "bytes": 8703,
+      "sha256": "9563a061f7488a0fde06fa810460b74413065c1cdc539ad8bff54106e229379c"
+    },
+    {
+      "id": "elementor-post-2414",
+      "url": "https://www.finedecor.de/wp-content/uploads/elementor/css/post-2414.css",
+      "homepageDeclaredVersion": "1791086357",
+      "bytes": 11064,
+      "sha256": "62e75cb1dcfa60ffe4e351408cbff4ff19e36fe9f5457b695a530fb0e0297278"
+    },
+    {
+      "id": "original-company-logo",
+      "url": "https://www.finedecor.de/wp-content/uploads/2020/09/FineDecor_Logo_m.png",
+      "bytes": 6975,
+      "sha256": "155d0ff7ed5d9015e068dc0ad0986d0a4e4d593c5b56e4baae46a4aba1080551",
+      "matchesLocalLogo": true,
+      "dimensions": [
+        200,
+        102
+      ],
+      "dominantOpaqueRgb": [
+        165,
+        165,
+        30
+      ],
+      "opaquePixelsInDominantColour": 2124
+    }
+  ],
+  "implementedTokens": {
+    "--brand-olive": {
+      "hex": "#A5A51E",
+      "role": "Original identity colour, logo and decorative brand accents",
+      "provenance": "exact observed company colour"
+    },
+    "--brand-olive-secondary": {
+      "hex": "#9F9E00",
+      "role": "Recorded alternate public-site olive; available for decoration",
+      "provenance": "exact observed company colour"
+    },
+    "--olive": {
+      "hex": "#636312",
+      "role": "Accessible olive text and action background",
+      "provenance": "derived: source RGB [165,165,30] multiplied by 0.60 and rounded to nearest integer"
+    },
+    "--primary": {
+      "hex": "#636312",
+      "role": "Default component action background",
+      "provenance": "same derived accessible olive as --olive"
+    },
+    "--olive-hover": {
+      "hex": "#53530F",
+      "role": "Action hover",
+      "provenance": "derived: source RGB multiplied by 0.50 and rounded half upward"
+    },
+    "--ink": {
+      "hex": "#333333",
+      "role": "Primary text",
+      "provenance": "exact observed primary text colour"
+    },
+    "--muted": {
+      "hex": "#666666",
+      "role": "Readable supporting text",
+      "provenance": "derived darker neutral than source #7D7D7D for small text on warm backgrounds"
+    },
+    "--paper": {
+      "hex": "#F8F8F2",
+      "role": "Warm page background",
+      "provenance": "retained architectural warm neutral; not claimed as an official company colour"
+    },
+    "--secondary": {
+      "hex": "#EEEED9",
+      "role": "Quiet olive-tinted panels/selected controls",
+      "provenance": "derived: 12% source olive plus 88% warm paper in sRGB channels, rounded"
+    },
+    "--accent": {
+      "hex": "#F1F1E1",
+      "role": "Subtle olive-tinted highlights",
+      "provenance": "derived: 8% source olive plus 92% warm paper in sRGB channels, rounded"
+    },
+    "--line": {
+      "hex": "#DFDFB2",
+      "role": "Decorative separators",
+      "provenance": "derived: 30% source olive plus 70% warm paper in sRGB channels, rounded; not used as sole control boundary"
+    },
+    "--input": {
+      "hex": "#8B8B19",
+      "role": "Visible input/search boundary",
+      "provenance": "derived: source RGB multiplied by 0.84 and rounded"
+    },
+    "--focus": {
+      "hex": "#636312",
+      "role": "Visible focus ring",
+      "provenance": "same derived accessible olive as --olive"
+    }
+  },
+  "contrastMethod": "WCAG relative luminance: decode sRGB with breakpoint 0.04045, weights 0.2126/0.7152/0.0722, ratio (Llighter + 0.05)/(Ldarker + 0.05). Solid colour pairs only; thresholds evaluated before rounding.",
+  "contrastSources": [
+    "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+    "https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html"
+  ],
+  "contrastChecks": [
+    {
+      "use": "Original olive with white text",
+      "foreground": "#FFFFFF",
+      "background": "#A5A51E",
+      "ratio": 2.624781,
+      "threshold": 4.5,
+      "passes": false
+    },
+    {
+      "use": "Source alternate olive with white text",
+      "foreground": "#FFFFFF",
+      "background": "#9F9E00",
+      "ratio": 2.851351,
+      "threshold": 4.5,
+      "passes": false
+    },
+    {
+      "use": "Dark action olive with white text",
+      "foreground": "#FFFFFF",
+      "background": "#636312",
+      "ratio": 6.317689,
+      "threshold": 4.5,
+      "passes": true
+    },
+    {
+      "use": "Dark hover olive with white text",
+      "foreground": "#FFFFFF",
+      "background": "#53530F",
+      "ratio": 8.039815,
+      "threshold": 4.5,
+      "passes": true
+    },
+    {
+      "use": "Primary text on paper",
+      "foreground": "#333333",
+      "background": "#F8F8F2",
+      "ratio": 11.852758,
+      "threshold": 4.5,
+      "passes": true
+    },
+    {
+      "use": "Supporting text on paper",
+      "foreground": "#666666",
+      "background": "#F8F8F2",
+      "ratio": 5.386502,
+      "threshold": 4.5,
+      "passes": true
+    },
+    {
+      "use": "Supporting text on tinted panel",
+      "foreground": "#666666",
+      "background": "#EEEED9",
+      "ratio": 4.885262,
+      "threshold": 4.5,
+      "passes": true
+    },
+    {
+      "use": "Olive text on paper",
+      "foreground": "#636312",
+      "background": "#F8F8F2",
+      "ratio": 5.926718,
+      "threshold": 4.5,
+      "passes": true
+    },
+    {
+      "use": "Olive text on tinted panel",
+      "foreground": "#636312",
+      "background": "#EEEED9",
+      "ratio": 5.375208,
+      "threshold": 4.5,
+      "passes": true
+    },
+    {
+      "use": "Input boundary on paper",
+      "foreground": "#8B8B19",
+      "background": "#F8F8F2",
+      "ratio": 3.393768,
+      "threshold": 3,
+      "passes": true
+    },
+    {
+      "use": "Input boundary on white",
+      "foreground": "#8B8B19",
+      "background": "#FFFFFF",
+      "ratio": 3.617647,
+      "threshold": 3,
+      "passes": true
+    },
+    {
+      "use": "Focus ring on paper",
+      "foreground": "#636312",
+      "background": "#F8F8F2",
+      "ratio": 5.926718,
+      "threshold": 3,
+      "passes": true
+    },
+    {
+      "use": "Source body grey on paper",
+      "foreground": "#7D7D7D",
+      "background": "#F8F8F2",
+      "ratio": 3.861634,
+      "threshold": 4.5,
+      "passes": false
+    },
+    {
+      "use": "Source global text on white",
+      "foreground": "#A1A9AF",
+      "background": "#FFFFFF",
+      "ratio": 2.383755,
+      "threshold": 4.5,
+      "passes": false
+    },
+    {
+      "use": "Dark text on original brand olive",
+      "foreground": "#333333",
+      "background": "#A5A51E",
+      "ratio": 4.813603,
+      "threshold": 4.5,
+      "passes": true
+    }
+  ],
+  "excludedSourceColours": [
+    {
+      "hex": "#E22658",
+      "reason": "Generic Twenty Twenty fallback accent appears in inline theme CSS; branded Elementor kit/components and logo establish the olive identity. Not imported into the new design."
+    }
+  ],
+  "implementationScope": "app/globals.css colour tokens/declarations only; existing logo file/proportions, layouts, animation timings, product swatches and 3D material colours remain unchanged. Home component rules owned separately.",
+  "limitations": "Numeric palette checks are not full WCAG conformance. Owner brand review and full rendered colour/zoom/assistive-technology QA remain required. No external stylesheet, tracker or script is imported."
+}

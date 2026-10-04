@@ -24,3 +24,10 @@ All endpoints return JSON, are same-origin, and use no-store. Bodies are streame
 `AnalyticsAdapter` exists with tracking disabled. AI/AR/optional embeds are disabled feature flags. No API secrets enter client bundles. No uploads are accepted. Private technical files must be served from authorized storage with signed short-lived access in production; do not put them in `public/` or use static reusable private URLs.
 
 Retain contact information only under the owner-reviewed regional policy. Implement retention jobs, audit-preserving record deletion and a data-subject procedure before launch. The local safe reset is documented in README. Shared projects must always remain separate from enquiries.
+
+
+## Vercel review guard — 4 October 2026
+
+`VERCEL=1` selects hosted-review capability through `lib/runtime.ts`. Public catalog reads validate filters against the source snapshot without opening SQLite or setting an application session cookie. Project/share/enquiry/admin/document persistence endpoints return 503 with a scoped explanation before reading contact data or opening storage. Device drafts remain private on the browser; share/export are disabled and the enquiry route displays public company email/phone with selected references. Set a trusted `FD_PUBLIC_ORIGIN` for metadata, or use Vercel-provided project/deployment origin variables; request headers do not determine canonical origin. This is an explicit review mode, not a production database adapter.
+
+Studio enquiry navigation carries only validated public variant IDs in `variants`, preserving the device shortlist. The selection resolver gives those IDs priority within the 12-item request limit and reports excluded extra shortlist references; no contact data enters the URL.

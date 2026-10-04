@@ -1,0 +1,113 @@
+{
+  "checkedAt": "2026-10-04",
+  "buildId": "LNGCd5c1tr0wPJ2BoB0x1",
+  "environment": {
+    "hardware": "MacBook Pro / Apple M1 Pro / 16 GB (same host recorded in earlier QA)",
+    "os": "macOS 15.7.4",
+    "browser": "Codex in-app Chromium browser",
+    "pixelRatio": 1,
+    "network": "Warm loopback localhost; no throttling",
+    "mobileMethod": "Viewport emulation on desktop; no agreed physical phone was tested"
+  },
+  "method": "Read-only DOM lab observer: latest LCP, lifetime layout-shift sum and maximum observed event duration. These are local single samples, not field p75, full INP or session-window CLS.",
+  "samples": [
+    {
+      "view": "EN home",
+      "viewport": [
+        390,
+        844
+      ],
+      "lcpMs": 96,
+      "layoutShiftSum": 0,
+      "maxEventDurationMs": 0,
+      "horizontalOverflow": false
+    },
+    {
+      "view": "DE home",
+      "viewport": [
+        768,
+        1024
+      ],
+      "lcpMs": 80,
+      "layoutShiftSum": 0,
+      "maxEventDurationMs": 0,
+      "horizontalOverflow": false
+    },
+    {
+      "view": "EN home",
+      "viewport": [
+        1440,
+        900
+      ],
+      "lcpMs": 92,
+      "layoutShiftSum": 0,
+      "maxEventDurationMs": 24,
+      "interaction": "Manual Production image selection",
+      "horizontalOverflow": false
+    },
+    {
+      "view": "Kitchen Studio",
+      "viewport": [
+        390,
+        844
+      ],
+      "lcpMs": 104,
+      "layoutShiftSum": 0,
+      "maxEventDurationMs": 32,
+      "deferred3DToFirstFrameMs": 107.9,
+      "navigationToFirstFrameMs": 214.5,
+      "movementCap": 30,
+      "renderMode": "on-change",
+      "horizontalOverflow": false
+    },
+    {
+      "view": "Kitchen Studio",
+      "viewport": [
+        1440,
+        900
+      ],
+      "lcpMs": 92,
+      "layoutShiftSum": 0,
+      "maxEventDurationMs": 32,
+      "deferred3DToFirstFrameMs": 98.5,
+      "navigationToFirstFrameMs": 191.2,
+      "movementCap": "on-change",
+      "renderMode": "on-change",
+      "horizontalOverflow": false
+    }
+  ],
+  "verification": {
+    "nativeFullscreenEntered": true,
+    "nativeEscapeRestoredLayoutAndFocus": true,
+    "nativeEscapeRemovedInertIsolation": true,
+    "fullscreenPreservedRendererInstance": true,
+    "fullCatalogSourcePairs": 86,
+    "sourceOnly2DReferences": 80,
+    "illustrative3DReferences": 6,
+    "unitSidesInspectedFromBothDirections": true,
+    "tableSavedSharedAndRevokedLocally": true,
+    "hostedDeviceDraftRestoredAfterReload": true,
+    "hostedEnquiryContactFormAbsent": true,
+    "requestSamplesPreservedExplicitVariantIDs": true,
+    "finalStudioConsoleWarningsErrors": [],
+    "automatedTestsPassed": 30,
+    "productionBuildPassed": true,
+    "readOnlyHttpSmokePassed": true
+  },
+  "budgets": {
+    "initialStudioSceneAssetRawBytes": 576049,
+    "initialStudioSceneAssetEstimatedGzipBytes": 145336,
+    "conservativeEntireStudioRawBytes": 2994950,
+    "note": "Includes all 86 SSR-listed lazy swatches, all initial scripts including conditional polyfills, deferred renderer, HTML and CSS. Not a captured HAR transfer total. Renderer uses no external models/textures."
+  },
+  "limitations": [
+    "No physical mobile/GPU or cold/slow-network trace",
+    "No field traffic or Core Web Vitals guarantee",
+    "No full screen-reader/assistive-technology/WCAG certification",
+    "Reduced-motion paths code-reviewed; no OS preference matrix run",
+    "Viewport fallback code-reviewed; native fullscreen tested",
+    "Actual context loss verified in earlier isolated diagnostic; not repeated for final catalog import",
+    "Material appearance remains uncalibrated and illustrative",
+    "Hosted durable snapshots, share/export, enquiries and admin writes require persistent services; current hosted review uses device drafts and direct contact"
+  ]
+}

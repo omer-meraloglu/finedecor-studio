@@ -15,7 +15,7 @@ function PendingHint(){const {pending}=useLinkStatus();return <span aria-hidden=
 export default function Site({locale,path}:{locale:'en'|'de';path:string[]}){
   const de=locale==='de',page=path[0]||'',route=`/${locale}/${path.join('/')}`;
   const [menu,setMenu]=useState(false),[scrolled,setScrolled]=useState(false);
-  const {shortlist,storageStatus}=useLibrary();
+  const {shortlist,storageStatus,serverPersistence}=useLibrary();
   const header=useRef<HTMLElement>(null),menuButton=useRef<HTMLButtonElement>(null),progress=useRef<HTMLSpanElement>(null),previousRoute=useRef(route);
   const link=(p:string)=>`/${locale}/${p}`;
   useSectionMotion(route);
@@ -48,11 +48,11 @@ export default function Site({locale,path}:{locale:'en'|'de';path:string[]}){
     return ()=>life.abort();
   },[]);
   const props={locale,path};
-  const content=page==='collections'?<Catalog {...props}/>:page==='products'?<Product {...props}/>:page==='applications'?<ApplicationsPage {...props}/>:page==='studio'?<StudioPage {...props}/>:page==='shortlist'?<Shortlist {...props}/>:page==='request'?<RequestForm {...props}/>:page==='knowledge'?<Knowledge {...props}/>:page==='company'?<Company {...props}/>:page==='contact'?<Contact {...props}/>:page==='legal'?<Legal {...props}/>:page==='accessibility'?<Legal {...props} accessibility/>:page==='admin'?<Admin locale={locale}/>:page==='shared'?<Studio locale={locale} shareToken={path[1]}/>:page===''?<Home locale={locale}/>:<Missing {...props}/>;
+  const content=page==='collections'?<Catalog {...props}/>:page==='products'?<Product {...props}/>:page==='applications'?<ApplicationsPage {...props}/>:page==='studio'?<StudioPage {...props}/>:page==='shortlist'?<Shortlist {...props}/>:page==='request'?<RequestForm {...props}/>:page==='knowledge'?<Knowledge {...props}/>:page==='company'?<Company {...props}/>:page==='contact'?<Contact {...props}/>:page==='legal'?<Legal {...props}/>:page==='accessibility'?<Legal {...props} accessibility/>:page==='admin'?(serverPersistence?<Admin locale={locale}/>:<div className="page-wrap"><h1>{de?'Redaktion in der lokalen Vorschau':'Content review in the local preview'}</h1><p>{de?'Die gehostete Vorschau enthält keinen schreibbaren Redaktionsspeicher.':'This hosted review has no writable content store.'}</p></div>):page==='shared'?<Studio locale={locale} shareToken={path[1]}/>:page===''?<Home locale={locale}/>:<Missing {...props}/>;
   const navigation=[['collections',de?'Kollektionen':'Collections'],['applications',de?'Anwendungen':'Applications'],['studio','Material Studio'],['knowledge',de?'Wissen':'Knowledge'],['company',de?'Unternehmen':'Company']];
   return <>
     <a className="skip" href="#main">{de?'Zum Inhalt':'Skip to content'}</a>
-    <div className="notice">{de?'Lokale Vorschau · Materialien und Anfragen zur Prüfung':'Local preview · materials and enquiries for review'}</div>
+    <div className="notice">{serverPersistence?(de?'Lokale Vorschau · Materialien und Anfragen zur Prüfung':'Local preview · materials and enquiries for review'):(de?'Gehostete Vorschau · Quellenmaterialien · private Geräteentwürfe':'Hosted review · source materials · private device drafts')}</div>
     <header ref={header} className={`site-header ${scrolled?'is-scrolled':''}`}>
       <Link href={link('')} className="brand" aria-label={de?'Fine Decor Startseite':'Fine Decor home'}><img src="/media/logo.png" alt="Fine Decor" width="171" height="66"/></Link>
       <nav id="primary-navigation" aria-label={de?'Hauptnavigation':'Main navigation'} className={menu?'open':''}>
@@ -72,7 +72,7 @@ export default function Site({locale,path}:{locale:'en'|'de';path:string[]}){
     <footer>
       <div><img src="/media/logo.png" alt="Fine Decor" width="140"/><p>{de?'PET-Dekoroberflächen.':'PET decorative surfaces.'}<br/>{de?'Eine Grundlage für Ihr nächstes Projekt.':'A considered foundation for your next project.'}</p></div>
       <div><Link href={link('contact')}>{de?'Kontakt':'Contact'}</Link><Link href={link('company')}>{de?'Unternehmen und Karriere':'Company & careers'}</Link><Link href={link('legal')}>{de?'Rechtliches und Datenschutz':'Legal & privacy'}</Link><Link href={link('accessibility')}>{de?'Barrierefreiheit':'Accessibility'}</Link><Link href={link('admin')} prefetch={false}>{de?'Redaktionsbereich':'Content review'}</Link></div>
-      <div><p>Aurea 21 · 59302 Oelde · Germany</p><a href="mailto:info@finedecor.de">info@finedecor.de</a><a href="tel:+492522937970">+49 2522 937 97 0</a><p>© Fine Decor · {de?'Lokale Entwicklungsvorschau':'Local development preview'}</p></div>
+      <div><p>Aurea 21 · 59302 Oelde · Germany</p><a href="mailto:info@finedecor.de">info@finedecor.de</a><a href="tel:+492522937970">+49 2522 937 97 0</a><p>© Fine Decor · {serverPersistence?(de?'Lokale Entwicklungsvorschau':'Local development preview'):(de?'Gehostete Entwicklungsvorschau':'Hosted development preview')}</p></div>
     </footer>
     <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify({'@context':'https://schema.org','@type':'Organization',name:'Fine Decor',url:'https://www.finedecor.de/'})}}/>
   </>;

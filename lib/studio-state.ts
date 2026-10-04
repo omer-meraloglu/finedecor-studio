@@ -2,6 +2,7 @@ import {getVariant} from './catalog';
 import type {Project} from './model';
 
 export type MaterialTarget = 'fronts' | 'accent' | 'compare';
+export const supportsAccent = (scene: Project['scene']): boolean => scene === 'kitchen' || scene === 'unit';
 export type StudioHistory = {
   past: Project[];
   present: Project;
@@ -25,6 +26,12 @@ const cameraPresets: Record<Project['scene'], Record<Project['camera']['preset']
     perspective: {preset: 'perspective', position: [3, 1.9, 4.1], target: [0, .9, 0]},
     front: {preset: 'front', position: [0, .9, 6.1], target: [0, .9, 0]},
     detail: {preset: 'detail', position: [1.1, 1.12, 2.35], target: [0, .94, .12]},
+  },
+  table: {
+    perspective: {preset: 'perspective', position: [2.6, 1.95, 3.5], target: [0, .62, 0]},
+    // An elevated front preset keeps this horizontal reference surface visible.
+    front: {preset: 'front', position: [0, 1.9, 4.8], target: [0, .72, 0]},
+    detail: {preset: 'detail', position: [1.1, 1.5, 2], target: [0, .75, 0]},
   },
 };
 
@@ -55,7 +62,7 @@ export function cameraPreset(scene: Project['scene'], preset: Project['camera'][
 /** Only surfaces visible in a material slot or comparison belong to the active selection. */
 export function activeVariantIds(project: Project): string[] {
   const ids = [project.assignments.fronts];
-  if (project.scene !== 'panel' && project.assignments.accent) ids.push(project.assignments.accent);
+  if (supportsAccent(project.scene) && project.assignments.accent) ids.push(project.assignments.accent);
   if (project.compareId) ids.push(project.compareId);
   return [...new Set(ids.map(requireVariant))];
 }
@@ -76,7 +83,7 @@ export function assignMaterial(
 ): Project {
   requireVariant(variantId);
   if (!['fronts', 'accent', 'compare'].includes(target)) throw new Error('Unsupported material slot');
-  if (target === 'accent' && project.scene === 'panel') throw new Error('Panel supports the fronts slot only');
+  if (target === 'accent' && !supportsAccent(project.scene)) throw new Error('This scene supports the fronts slot only');
   const next = cloneProject(project);
   if (target === 'compare') next.compareId = variantId;
   else next.assignments[target] = variantId;
@@ -100,7 +107,7 @@ export function changeScene(
 ): Project {
   const next = cloneProject(project);
   next.scene = scene;
-  if (scene === 'panel') next.assignments = {fronts: next.assignments.fronts};
+  if (!supportsAccent(scene)) next.assignments = {fronts: next.assignments.fronts};
   next.camera = cameraPreset(scene, 'perspective');
   return retainReferenceIds(next, referenceIds);
 }

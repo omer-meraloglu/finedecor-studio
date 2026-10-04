@@ -1,11 +1,12 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {defaultProject} from '../lib/catalog';
+import {defaultProject,variants} from '../lib/catalog';
 import {projectSchema} from '../lib/validation';
 import type {Project} from '../lib/model';
 import {
   activeVariantIds, assignMaterial, cameraPreset, changeScene, cloneProject,
   commitHistory, createHistory, redoHistory, retainReferenceIds, setComparison, undoHistory,
+  supportsAccent,
 } from '../lib/studio-state';
 
 const olive = 'demo-373-frosted';
@@ -51,7 +52,7 @@ test('Scene changes drop unsupported accents, keep explicit references and fit t
   assert.throws(() => assignMaterial(panel, 'accent', grey), /fronts slot only/);
   assert.deepEqual(changeScene(kitchen, 'panel', [grey]).variantIds, [olive, grey]);
   assert.ok(projectSchema.safeParse(panel).success);
-  for (const scene of ['panel', 'kitchen', 'unit'] as const) {
+  for (const scene of ['panel', 'kitchen', 'unit', 'table'] as const) {
     for (const preset of ['perspective', 'front', 'detail'] as const) {
       const project = {...changeScene(defaultProject, scene), camera: cameraPreset(scene, preset)};
       assert.ok(projectSchema.safeParse(project).success, `${scene}/${preset} serializes as a valid camera`);
@@ -60,6 +61,55 @@ test('Scene changes drop unsupported accents, keep explicit references and fit t
   const camera = cameraPreset('kitchen', 'front');
   camera.position[0] = 29;
   assert.equal(cameraPreset('kitchen', 'front').position[0], .45);
+});
+
+test('Table transitions keep tabletop and comparison IDs, drop accents and restore through undo', () => {
+  const kitchen = setComparison(assignMaterial(changeScene(defaultProject, 'kitchen'), 'accent', grey), cashmere, [sand]);
+  const table = changeScene(kitchen, 'table', [sand]);
+  assert.equal(table.scene, 'table');
+  assert.deepEqual(table.assignments, {fronts: olive});
+  assert.deepEqual(table.variantIds, [olive, cashmere, sand]);
+  assert.deepEqual(table.camera, cameraPreset('table', 'perspective'));
+  assert.deepEqual(activeVariantIds(table), [olive, cashmere]);
+  assert.ok(projectSchema.safeParse(table).success);
+  assert.equal(supportsAccent('table'), false);
+  assert.equal(supportsAccent('panel'), false);
+  assert.equal(supportsAccent('kitchen'), true);
+  assert.equal(supportsAccent('unit'), true);
+  assert.throws(() => assignMaterial(table, 'accent', grey), /fronts slot only/);
+  assert.equal(projectSchema.safeParse({...table, assignments: {...table.assignments, accent: grey}, variantIds: [...table.variantIds, grey]}).success, false);
+  const updated = assignMaterial(table, 'fronts', grey, [sand]);
+  assert.deepEqual(updated.variantIds, [grey, cashmere, sand]);
+  assert.deepEqual(setComparison(updated, null, [sand]).variantIds, [grey, sand]);
+  const front = cameraPreset('table', 'front');
+  assert.ok(front.position[1] > front.target[1], 'Front view looks down enough to reveal the tabletop');
+  const history = commitHistory(createHistory(kitchen), table);
+  assert.deepEqual(undoHistory(history).present, kitchen);
+  assert.deepEqual(redoHistory(undoHistory(history)).present, table);
+});
+
+test('Full studies reject additions atomically and accept a replacement or a released reference slot', () => {
+  const references=variants.filter(v=>v.id!==olive).slice(0,11).map(v=>v.id);
+  const full=retainReferenceIds(changeScene(defaultProject,'kitchen'),references);
+  const original=cloneProject(full),originalReferences=[...references];
+  const next=variants.find(v=>!full.variantIds.includes(v.id))!.id;
+  assert.equal(full.variantIds.length,12);
+  assert.ok(projectSchema.safeParse(full).success);
+  assert.throws(()=>retainReferenceIds(full,[...references,next]),/up to 12 variants/);
+  assert.throws(()=>setComparison(full,next,references),/up to 12 variants/);
+  assert.throws(()=>assignMaterial(full,'accent',next,references),/up to 12 variants/);
+  assert.deepEqual(full,original,'Rejected additions preserve assignments, IDs and camera');
+  assert.deepEqual(references,originalReferences,'Rejected additions do not poison reference bookkeeping');
+  const replacement=assignMaterial(full,'fronts',next,references);
+  assert.equal(replacement.variantIds.length,12);
+  assert.equal(replacement.assignments.fronts,next);
+  assert.ok(!replacement.variantIds.includes(olive));
+  const accepted=setComparison(full,next,references.slice(0,-1));
+  assert.equal(accepted.variantIds.length,12);
+  assert.equal(accepted.compareId,next);
+  assert.equal(accepted.assignments.fronts,olive);
+  assert.ok(projectSchema.safeParse(accepted).success);
+  assert.deepEqual(full,original,'A successful retry also leaves its input snapshot untouched');
 });
 
 test('Bounded undo and redo restore whole projects and discard abandoned future edits', () => {

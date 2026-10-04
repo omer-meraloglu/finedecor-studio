@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {defaultProject} from '../lib/catalog';
 import type {Project} from '../lib/model';
 import {buildStudyExport} from '../lib/study-export';
-import {cameraPreset} from '../lib/studio-state';
+import {cameraPreset, changeScene, setComparison} from '../lib/studio-state';
 
 const date = new Date('2026-10-04T12:00:00Z');
 const png = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+aQ1sAAAAASUVORK5CYII=';
@@ -72,4 +72,21 @@ test('Study export names cameras by their saved coordinates rather than a stale 
   const de = build({project: {...project, camera: custom}, locale: 'de'});
   assert.ok(en.includes('<dt>Saved camera</dt><dd>Custom view</dd>'));
   assert.ok(de.includes('<dt>Gespeicherte Kamera</dt><dd>Eigene Ansicht</dd>'));
+});
+
+test('Table study exports localized scene and tabletop roles without unsupported accents', () => {
+  const table = setComparison(changeScene(project, 'table'), 'demo-373-gloss');
+  const en = build({project: table});
+  const de = build({project: table, locale: 'de'});
+  assert.ok(en.includes('<dt>Reference scene</dt><dd>Table</dd>'));
+  assert.ok(de.includes('<dt>Referenzszene</dt><dd>Tisch</dd>'));
+  assert.ok(en.includes('A · Tabletop'));
+  assert.ok(en.includes('B · Comparison tabletop'));
+  assert.ok(de.includes('A · Tischplatte'));
+  assert.ok(de.includes('B · Vergleichstischplatte'));
+  assert.equal(en.includes('Accent front'), false);
+  assert.equal(de.includes('Akzentfront'), false);
+  assert.ok(en.includes('Illustrative preview — verify with a physical sample.'));
+  assert.ok(de.includes('keine technische Spezifikation'));
+  assert.ok(en.includes('Same geometry, camera, exposure and lighting for A and B.'));
 });

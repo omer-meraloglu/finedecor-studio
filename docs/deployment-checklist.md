@@ -28,3 +28,15 @@
 - Disable downstream adapters if integrity fails; preserve stored enquiries and queued jobs. Audit the incident and replay only stable idempotency keys after repair.
 - Restore the database from a reviewed backup only when needed, reconciling requests created since backup. Revoke any compromised project tokens or staff sessions separately.
 - Verify catalog IDs, sample storage, locale routing and privacy on the restored version.
+
+## Authorized GitHub / Vercel review update — 4 October 2026
+
+The user explicitly authorized one commit and push to `omer-meraloglu/finedecor-studio` on `main` for this update only. Future ordinary work does not inherit commit or push authorization. Git-connected Vercel deployment is the existing review URL; no company domain/DNS or live company systems are changed.
+
+The repository requires Node `24.x`. Vercel is detected through its trusted `VERCEL=1` environment. This deployment serves the full source catalog and interactive Studio, keeps anonymous drafts/shortlists in device storage, and disables SQLite-backed server snapshots, shares, enquiries and admin writes. It exposes direct Fine Decor email/phone for real enquiries instead of accepting contact data into ephemeral storage. No `/tmp` database is used or presented as durable. The local Node process retains the complete SQLite save/share/revoke and enquiry/outbox workflows.
+
+`FD_PUBLIC_ORIGIN` overrides canonical/sitemap origin when configured. Otherwise trusted Vercel production/build URL environment values supply the hosted origin; request headers are never used to infer an allowed origin. Secrets and local databases stay out of Git. Persistent hosted enquiry/project storage requires a separately configured durable database adapter; adapters and regional/product approvals remain release dependencies.
+
+Rollback: select the previous Vercel deployment or revert this commit on `main` under a new explicit instruction. Never force-push or erase stored local review data. Existing demo IDs remain compatible.
+
+Platform references: [Node versions](https://vercel.com/docs/functions/runtimes/node-js/node-js-versions), [file handling in Vercel Functions](https://vercel.com/kb/guide/how-can-i-use-files-in-serverless-functions).
