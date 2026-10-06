@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import {ArrowUpRight,Palette,Ruler,MessageSquare} from 'lucide-react';
 import './home.css';
+import './company.css';
 
 type LocaleProps={locale:'en'|'de'};
 
@@ -37,10 +38,25 @@ export function CustomConsultation({locale}:LocaleProps){
 /** Owner-authorized source context for the company page; no live site claims. */
 export function CompanySourceStory({locale}:LocaleProps){
   const de=locale==='de';
-  return <section className="fd-company-story" aria-labelledby="fd-company-story-title">
-    <div className="fd-source-heading"><div><span className="eyebrow">{de?'ERFAHRUNG & ZUSAMMENARBEIT':'EXPERIENCE & COLLABORATION'}</span><h2 id="fd-company-story-title">{de?'Aus Ideen werden':'Ideas become'}<br/>{de?'Oberflächen.':'surfaces.'}</h2></div><p>{de?'Fine Decor wurde 2004 gegründet und arbeitet mit der deutschen und internationalen Küchen- und Möbelindustrie. Die Ideen der Kunden prägen Farbe und Oberflächendesign.':'Founded in 2004, Fine Decor works with the German and international kitchen and furniture industry. Customers’ ideas inform colour and surface design.'}</p></div>
-    <div className="fd-company-principles"><article><span>01</span><h3>{de?'Design im Dialog':'Design in dialogue'}</h3><p>{de?'Sinne, Natur und Kundenideen geben Impulse für Farben und Dekore.':'Senses, nature and customer ideas inspire colours and decors.'}</p></article><article><span>02</span><h3>{de?'Individuelle Anforderungen':'Individual requirements'}</h3><p>{de?'Besprechen Sie Farben, Breiten und anwendungstechnische Fragen mit dem Team.':'Discuss colours, widths and application questions with the team.'}</p></article><article><span>03</span><h3>{de?'Materialentwicklung':'Material development'}</h3><p>{de?'Die Unternehmensgeschichte nennt PET-Entwicklung ab 2005 und den Grundstein für den Produktionsstandort der Schwesterfirma FineLine Innovation im Jahr 2019.':'The company history records PET development from 2005 and a 2019 production-site milestone for sister company FineLine Innovation.'}</p></article></div>
-    <div className="fd-company-images"><figure><img src="/media/source-production-hall.jpg" width="600" height="300" loading="lazy" alt={de?'Luftaufnahme eines Industriegebäudes aus der FineLine Galerie auf der Fine Decor Unternehmensseite':'Aerial photograph of an industrial building from the FineLine gallery on Fine Decor’s company page'}/><figcaption>{de?'FineLine · Fine Decor Unternehmensgalerie':'FineLine · Fine Decor company gallery'}</figcaption></figure><figure><img src="/media/source-production-exterior.jpg" width="600" height="300" loading="lazy" alt={de?'Gebäudefassade mit FineLine Beschriftung aus der Fine Decor Unternehmensgalerie':'Building facade with FineLine signage from the Fine Decor company gallery'}/><figcaption>{de?'Architektur · Fine Decor Unternehmensgalerie':'Architecture · Fine Decor company gallery'}</figcaption></figure></div>
-    <div className="fd-source-footer"><Link className="text-link" href={`/${locale}/request?kind=technical`}>{de?'Mit dem Team sprechen':'Talk to the team'}<ArrowUpRight size={18}/></Link><div><a href={de?'https://www.finedecor.de/ueber-fine-decor/':'https://www.finedecor.de/en/about-fine-decor/'} target="_blank" rel="noreferrer">{de?'Unternehmensquelle & Geschichte':'Company source & history'} ↗</a><a href={de?'https://www.finedecor.de/unsere-produkte/':'https://www.finedecor.de/en/our-products/'} target="_blank" rel="noreferrer">{de?'Produkt- und Beratungsquelle':'Product & consultation source'} ↗</a></div></div>
+  const groups=[
+    {id:'fine-decor',name:'Fine Decor',location:'Bielefeld',images:[
+      {src:'/media/company/building.jpg',alt:de?'Luftaufnahme einer dunklen Industriehalle mit Fine Decor Schriftzug':'Aerial view of a dark industrial hall with Fine Decor signage'},
+      {src:'/media/company/warehouse.jpg',alt:de?'Materialrollen und ein roter Gabelstapler in einer Lagerhalle':'Material rolls and a red forklift inside a warehouse'},
+      {src:'/media/company/truck.jpg',alt:de?'Blauer IVECO Lkw an den Laderampen eines Industriegebäudes':'Blue IVECO truck at the loading bays of an industrial building'}
+    ]},
+    {id:'fineline',name:'FineLine Innovation',location:'Oelde',images:[
+      {src:'/media/source-production-hall.jpg',alt:de?'Luftaufnahme eines Produktionsgebäudes mit Metallsilos an einem Ende':'Aerial view of a production building with metal silos at one end'},
+      {src:'/media/company/production-site.jpg',alt:de?'Luftaufnahme des FineLine Gebäudes mit weißem Dach und umliegenden Feldern':'Aerial view of the FineLine building with a white roof and surrounding fields'},
+      {src:'/media/source-production-exterior.jpg',alt:de?'Verglaste FineLine Gebäudefassade mit Firmenschriftzug neben einer Rasenfläche':'Glazed FineLine facade with company signage beside a lawn'},
+      {src:'/media/company/production-detail.jpg',alt:de?'Dunkle gemusterte Oberflächenfolie auf einer breiten industriellen Walze':'Dark patterned surface film around a wide industrial roller'}
+    ]}
+  ];
+  return <section className="company-source-gallery" aria-labelledby="company-gallery-title">
+    <div className="company-gallery-heading"><span className="eyebrow">{de?'EINBLICKE':'A CLOSER LOOK'}</span><h2 id="company-gallery-title">{de?'Raum für Oberflächen.':'Room for surfaces.'}</h2></div>
+    {groups.map(group=><section className="company-gallery-group" key={group.id} aria-labelledby={`company-gallery-${group.id}`}>
+      <div className="company-gallery-label"><h3 id={`company-gallery-${group.id}`}>{group.name}</h3><span>{group.location} · {de?'Unternehmensgalerie':'Company source gallery'}</span></div>
+      <div className={`company-gallery-grid${group.images.length===3?' company-gallery-three':''}`}>{group.images.map(photo=><figure key={photo.src}><img src={photo.src} width="600" height="300" loading="lazy" decoding="async" alt={photo.alt}/></figure>)}</div>
+    </section>)}
+    <div className="company-gallery-footer"><Link className="text-link" href={`/${locale}/request?kind=technical`}>{de?'Mit dem Team sprechen':'Talk to the team'}<ArrowUpRight size={18}/></Link><a href={de?'https://www.finedecor.de/ueber-fine-decor/':'https://www.finedecor.de/en/about-fine-decor/'} target="_blank" rel="noreferrer">{de?'Bildquelle · Fine Decor':'Photography source · Fine Decor'} ↗</a></div>
   </section>;
 }

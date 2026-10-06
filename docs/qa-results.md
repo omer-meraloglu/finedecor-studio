@@ -2,6 +2,8 @@
 
 **Latest evidence — 6 October 2026:** [Homepage and enquiry streamlining](homepage-enquiry-streamlining.md) and [screenshots](screenshots/README.md). All 35 tests, TypeScript, the final optimized build and local/hosted read-only HTTP smoke pass. Request/Contact forms store locally or prepare explicit hosted email drafts; product 3D opens the full Studio with the exact variant selected. Earlier sections and numeric measurements below are historical.
 
+**Subsequent image update — 6 October 2026:** [Company imagery](company-image-enrichment.md). All eight source photos and the archived graphic load; desktop/mobile/German-tablet screenshots were inspected. The final build, TypeScript and read-only smoke pass. No catalogue, form, Studio or integration logic changed in this image update.
+
 ## Original build — 3 October 2026
 
 The final optimized Next.js build and TypeScript checks pass. Seven meaningful automated core tests pass, plus the read-only HTTP smoke suite in `scripts/smoke.mjs`. No real email, CRM lead, warehouse instruction, external service subscription or company deployment occurred.

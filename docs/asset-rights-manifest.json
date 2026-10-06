@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-10-04",
+  "checkedAt": "2026-10-06",
   "timezone": "Europe/Istanbul",
-  "authorization": "The user authorized reuse of Fine Decor .de content and assets in this site and its one-time GitHub/Vercel review update on 4 October 2026. Stock application photos use verified free Unsplash/Burst licenses and remain inspiration. A company-domain release, approved product/PIM data and regional legal review remain separate dependencies.",
+  "authorization": "The user authorized reuse of Fine Decor .de content and assets for the review site in earlier requests and specifically authorized all company-page imagery for this page update on 6 October 2026. After local verification, the user separately authorized committing and pushing the company imagery update to the existing GitHub repository and hosted review. Stock application photos retain their verified Unsplash/Burst licenses and remain inspiration. Company-domain release, approved product/PIM data, current certification evidence and regional legal review remain separate dependencies.",
   "publicationStatus": "user-authorized-local-and-hosted-review; company release pending owner confirmation",
   "assets": [
     {
@@ -65,11 +65,15 @@
         1920,
         800
       ],
-      "description": "Building facade bearing Fine Decor identity; do not infer current exact site from image.",
+      "description": "Low-angle view of a white facade with olive Fine Decor signage against blue sky.",
       "credit": "Fine Decor source company photography",
       "localPath": "/media/interior.jpg",
       "bytes": 687700,
-      "sha256": "cb84410c566994ef5be9ee9232bd563ffd9361c6df8f24aa6fe39bfa3df6d7ce"
+      "sha256": "cb84410c566994ef5be9ee9232bd563ffd9361c6df8f24aa6fe39bfa3df6d7ce",
+      "usage": [
+        "home-company-section"
+      ],
+      "usageUpdatedAt": "2026-10-06"
     },
     {
       "id": "fine-decor-logo",
@@ -302,8 +306,7 @@
         551
       ],
       "usage": [
-        "home-hero-gallery",
-        "home-production-band"
+        "home-hero-gallery"
       ],
       "variantAssignment": null,
       "clientIdentity": null,
@@ -324,24 +327,26 @@
         850,
         567
       ],
-      "usage": [
-        "home-production-band"
-      ],
+      "usage": [],
       "variantAssignment": null,
       "clientIdentity": null,
       "calibrationStatus": "not-applicable-context-photo",
       "localPath": "/media/production.jpg",
       "bytes": 58486,
       "sha256": "af4eb76ef455d6c74f72665eed3f07525242f77e2f3d55f348b68b50b7474f8a",
-      "publicationStatus": "user-authorized-local-demo-pending-owner-publication-review"
+      "publicationStatus": "user-authorized-local-demo-pending-owner-publication-review",
+      "previousUsage": [
+        "home-production-band"
+      ],
+      "usageNote": "Retained source asset; home Company section now uses the Fine Decor facade moved from the Company page."
     },
     {
       "id": "source-production-hall",
-      "sourcePage": "https://www.finedecor.de/en/about-fine-decor/",
+      "sourcePage": "https://www.finedecor.de/ueber-fine-decor/",
       "url": "https://www.finedecor.de/wp-content/uploads/elementor/thumbs/fineline-produktion-oelde-2-qd4cpwi2x6utydqs5t802ownfhtqs07e0v2yhiu6d4.jpg",
       "localPath": "/media/source-production-hall.jpg",
-      "description": "Aerial exterior of an industrial building from the FineLine company gallery. No capacity, staffing or current operating responsibility inferred.",
-      "credit": "Fine Decor / FineLine source company gallery",
+      "description": "Aerial close view of an industrial building roof and metal storage silos at one end. No capacity, staffing or current operating responsibility is inferred.",
+      "credit": "Fine Decor / FineLine source company photography",
       "dimensions": [
         600,
         300
@@ -352,16 +357,20 @@
       "calibrationStatus": "not-applicable-context-photo",
       "publicationStatus": "user-authorized-local-copy-pending-owner-release",
       "usage": [
-        "CompanySourceStory"
-      ]
+        "company-source-gallery-oelde"
+      ],
+      "observedAt": "2026-10-06 live rendered company-page image and downloaded bytes visually inspected",
+      "clientIdentity": null,
+      "transformation": "Source bytes preserved; no upscaling, recolouring or product material modification.",
+      "importStatus": "existing"
     },
     {
       "id": "source-production-exterior",
-      "sourcePage": "https://www.finedecor.de/en/about-fine-decor/",
+      "sourcePage": "https://www.finedecor.de/ueber-fine-decor/",
       "url": "https://www.finedecor.de/wp-content/uploads/elementor/thumbs/fineline-produktion-oelde-1-qd4cpwi2x6utydqs5t802ownfhtqs07e0v2yhiu6d4.jpg",
       "localPath": "/media/source-production-exterior.jpg",
-      "description": "Building facade with FineLine signage from the Fine Decor company gallery. No present legal entity/address/responsibility assertion.",
-      "credit": "Fine Decor / FineLine source company gallery",
+      "description": "Glazed facade bearing FineLine signage beside a lawn. No current legal entity, address or operating responsibility is inferred.",
+      "credit": "Fine Decor / FineLine source company photography",
       "dimensions": [
         600,
         300
@@ -372,8 +381,184 @@
       "calibrationStatus": "not-applicable-context-photo",
       "publicationStatus": "user-authorized-local-copy-pending-owner-release",
       "usage": [
-        "CompanySourceStory"
-      ]
+        "company-source-gallery-oelde"
+      ],
+      "observedAt": "2026-10-06 live rendered company-page image and downloaded bytes visually inspected",
+      "clientIdentity": null,
+      "transformation": "Source bytes preserved; no upscaling, recolouring or product material modification.",
+      "importStatus": "existing"
+    },
+    {
+      "id": "source-company-laboratory",
+      "sourcePage": "https://www.finedecor.de/ueber-fine-decor/",
+      "url": "https://www.finedecor.de/wp-content/uploads/elementor/thumbs/FineLine03-qd4cnh339lj5yn9rc9fp4sys6nslw5kcouesusfsfs.jpg",
+      "observedAt": "2026-10-06 live rendered company-page image and downloaded bytes visually inspected",
+      "description": "A hand lifts a small orange sample with tweezers beside glass dishes on a workbench. No specific test, measured result or current certification is asserted.",
+      "credit": "Fine Decor / FineLine source company photography",
+      "dimensions": [
+        600,
+        300
+      ],
+      "localPath": "/media/company/laboratory.jpg",
+      "bytes": 21290,
+      "sha256": "b48033f10049021eea72784f6c823ebf250b3169cfd7a94c09b3d83c558d47d1",
+      "variantAssignment": null,
+      "clientIdentity": null,
+      "calibrationStatus": "not-applicable-context-photo",
+      "publicationStatus": "user-authorized-local-copy-pending-owner-release",
+      "usage": [
+        "company-introduction"
+      ],
+      "transformation": "Source bytes preserved; no upscaling, recolouring or product material modification.",
+      "importStatus": "new"
+    },
+    {
+      "id": "source-company-building",
+      "sourcePage": "https://www.finedecor.de/ueber-fine-decor/",
+      "url": "https://www.finedecor.de/wp-content/uploads/elementor/thumbs/FineDecor_Gebaeude-qd4cpumejis9b5tigseqxpdq8q30clzxclrziywypk.jpg",
+      "observedAt": "2026-10-06 live rendered company-page image and downloaded bytes visually inspected",
+      "description": "Aerial photograph of a dark industrial hall bearing Fine Decor signage. No current office, production or warehouse assignment inferred from this image.",
+      "credit": "Fine Decor / FineLine source company photography",
+      "dimensions": [
+        600,
+        300
+      ],
+      "localPath": "/media/company/building.jpg",
+      "bytes": 34238,
+      "sha256": "211708facc63bba8d09073ba15f947b4f6f3ed4a79b5bbfa880f2dc83ad888e5",
+      "variantAssignment": null,
+      "clientIdentity": null,
+      "calibrationStatus": "not-applicable-context-photo",
+      "publicationStatus": "user-authorized-local-copy-pending-owner-release",
+      "usage": [
+        "company-source-gallery-bielefeld"
+      ],
+      "transformation": "Source bytes preserved; no upscaling, recolouring or product material modification.",
+      "importStatus": "new"
+    },
+    {
+      "id": "source-company-warehouse",
+      "sourcePage": "https://www.finedecor.de/ueber-fine-decor/",
+      "url": "https://www.finedecor.de/wp-content/uploads/elementor/thumbs/FineLine02-qd4cng592rhvn1b4hr12kb7bl9x8oggmcprbdih6m0.jpg",
+      "observedAt": "2026-10-06 live rendered company-page image and downloaded bytes visually inspected",
+      "description": "Stored rolls on pallets and a motion-blurred red forklift inside a warehouse. No stock, capacity or delivery promise is inferred.",
+      "credit": "Fine Decor / FineLine source company photography",
+      "dimensions": [
+        600,
+        300
+      ],
+      "localPath": "/media/company/warehouse.jpg",
+      "bytes": 29685,
+      "sha256": "d5c103e235970aa40abfba0515a7df24b9103dd5d056d5f6df3b6d7fdf49e681",
+      "variantAssignment": null,
+      "clientIdentity": null,
+      "calibrationStatus": "not-applicable-context-photo",
+      "publicationStatus": "user-authorized-local-copy-pending-owner-release",
+      "usage": [
+        "company-source-gallery-bielefeld"
+      ],
+      "transformation": "Source bytes preserved; no upscaling, recolouring or product material modification.",
+      "importStatus": "new"
+    },
+    {
+      "id": "source-company-truck",
+      "sourcePage": "https://www.finedecor.de/ueber-fine-decor/",
+      "url": "https://www.finedecor.de/wp-content/uploads/elementor/thumbs/FIneLine01-qd4cnf7evxglbfchn8mfztfuzw1vgrcw0l3tw8iks8.jpg",
+      "observedAt": "2026-10-06 live rendered company-page image and downloaded bytes visually inspected",
+      "description": "A blue IVECO truck with a container at loading bays. Vehicle ownership and current logistics responsibilities are not asserted.",
+      "credit": "Fine Decor / FineLine source company photography",
+      "dimensions": [
+        600,
+        300
+      ],
+      "localPath": "/media/company/truck.jpg",
+      "bytes": 34627,
+      "sha256": "2fe7c3ac62c3652742b3909cc33faada550ed0d357e7a0ca3abadf324243a023",
+      "variantAssignment": null,
+      "clientIdentity": null,
+      "calibrationStatus": "not-applicable-context-photo",
+      "publicationStatus": "user-authorized-local-copy-pending-owner-release",
+      "usage": [
+        "company-source-gallery-bielefeld"
+      ],
+      "transformation": "Source bytes preserved; no upscaling, recolouring or product material modification.",
+      "importStatus": "new"
+    },
+    {
+      "id": "source-company-production-site",
+      "sourcePage": "https://www.finedecor.de/ueber-fine-decor/",
+      "url": "https://www.finedecor.de/wp-content/uploads/elementor/thumbs/fineline-produktion-oelde-qd4cpwi2x6utydqs5t802ownfhtqs07e0v2yhiu6d4.jpg",
+      "observedAt": "2026-10-06 live rendered company-page image and downloaded bytes visually inspected",
+      "description": "Aerial view of a dark FineLine building with a white roof and surrounding fields. No current legal entity, exact location or operating responsibility is inferred solely from the image.",
+      "credit": "Fine Decor / FineLine source company photography",
+      "dimensions": [
+        600,
+        300
+      ],
+      "localPath": "/media/company/production-site.jpg",
+      "bytes": 59107,
+      "sha256": "6492e31a49f4964607283061240907b7f4f632eb97dbf88fe251acbffce0dc24",
+      "variantAssignment": null,
+      "clientIdentity": null,
+      "calibrationStatus": "not-applicable-context-photo",
+      "publicationStatus": "user-authorized-local-copy-pending-owner-release",
+      "usage": [
+        "company-source-gallery-oelde"
+      ],
+      "transformation": "Source bytes preserved; no upscaling, recolouring or product material modification.",
+      "importStatus": "new"
+    },
+    {
+      "id": "source-company-production-detail",
+      "sourcePage": "https://www.finedecor.de/ueber-fine-decor/",
+      "url": "https://www.finedecor.de/wp-content/uploads/elementor/thumbs/fineline-produktion-qd4cpwi2x6utydqs5t802ownfhtqs07e0v2yhiu6d4.jpg",
+      "observedAt": "2026-10-06 live rendered company-page image and downloaded bytes visually inspected",
+      "description": "Dark patterned surface film wrapped around a wide industrial roller. No exact product, finish or variant is identified.",
+      "credit": "Fine Decor / FineLine source company photography",
+      "dimensions": [
+        600,
+        300
+      ],
+      "localPath": "/media/company/production-detail.jpg",
+      "bytes": 28963,
+      "sha256": "881b168af67adfcc42c0038067c055d68c3eec3751c4cf31dd0172a11649a374",
+      "variantAssignment": null,
+      "clientIdentity": null,
+      "calibrationStatus": "not-applicable-context-photo",
+      "publicationStatus": "user-authorized-local-copy-pending-owner-release",
+      "usage": [
+        "company-source-gallery-oelde"
+      ],
+      "transformation": "Source bytes preserved; no upscaling, recolouring or product material modification.",
+      "importStatus": "new"
+    },
+    {
+      "id": "source-golden-m-archive",
+      "sourcePage": "https://www.finedecor.de/ueber-fine-decor/",
+      "url": "https://www.finedecor.de/wp-content/uploads/2020/04/Goldenes-M-Logo.png",
+      "observedAt": "2026-10-06 live rendered company-page image and downloaded bytes visually inspected",
+      "description": "Golden M/RAL quality-mark graphic as published on the source company page. Archived source graphic only; current validity, approved wording and applicable product scope are unverified.",
+      "credit": "Graphic reproduced from Fine Decor source company page; underlying mark rights remain with its owner.",
+      "dimensions": [
+        250,
+        250
+      ],
+      "localPath": "/media/company/certification-archive.png",
+      "bytes": 19195,
+      "sha256": "c2b4a8a12a1fc022c5e2e61f2e0634c61950a6482f5701d66004152f78b76a7a",
+      "variantAssignment": null,
+      "clientIdentity": null,
+      "calibrationStatus": "not-applicable-context-photo",
+      "publicationStatus": "user-authorized-local-copy-pending-owner-release",
+      "usage": [
+        "company-source-certification-archive"
+      ],
+      "transformation": "Source bytes preserved; no upscaling, recolouring or product material modification.",
+      "importStatus": "new",
+      "claimStatus": "Archived source graphic; no current certification, health or environmental claim.",
+      "currentCertificate": null,
+      "applicableProductScope": null,
+      "approvalStatus": "not-verified"
     }
   ],
   "localCodeAssets": [
@@ -395,5 +580,7 @@
     "role": "Indicative source colour swatches; documented source RGB averages drive 80 additional illustrative 3D colour/finish previews. No calibrated texture maps.",
     "illustrative3DVariants": 86,
     "materialManifest": "material-manifest.json"
-  }
+  },
+  "companyImageCheckScope": "Company imagery rechecked 6 October 2026; earlier catalog/application source checks remain dated in their individual ledgers.",
+  "companyImageLedger": "company-image-sources.json"
 }

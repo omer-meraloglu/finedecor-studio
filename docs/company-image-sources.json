@@ -1,85 +1,39 @@
 {
   "checkedAt": "2026-10-06",
   "timezone": "Europe/Istanbul",
-  "verification": "Company imagery rechecked on the live rendered German page on 6 October 2026. Each imported and reused company photo was visually inspected and recorded in company-image-sources.json. Earlier English home/product/catalog observations remain recorded as 4 October source checks; hidden legacy range content stays excluded.",
-  "authorization": "The user explicitly authorized copying Fine Decor .de company content and assets into this local site. Text is concise sourced paraphrase. Wider company publication and technical product approvals remain owner dependencies.",
-  "content": [
-    {
-      "component": "Home",
-      "topic": "Industrial offer and history",
-      "treatment": "PET decorative films for the furniture industry; founding in 2004 remains a company date, not a dated product specification. Existing Fine Decor facade image moved from the local Company page to the Home Company section on 6 October 2026.",
-      "sources": [
-        "https://www.finedecor.de/en/",
-        "https://www.finedecor.de/en/about-fine-decor/"
-      ]
-    },
-    {
-      "component": "Home / FamilyOverview",
-      "topic": "Sensory and customer-informed design",
-      "treatment": "Sight, touch and customer ideas inform colours/decors. No claimed measured tactile behavior or customer result.",
-      "sources": [
-        "https://www.finedecor.de/en/our-products/",
-        "https://www.finedecor.de/unsere-produkte/"
-      ]
-    },
-    {
-      "component": "FamilyOverview",
-      "topic": "Fineflex and lacquered laminate",
-      "treatment": "Two source-named public families with restrained design descriptions. No draft variant is assigned to a family by these cards. Fineflex uses general material-reference photography, not verified family-specific or variant-specific imagery. Technical-enquiry links open the existing technical request flow.",
-      "sources": [
-        "https://www.finedecor.de/en/our-products/",
-        "https://www.finedecor.de/unsere-produkte/"
-      ]
-    },
-    {
-      "component": "CustomConsultation",
-      "topic": "Individual requirements",
-      "treatment": "Discuss colour setting, special widths and application questions. Colour reference examples RAL/NCS/Pantone come from the public products page. No availability, exact colour match, processing suitability, price or delivery promise.",
-      "sources": [
-        "https://www.finedecor.de/en/our-products/",
-        "https://www.finedecor.de/unsere-produkte/"
-      ]
-    },
-    {
-      "component": "CompanySourceStory",
-      "topic": "Company/design collaboration",
-      "treatment": "German and international kitchen/furniture industrial context, senses/nature/customer-informed design, PET development from 2005, a 2019 production-site milestone for sister company FineLine Innovation. No export count, market leadership or current ownership/production-routing inference. Company image gallery now includes all eight unique source photos. The Golden M graphic appears only as an archived source reference with current approval and product scope explicitly unverified.",
-      "sources": [
-        "https://www.finedecor.de/en/",
-        "https://www.finedecor.de/en/about-fine-decor/",
-        "https://www.finedecor.de/ueber-fine-decor/",
-        "https://www.finedecor.de/en/our-products/"
-      ]
-    }
+  "sourcePages": [
+    "https://www.finedecor.de/ueber-fine-decor/",
+    "https://www.finedecor.de/en/about-fine-decor/"
   ],
-  "excludedClaims": [
-    "Recycled percentages, recyclability or environmental benefit",
-    "Current Golden M/REACH certification, pollutant/health statements or test ratings",
-    "Durability, scratch/chemical/light resistance or calibrated gloss values",
-    "Current stock, lead times, price, free DIN-A4 sample/dispatch terms",
-    "Market leadership, customer/export counts and quantified business results",
-    "Hidden/cached Glaslaminat specification tables and legacy PVC/processing categories as current range"
-  ],
-  "contradictions": [
-    {
-      "id": "PC-01",
-      "topic": "Locations",
-      "observation": "Current company location blocks say Oelde head office/production and Bielefeld warehouse; older English prose still describes Bielefeld headquarters.",
-      "resolution": "No new operating-site or sales-responsibility assertion is made. Root ledger/owner review remains authoritative."
-    },
-    {
-      "id": "PC-02",
-      "topic": "Range",
-      "observation": "Web extraction still exposes legacy Glaslaminat claims/tables that are not present in the inspected rendered range.",
-      "resolution": "Family overview uses only rendered Fineflex/lacquered-laminate headings, without copying hidden technical content."
-    },
-    {
-      "id": "PC-03",
-      "topic": "PET history",
-      "observation": "Home presents the company offer as operating since 2004; company history dates PET development to 2005.",
-      "resolution": "Founding remains 2004; the company story separately states PET development from 2005."
-    }
-  ],
+  "verification": "The live rendered German company page was inspected on 6 October 2026. Each imported or reused photo was visually inspected. Source carousel clones are deduplicated by URL; the page contains eight unique editorial photos plus one certification graphic.",
+  "authorization": "The user explicitly asked to reuse every company-page image and move the first Fine Decor image currently used in the local Company page to Home. After local verification, the user separately authorized committing and pushing this update to the existing GitHub repository and hosted review. Company-domain deployment and certification approval remain separate dependencies.",
+  "publicationStatus": "local and hosted review; owner rights and company production publication review remain separate dependencies",
+  "totals": {
+    "uniqueCompanyPhotos": 8,
+    "certificationGraphics": 1,
+    "newFiles": 7,
+    "existingCompanyPhotosReused": 2,
+    "newAssetBytes": 227105,
+    "companyPhotoBytes": 292193
+  },
+  "movedExistingImage": {
+    "id": "source-company-facade",
+    "localPath": "/media/interior.jpg",
+    "sourcePage": "https://www.finedecor.de/en/",
+    "url": "https://www.finedecor.de/wp-content/uploads/2020/11/fd_slider1.jpg",
+    "description": "Low-angle view of a white facade with olive Fine Decor signage against blue sky.",
+    "previousUsage": "Company introduction image in this local site",
+    "usage": [
+      "home-company-section"
+    ],
+    "dimensions": [
+      1920,
+      800
+    ],
+    "bytes": 687700,
+    "sha256": "cb84410c566994ef5be9ee9232bd563ffd9361c6df8f24aa6fe39bfa3df6d7ce",
+    "transformation": "Existing source bytes reused; position moved from Company to Home."
+  },
   "assets": [
     {
       "id": "source-company-laboratory",
@@ -302,28 +256,24 @@
       "approvalStatus": "not-verified"
     }
   ],
-  "existingAssetReuse": [
+  "templateAssets": [
     {
-      "localPath": "/media/film.jpg",
-      "url": "https://www.finedecor.de/wp-content/uploads/2024/08/Finedecor_Folien-1.jpg",
-      "usage": "Fineflex editorial card, general material reference only; no family/variant assignment evidence"
+      "kind": "Fine Decor header/footer logo",
+      "treatment": "Existing /media/logo.png remains in the shared header/footer; template repetition is not duplicated into the Company photo gallery."
     },
     {
-      "localPath": "/media/lacquer.jpg",
-      "url": "https://www.finedecor.de/wp-content/uploads/2020/04/fine-decor-lacklaminat.jpg",
-      "usage": "Lacquered laminate card, source surface detail; no variant or process suitability inferred"
+      "kind": "Language flags / navigation graphics",
+      "treatment": "Source navigation assets are excluded from the editorial gallery; localized textual navigation is retained in this site."
+    },
+    {
+      "kind": "Cloned carousel slides",
+      "treatment": "Duplicate DOM slides are deduplicated by original image URL; all eight unique editorial photographs are present."
     }
   ],
-  "companyImageLedger": "company-image-sources.json",
-  "companyImageUpdate": {
-    "checkedAt": "2026-10-06",
-    "uniquePhotos": 8,
-    "sourceCertificationGraphic": "Archived reference only; current approval and product scope unverified.",
-    "movedExistingImage": {
-      "localPath": "/media/interior.jpg",
-      "from": "Company introduction",
-      "to": "Home Company section"
-    },
-    "sourceGrouping": "Bielefeld/Oelde gallery labels are provenance from the source page; no new operating-site responsibility assertion."
-  }
+  "sourceLimitations": [
+    "Gallery labels describe the source page grouping, not independently verified current operating-site responsibilities.",
+    "The source photographs identify no exact sellable variant, measured material property, stock or production capacity.",
+    "Golden M graphic is an archived source reference only. Current certificate, applicable product scope and approved public claims need company evidence.",
+    "Source thumbnails are 600×300 pixels and are preserved as supplied; images are not upscaled into fabricated high-resolution originals."
+  ]
 }

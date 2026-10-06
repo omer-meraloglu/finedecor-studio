@@ -2,7 +2,7 @@
 
 All images are local browser captures; interiors are source imagery and 3D is expressly illustrative.
 
-**Latest captures:** see the 6 October homepage and enquiry section below and [latest QA](../homepage-enquiry-streamlining.md). Earlier sections are historical.
+**Latest captures:** see the Company imagery section below and [image QA](../company-image-enrichment.md); [homepage/enquiry QA](../homepage-enquiry-streamlining.md) remains the current flow evidence. Earlier sections are historical.
 
 ## Original build
 
@@ -92,3 +92,14 @@ Request captures are full-page; Studio captures show the active viewport. Viewpo
 | Mobile German navigation, 390×844 | [Company third](streamlined/nav-de-390.jpg) |
 
 These optimized-build captures use literal viewport dimensions without the prior browser’s capture scaling. Full-page height can exceed the viewport. The Contact full-page capture includes not-yet-revealed location cards below the fold; live scrolling reveals them. Enquiries contain synthetic QA data only, and no email app/send action occurred. Earlier embedded-PDP and form-free hosted captures are superseded by this update. 3D remains illustrative.
+
+## Complete Company imagery — 6 October
+
+| View | Evidence |
+|---|---|
+| Company EN, 1440×900 | [Introduction](company/company-1440.jpg), [source galleries](company/gallery-1440.jpg), [complete page](company/company-full-1440.jpg) |
+| Company EN, 390×844 | [Mobile introduction](company/company-390.jpg), [mobile gallery](company/gallery-390.jpg) |
+| Company DE, 768×1024 | [German tablet](company/company-de-768.jpg) |
+| Moved Fine Decor facade on Home | [Desktop](company/home-company-1440.jpg), [mobile complete signage](company/home-company-390.jpg) |
+
+Source photographs retain their original pixels and complete framing in the Company galleries. Captures use the optimized localhost build; Home captures include the final right-aligned crop adjustment. The certification graphic is a labelled archive reference with unverified current scope. [Source/rights inventory](../company-image-sources.json).
