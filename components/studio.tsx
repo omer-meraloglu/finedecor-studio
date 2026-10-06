@@ -82,7 +82,11 @@ export default function Studio({locale,initialId,embedded=false,shareToken}:{loc
     if(!restored.current||shareToken||embedded)return;
     lib.setProject({...p,name:nameDraft.trim()||p.name});const id=dirty?null:savedId;if(lib.projectId!==id)lib.setProjectId(id);
   },[p,nameDraft,dirty,savedId,shareToken,embedded]);
-  useEffect(()=>{if(lib.ready&&(embedded||(!shareToken&&lib.studioMode==='3d')))enable3d()},[lib.ready]);
+  useEffect(()=>{
+    // An explicit surface link is an intent to inspect it in 3D, even after a 2D visit.
+    const requested=initialId||queryVariant;
+    if(lib.ready&&!shareToken&&(embedded||(requested&&getVariant(requested))||lib.studioMode==='3d'))enable3d();
+  },[lib.ready,initialId,queryVariant,shareToken,embedded]);
   useEffect(()=>{setShareUrl('');setShareAck(false);setShareOpen(false);setExportHtml('')},[savedId,dirty]);
   useEffect(()=>{if(!can3d&&mode==='3d'){setMode('2d');if(!embedded)lib.setStudioMode('2d')}},[can3d,mode]);
   useEffect(()=>{

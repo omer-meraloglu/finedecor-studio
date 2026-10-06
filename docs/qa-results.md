@@ -1,6 +1,6 @@
 # QA and performance
 
-**Latest evidence:** [Surface Library, all-reference 3D and contact refinement](library-contact-refinement.md); [browser observations](performance-library-contact-browser.json), [asset measurements](performance-library-contact-assets.json); previous [source enrichment and Studio refinement](applications-home-studio-refinement.md) and [screenshots](screenshots/README.md). All 31 tests, final production build and read-only HTTP smoke pass. Earlier sections below are historical.
+**Latest evidence — 6 October 2026:** [Homepage and enquiry streamlining](homepage-enquiry-streamlining.md) and [screenshots](screenshots/README.md). All 35 tests, TypeScript, the final optimized build and local/hosted read-only HTTP smoke pass. Request/Contact forms store locally or prepare explicit hosted email drafts; product 3D opens the full Studio with the exact variant selected. Earlier sections and numeric measurements below are historical.
 
 ## Original build — 3 October 2026
 

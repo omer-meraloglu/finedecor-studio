@@ -1,9 +1,8 @@
 'use client';
 import {useState} from 'react';
 import Link from 'next/link';
-import {ArrowUpRight,ArrowRight,Layers,Bookmark,Scan,MessageSquare,ChevronLeft,ChevronRight} from 'lucide-react';
-import {news,getVariant} from '@/lib/catalog';
-import {FamilyOverview,CustomConsultation} from './production-content';
+import {ArrowUpRight,ArrowRight,Layers,ChevronLeft,ChevronRight} from 'lucide-react';
+import {getVariant,getDecor} from '@/lib/catalog';
 import './home.css';
 
 export default function Home({locale}:{locale:'en'|'de'}){
@@ -15,19 +14,14 @@ export default function Home({locale}:{locale:'en'|'de'}){
     {src:'/media/production-rolls.jpg',width:800,height:551,label:de?'Produktion':'Production',caption:de?'EIN BLICK IN DIE PRODUKTION':'A PRODUCTION PERSPECTIVE',alt:de?'Folienrolle auf einer Maschine aus einem Quellenbild der öffentlichen Fine Decor Website':'Roll of film on machinery in a source photograph from the Fine Decor public website'}
   ];
   const photo=photographs[photoIndex];
-  const steps=[
-    {number:'01',icon:Scan,title:de?'Eine Oberfläche entdecken':'Find your surface',copy:de?'Dekor und Finish ansehen. Quellen und Freigabestatus prüfen.':'Explore decor and finish. Check the source and approval status.',href:'collections',cta:de?'Bibliothek ansehen':'Browse the library'},
-    {number:'02',icon:Bookmark,title:de?'Im Kontext vergleichen':'See it in context',copy:de?'Varianten vergleichen und eine private Projektstudie speichern.':'Compare variants and keep your choices in a private project study.',href:'studio',cta:de?'Studie beginnen':'Start a surface study'},
-    {number:'03',icon:MessageSquare,title:de?'Mit einem Muster prüfen':'Make it tangible',copy:de?'Eine Muster- oder technische Anfrage mit den gewählten IDs vorbereiten.':'Prepare a sample or technical enquiry with the IDs you selected.',href:'request',cta:de?'Anfrage vorbereiten':'Prepare an enquiry'}
-  ];
   return <div className="fine-home">
-    <section className="hero">
+    <section className="hero" aria-labelledby="home-title">
       <div className="hero-copy">
-        <div className="eyebrow"><span/> {de?'DEKORATIVE OBERFLÄCHEN. INDUSTRIELL GEDACHT.':'DECORATIVE SURFACES. INDUSTRIALLY CONSIDERED.'}</div>
-        <h1>{de?'Oberflächen für':'Surfaces for'}<br/><em>{de?'neue Perspektiven.':'what comes next.'}</em></h1>
-        <p>{de?'PET-Dekorfolien für die Möbelindustrie. Entdecken Sie Farbe, erkunden Sie Oberflächen und bringen Sie Ihr nächstes Projekt in Form.':'PET decorative films for the furniture industry. Discover colour, explore finishes and give your next project a new perspective.'}</p>
-        <div className="button-row"><Link className="btn" href={link('collections')}>{de?'Kollektionen entdecken':'Explore collections'}<ArrowUpRight size={19}/></Link><Link className="text-link" href={link('studio')}>{de?'Im Studio visualisieren':'Open Material Studio'}<ArrowRight size={18}/></Link></div>
-        <div className="hero-note">{de?'FÜR DESIGNER. FÜR HERSTELLER. SEIT 2004.':'FOR DESIGNERS. FOR MANUFACTURERS. SINCE 2004.'}</div>
+        <div className="eyebrow"><span/> {de?'PET-DEKORFOLIEN FÜR MÖBEL':'PET DECORATIVE FILMS FOR FURNITURE'}</div>
+        <h1 id="home-title">{de?'Oberflächen für':'Surfaces for'}<br/><em>{de?'neue Perspektiven.':'what comes next.'}</em></h1>
+        <p>{de?'Farbe und Oberfläche. Von der ersten Idee zum physischen Muster.':'Colour and finish. From your first idea to a physical sample.'}</p>
+        <div className="button-row"><Link className="btn" href={link('collections')}>{de?'Oberflächen entdecken':'Explore surfaces'}<ArrowUpRight size={19}/></Link><Link className="text-link" href={link('studio')}>{de?'Material Studio':'Material Studio'}<ArrowRight size={18}/></Link></div>
+        <div className="hero-note">{de?'FINE DECOR · SEIT 2004':'FINE DECOR · SINCE 2004'}</div>
       </div>
       <div className="hero-gallery">
         <figure className="hero-image" id="home-hero-photograph"><img key={photo.src} className="home-photo-change" src={photo.src} alt={photo.alt} width={photo.width} height={photo.height} fetchPriority={photoIndex===0?'high':'auto'}/><figcaption aria-live="polite" aria-atomic="true"><span>{photo.caption}</span><span>{de?'Fine Decor Quellenbild · Dekor nicht zugeordnet':'Fine Decor source imagery · decor unassigned'}</span></figcaption></figure>
@@ -37,26 +31,19 @@ export default function Home({locale}:{locale:'en'|'de'}){
         </div>
       </div>
     </section>
-    <section className="home-intro">
-      <div><span className="eyebrow">01 / {de?'DIE MATERIALBIBLIOTHEK':'THE MATERIAL LIBRARY'}</span><h2>{de?'Eine Oberfläche.':'One surface.'}<br/>{de?'Viele Möglichkeiten.':'Many possibilities.'}</h2></div>
-      <p>{de?'Eine Oberfläche spricht Auge und Tastsinn an. Fine Decor entwickelt Farben und Dekore mit Impulsen aus den Sinnen und den Ideen seiner Kunden.':'A surface speaks to sight and touch. Fine Decor develops colours and decors with inspiration from the senses and its customers’ ideas.'}</p>
-      <Link className="text-link" href={link('collections')}>{de?'Alle Oberflächen ansehen':'View the surfaces'}<ArrowUpRight size={20}/></Link>
+    <section className="home-collection" aria-labelledby="home-surfaces-title">
+      <div className="home-intro"><div><span className="eyebrow">{de?'DIE OBERFLÄCHEN':'THE SURFACES'}</span><h2 id="home-surfaces-title">{de?'Farbe entdecken.':'Find your colour.'}</h2></div><p>Fineflex · {de?'Lacklaminat':'Lacquered laminate'}</p><Link className="text-link" href={link('collections')}>{de?'Alle Oberflächen':'All surfaces'}<ArrowUpRight size={20}/></Link></div>
+      <div className="starter-surfaces">{['373','255','425'].map(code=>{const variant=getVariant(`demo-${code}-frosted`)!;return <Link href={link('products/'+variant.id)} key={code} className="starter-card"><div className="starter-swatch"><img src={variant.swatch} width="200" height="200" alt="" loading="lazy"/><span className="starter-index">{code}</span><span className="starter-explore"><ArrowUpRight size={22}/></span></div><span>{getDecor(variant).name}<small>Frosted</small></span></Link>})}</div>
+      <p className="home-reference-note">{de?'Quellenreferenzen · Demo. Farben mit einem physischen Muster prüfen.':'Source references · demo. Verify colour with a physical sample.'}</p>
     </section>
-    <section className="starter-surfaces" aria-label={de?'Ausgewählte Quellenreferenzen':'Selected source references'}>
-      {['373','255','425'].map(code=>{const variant=getVariant(`demo-${code}-frosted`)!;return <Link href={link('products/'+variant.id)} key={code} className="starter-card"><div className="starter-swatch"><img src={variant.swatch} width="200" height="200" alt="" loading="lazy"/><span className="starter-index">{code} / FROSTED</span><span className="starter-explore"><ArrowUpRight size={22}/></span></div><span>{code==='373'?'OliveGreen':code==='255'?'Kaschmir':'SlateGrey'}<small>{de?'Quellenreferenz · Demo':'Source reference · demo'}</small></span></Link>})}
+    <section className="studio-teaser" aria-labelledby="home-studio-title">
+      <div><span className="eyebrow">MATERIAL STUDIO</span><h2 id="home-studio-title">{de?'Ihre Oberfläche.':'Your surface.'}<br/>{de?'Im Kontext.':'In context.'}</h2><p>{de?'Vier Szenen. Oberflächen vergleichen. Auswahl speichern.':'Four scenes. Compare surfaces. Save your choices.'}</p><Link className="btn" href={link('studio')}>{de?'Studio öffnen':'Open the studio'}<Layers size={19}/></Link></div>
+      <figure className="teaser-detail"><img src="/media/film.jpg" alt={de?'Gestapelte Materialtafeln in warmen Natur-, Weiß- und Dunkeltönen von Fine Decor':'Layered material panels in warm neutral, white and dark tones from Fine Decor'} loading="lazy" width="750" height="647"/><figcaption>{de?'Fine Decor Quellenbild':'Fine Decor source imagery'}<span>{de?'Illustrative Vorschau · mit physischem Muster prüfen':'Illustrative preview · verify with a physical sample'}</span></figcaption></figure>
     </section>
-    <FamilyOverview locale={locale}/>
-    <section className="studio-teaser">
-      <div><span className="eyebrow">02 / MATERIAL STUDIO</span><h2>{de?'Sehen. Vergleichen.':'See it. Compare it.'}<br/>{de?'Weiterdenken.':'Make it yours.'}</h2><p>{de?'Betrachten Sie Oberflächen in vier einfachen Referenzszenen. Speichern Sie Ihre Auswahl und fordern Sie ein physisches Muster an.':'Explore surfaces in four simple reference scenes. Keep your choices together, then request a physical sample.'}</p><div className="teaser-features"><span>{de?'4 Referenzszenen':'4 reference scenes'}</span><span>{de?'Gleiche Vergleichsbedingungen':'Consistent comparison'}</span><span>{de?'Privat gespeichert':'Saved privately'}</span></div><Link className="btn" href={link('studio')}>{de?'Studio öffnen':'Enter the studio'}<Layers size={19}/></Link></div>
-      <figure className="teaser-detail"><img src="/media/film.jpg" alt={de?'Gestapelte Materialtafeln in warmen Natur-, Weiß- und Dunkeltönen von Fine Decor':'Layered material panels in warm neutral, white and dark tones from Fine Decor'} loading="lazy" width="750" height="647"/><figcaption>{de?'Materialkontraste · Fine Decor Quellenbild':'Material contrasts · Fine Decor source imagery'}<span>{de?'Vorschau mit physischem Muster prüfen':'Verify previews with a physical sample'}</span></figcaption></figure>
+    <section className="home-evidence home-production" aria-labelledby="home-company-title">
+      <figure className="production-main-image"><img src="/media/production.jpg" alt={de?'Zwei Personen neben Produktionsausrüstung in einem Fine Decor Quellenbild':'Two people beside production equipment in a Fine Decor source photograph'} width="850" height="567" loading="lazy"/><figcaption>{de?'Produktion · Fine Decor Quellenbild':'Production · Fine Decor source imagery'}</figcaption></figure>
+      <div className="production-story"><span className="eyebrow">FINE DECOR</span><h2 id="home-company-title">{de?'Ideen werden':'Ideas become'}<br/><em>{de?'Oberflächen.':'surfaces.'}</em></h2><p>{de?'Entwicklung und Produktion von PET-Dekorfolien. Im Dialog mit der Möbelindustrie, seit 2004.':'Developing and producing PET decorative films. In dialogue with the furniture industry, since 2004.'}</p><Link className="text-link" href={link('company')}>{de?'Über Fine Decor':'About Fine Decor'}<ArrowUpRight size={19}/></Link></div>
     </section>
-    <section className="home-evidence home-production" aria-labelledby="home-production-title">
-      <div className="production-story"><span className="eyebrow">03 / {de?'MATERIAL & PRODUKTION':'MATERIALS & PRODUCTION'}</span><h2 id="home-production-title">{de?'Material als':'From material'}<br/><em>{de?'Ausgangspunkt.':'to possibility.'}</em></h2><p>{de?'Fine Decor entwickelt und produziert PET-Dekorfolien für die Möbelindustrie. Sprechen Sie mit unserem Team über Dekor, Finish und die Anforderungen Ihres Projekts.':'Fine Decor develops and produces PET decorative films for the furniture industry. Talk to our team about decor, finish and the needs of your project.'}</p><Link className="text-link" href={link('company')}>{de?'Fine Decor kennenlernen':'Meet Fine Decor'}<ArrowUpRight size={19}/></Link><figure className="production-roll-detail"><img src="/media/production-rolls.jpg" alt={de?'Detail einer Folienrolle auf Produktionsausrüstung aus einem Fine Decor Quellenbild':'Detail of a film roll on production equipment from a Fine Decor source photograph'} width="800" height="551" loading="lazy"/><figcaption>{de?'Materialrollen · Fine Decor Quellenbild':'Material rolls · Fine Decor source imagery'}</figcaption></figure></div>
-      <figure className="production-main-image"><img src="/media/production.jpg" alt={de?'Zwei Personen neben Produktionsausrüstung in einem Fine Decor Quellenbild':'Two people beside production equipment in a Fine Decor source photograph'} width="850" height="567" loading="lazy"/><figcaption><span>{de?'Ein Blick hinter die Oberfläche.':'A closer look behind the surface.'}</span><small>{de?'Produktion · Fine Decor Quellenbild':'Production · Fine Decor source imagery'}</small></figcaption></figure>
-    </section>
-    <section className="home-process"><div className="section-heading"><div><span className="eyebrow">{de?'VON DER IDEE ZUM GESPRÄCH':'FROM FIRST IDEA TO A CONVERSATION'}</span><h2>{de?'Ein klarer nächster Schritt.':'A clear next step.'}</h2></div><p>{de?'Ihre Auswahl bleibt bei Ihnen.':'Your choices stay with you.'}</p></div><div className="process-grid">{steps.map(step=><article className="process-step" key={step.number}><div className="process-top"><span>{step.number}</span><step.icon size={23} strokeWidth={1.5}/></div><h3>{step.title}</h3><p>{step.copy}</p><Link className="text-link" href={link(step.href)}>{step.cta}<ArrowUpRight size={17}/></Link></article>)}</div></section>
-    <CustomConsultation locale={locale}/>
-    <section className="home-news"><div className="section-heading"><h2>{de?'Aus dem Archiv':'From the archive'}</h2><Link className="text-link" href={link('knowledge')}>{de?'Alle Quellen ansehen':'View the sources'}<ArrowUpRight size={18}/></Link></div>{news.map(n=><a className="news-row" key={n.id} href={n.source} target="_blank" rel="noreferrer"><span>{n.id==='interzum-2023'?'2023':n.date}</span><h3>{n.title[locale]}</h3><small>{de?'Archivquelle':'Archived source'}</small><ArrowUpRight size={20}/></a>)}</section>
-    <section className="sample-band"><span className="eyebrow">{de?'VOM KONZEPT ZUM PHYSISCHEN MUSTER':'FROM CONCEPT TO PHYSICAL SAMPLE'}</span><h2>{de?'Die nächste Oberfläche':'Your next surface'}<br/>{de?'beginnt mit einem Gespräch.':'starts with a conversation.'}</h2><Link className="btn" href={link('request')}>{de?'Musteranfrage vorbereiten':'Prepare a sample enquiry'}<ArrowUpRight size={18}/></Link></section>
+    <section className="sample-band" aria-labelledby="home-sample-title"><div><span className="eyebrow">{de?'DER NÄCHSTE SCHRITT':'THE NEXT STEP'}</span><h2 id="home-sample-title">{de?'Material erleben.':'Make it tangible.'}</h2><p>{de?'Physische Muster. Persönliche Beratung.':'Physical samples. Personal advice.'}</p></div><Link className="btn" href={link('request')}>{de?'Muster anfragen':'Request samples'}<ArrowUpRight size={18}/></Link></section>
   </div>;
 }

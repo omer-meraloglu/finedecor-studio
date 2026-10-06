@@ -2,7 +2,7 @@
 
 All images are local browser captures; interiors are source imagery and 3D is expressly illustrative.
 
-**Latest captures:** see the Surface Library and contact section below and [latest QA](../library-contact-refinement.md). Earlier sections are historical.
+**Latest captures:** see the 6 October homepage and enquiry section below and [latest QA](../homepage-enquiry-streamlining.md). Earlier sections are historical.
 
 ## Original build
 
@@ -76,3 +76,19 @@ Viewport-based JPEG captures reserve a scrollbar and may be scaled: 390×844 pro
 | Hosted request DE, 768×1024 | [German tablet](request-layout-de-768.jpg) | Localized spacing, no horizontal overflow |
 
 Request captures are full-page; Studio captures show the active viewport. Viewport overrides and capture scaling follow the browser details recorded above. The only test selections are source-reference demo IDs; no actual contact enquiry is sent. All 86 3D views remain indicative uniform colour/finish previews with uncalibrated parameters, not physical material matches. See [current QA and limitations](../library-contact-refinement.md).
+
+## Homepage and enquiry streamlining — 6 October
+
+| View | Evidence |
+|---|---|
+| Shorter Home, EN 1440×900 | [Hero/navigation](streamlined/home-1440.jpg), [complete page after scrolling](streamlined/home-full-1440.jpg) |
+| Home, EN 390×844 / DE 768×1024 | [Mobile](streamlined/home-390.jpg), [German tablet](streamlined/home-de-768.jpg) |
+| Product redirect to Kitchen, 1440×900 | [Red/932/Gloss preselected](streamlined/studio-preselected-1440.jpg) |
+| Local Contact, 1440×900 | [Form and direct contact](streamlined/contact-1440.jpg), [synthetic saved enquiry](streamlined/contact-saved-local.jpg) |
+| Local Request, 1440×900 | [Form and selected reference](streamlined/request-1440.jpg) |
+| Hosted Request review, 1440×900 | [Editable synthetic draft / copied status](streamlined/request-hosted-draft.jpg) |
+| Contact, 390×844 | [Mobile form](streamlined/contact-390.jpg) |
+| Hosted Request, DE 390×844 / 768×1024 | [Mobile](streamlined/request-de-390.jpg), [Tablet](streamlined/request-de-768.jpg) |
+| Mobile German navigation, 390×844 | [Company third](streamlined/nav-de-390.jpg) |
+
+These optimized-build captures use literal viewport dimensions without the prior browser’s capture scaling. Full-page height can exceed the viewport. The Contact full-page capture includes not-yet-revealed location cards below the fold; live scrolling reveals them. Enquiries contain synthetic QA data only, and no email app/send action occurred. Earlier embedded-PDP and form-free hosted captures are superseded by this update. 3D remains illustrative.

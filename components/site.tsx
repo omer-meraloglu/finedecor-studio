@@ -1,6 +1,7 @@
 'use client';
 import {useEffect,useRef,useState} from 'react';
 import Link,{useLinkStatus} from 'next/link';
+import {useSearchParams} from 'next/navigation';
 import {ArrowUpRight,Bookmark,Menu,X} from 'lucide-react';
 import {Button} from '@/components/ui/button';
 import {useLibrary} from './library';
@@ -10,10 +11,13 @@ import {Catalog,Product,ApplicationsPage,Shortlist,RequestForm,Knowledge,Company
 import Studio from './studio';
 import Admin from './admin';
 import LabMetrics from './metrics';
+import {getVariant} from '@/lib/catalog';
 
 function PendingHint(){const {pending}=useLinkStatus();return <span aria-hidden="true" className={`nav-pending ${pending?'pending':''}`}/>}
 export default function Site({locale,path}:{locale:'en'|'de';path:string[]}){
-  const de=locale==='de',page=path[0]||'',route=`/${locale}/${path.join('/')}`;
+  const de=locale==='de',page=path[0]||'',route=`/${locale}/${path.join('/')}`,params=useSearchParams();
+  const requestedVariant=params.get('variant');
+  const localeHref=`/${de?'en':'de'}/${path.join('/')}${page==='studio'&&requestedVariant&&getVariant(requestedVariant)?`?variant=${encodeURIComponent(requestedVariant)}`:''}`;
   const [menu,setMenu]=useState(false),[scrolled,setScrolled]=useState(false);
   const {shortlist,storageStatus,serverPersistence}=useLibrary();
   const header=useRef<HTMLElement>(null),menuButton=useRef<HTMLButtonElement>(null),progress=useRef<HTMLSpanElement>(null),previousRoute=useRef(route);
@@ -49,7 +53,7 @@ export default function Site({locale,path}:{locale:'en'|'de';path:string[]}){
   },[]);
   const props={locale,path};
   const content=page==='collections'?<Catalog {...props}/>:page==='products'?<Product {...props}/>:page==='applications'?<ApplicationsPage {...props}/>:page==='studio'?<StudioPage {...props}/>:page==='shortlist'?<Shortlist {...props}/>:page==='request'?<RequestForm {...props}/>:page==='knowledge'?<Knowledge {...props}/>:page==='company'?<Company {...props}/>:page==='contact'?<Contact {...props}/>:page==='legal'?<Legal {...props}/>:page==='accessibility'?<Legal {...props} accessibility/>:page==='admin'?(serverPersistence?<Admin locale={locale}/>:<div className="page-wrap"><h1>{de?'Redaktion in der lokalen Vorschau':'Content review in the local preview'}</h1><p>{de?'Die gehostete Vorschau enthält keinen schreibbaren Redaktionsspeicher.':'This hosted review has no writable content store.'}</p></div>):page==='shared'?<Studio locale={locale} shareToken={path[1]}/>:page===''?<Home locale={locale}/>:<Missing {...props}/>;
-  const navigation=[['collections',de?'Kollektionen':'Collections'],['applications',de?'Anwendungen':'Applications'],['studio','Material Studio'],['knowledge',de?'Wissen':'Knowledge'],['company',de?'Unternehmen':'Company'],['contact',de?'Kontakt':'Contact']];
+  const navigation=[['collections',de?'Kollektionen':'Collections'],['applications',de?'Anwendungen':'Applications'],['company',de?'Unternehmen':'Company'],['studio','Material Studio'],['knowledge',de?'Wissen':'Knowledge'],['contact',de?'Kontakt':'Contact']];
   return <>
     <a className="skip" href="#main">{de?'Zum Inhalt':'Skip to content'}</a>
     <div className="notice">{serverPersistence?(de?'Lokale Vorschau · Materialien und Anfragen zur Prüfung':'Local preview · materials and enquiries for review'):(de?'Gehostete Vorschau · Quellenmaterialien · private Geräteentwürfe':'Hosted review · source materials · private device drafts')}</div>
@@ -60,7 +64,7 @@ export default function Site({locale,path}:{locale:'en'|'de';path:string[]}){
         <div className="mobile-nav-extra"><Link href={link('shortlist')} onNavigate={()=>setMenu(false)}><Bookmark size={17}/>{de?'Merkliste':'Shortlist'}<span>{shortlist.length}</span></Link></div>
       </nav>
       <div className="header-actions">
-        <Link href={`/${de?'en':'de'}/${path.join('/')}`} className="locale" hrefLang={de?'en':'de'} aria-label={de?'Switch to English':'Auf Deutsch wechseln'}>{de?'EN':'DE'}</Link>
+        <Link href={localeHref} className="locale" hrefLang={de?'en':'de'} aria-label={de?'Switch to English':'Auf Deutsch wechseln'}>{de?'EN':'DE'}</Link>
         <Link href={link('shortlist')} className="icon" aria-label={`${de?'Merkliste':'Shortlist'} (${shortlist.length})`}><Bookmark size={20}/>{shortlist.length>0&&<span className="count">{shortlist.length}</span>}</Link>
         <Link className="btn small" href={link('request')}>{de?'Muster anfragen':'Request samples'}<ArrowUpRight size={17}/></Link>
         <Button ref={menuButton} className="menu" variant="ghost" aria-controls="primary-navigation" aria-label={menu?(de?'Menü schließen':'Close menu'):(de?'Menü öffnen':'Open menu')} aria-expanded={menu} onClick={()=>setMenu(!menu)}>{menu?<X/>:<Menu/>}</Button>
